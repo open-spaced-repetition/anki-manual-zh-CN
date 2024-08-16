@@ -27,7 +27,7 @@ What's the capital city of {{Country}}?
 
 这意味着「先显示正面的文本，然后是一条分隔线，再然后是背面字段」。
 
-'id=answer' 部分告诉 Anki 问题和答案之间的分隔线在哪里。这使得 Anki 在你按下『显示答案』时会自动滚动
+'id=answer' 部分告诉 Anki 问题和答案之间的分隔线在哪里。这使得 Anki 在你按下「显示答案」时会自动滚动
 到答案开始的位置（在移动设备的小屏幕上尤其有用）。如果你不希望在答案开头有水平线，你可以使用其他
 HTML 元素，如段落或 div。
 
@@ -322,8 +322,8 @@ code#typeans {
 <code id="typeans">...</code>
 ```
 
-高级用户可以使用 css 类『typeGood』、『typeBad』和『typeMissed』覆盖默认的输入答案颜色。AnkiMobile
-支持『typeGood』和『typeBad』，但不支持『typeMissed』。
+高级用户可以使用 css 类 `typeGood`、`typeBad` 和 `typeMissed` 覆盖默认的输入答案颜色。AnkiMobile支持
+`typeGood` 和 `typeBad`，但不支持 `typeMissed`。
 
 如果希望覆盖输入框的大小而不想在「Fields」对话框中更改字体，可以使用 `!important` 来覆盖默认的内联样
 式，如下所示：

@@ -31,7 +31,7 @@ Anki 的 MathJax 支持期望内容为 TeX 格式。如果你不熟悉 TeX 格�
 如果你想在 MathJax 表达式中使用换行符，请用 <kbd>Shift</kbd>+<kbd>Enter</kbd>，而不是仅仅使用
 <kbd>Enter</kbd>，因为普通的换行符会导致 MathJax 无法正常工作。
 
-Anki 内置了对 mhchem 的支持来渲染化学方程。请参见『化学方程』部分和以下章节以获取更多信息：
+Anki 内置了对 mhchem 的支持来渲染化学方程。请参见「化学方程」部分和以下章节以获取更多信息：
 <https://mhchem.github.io/MathJax-mhchem/>
 
 可以[自定义一些设置](https://faqs.ankiweb.net/customizing-mathjax.html)。
@@ -49,7 +49,7 @@ LaTeX 是一个强大的排版系统，适用于输入数学公式、化学公�
 LaTeX 代码可能包含恶意命令，可能会读取或写入你计算机上的非 Anki 数据。因此，最新版的 Anki 默认拒绝生
 成 LaTeX 图像。
 
-如果你希望在自己的卡片上使用 LaTeX，需要在偏好设置界面启用『生成 LaTeX 图像』选项。
+如果你希望在自己的卡片上使用 LaTeX，需要在偏好设置界面启用「生成 LaTeX 图像」选项。
 
 **我们强烈建议不要在使用共享牌组或计划将来导入共享牌组时启用此选项，因为你可能会给任何共享牌组的作者
 访问你的计算机的权限**。
@@ -109,7 +109,7 @@ sudo tlmgr update --self; sudo tlmgr install dvipng
 
 ![收敛性问题 2](math/convergence_question_2.png)
 
-『文本公式』和『显示公式』是最常见的 LaTeX 表达式类型，因此 Anki 为它们提供了缩略版本。形式为：
+「文本公式」和「显示公式」是最常见的 LaTeX 表达式类型，因此 Anki 为它们提供了缩略版本。形式为：
 
     [latex]\begin{math}...\end{math}[/latex]
 

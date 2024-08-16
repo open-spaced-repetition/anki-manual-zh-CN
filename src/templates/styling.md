@@ -23,8 +23,8 @@
 文本应对齐在中心、左侧或右侧。
 
 **color**\
-文字的颜色。像『blue』、『lightyellow』等简单的颜色名称将有效，或你可以使用 HTML 颜色代码来选择任意
-颜色。更多信息请参见[此网页](https://htmlcolorcodes.com/)。
+文字的颜色。像 `blue`、`lightyellow` 等简单的颜色名称将有效，或你可以使用 HTML 颜色代码来选择任意颜
+色。更多信息请参见[此网页](https://htmlcolorcodes.com/)。
 
 **background-color**\
 卡片背景的颜色。
