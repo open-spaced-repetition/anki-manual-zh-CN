@@ -1,5 +1,7 @@
 # 资源
 
+> 原文：[Resources - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/resources.html)
+
 SuperMemo 网站上有很多关于间隔重复和记忆的优质信息： <https://supermemo.guru/wiki/SuperMemo_Guru>
 
 Michael Nielsen 撰写了一篇[详尽的文章](http://augmentingcognition.com/ltm.html)，讲述了长期记忆以及

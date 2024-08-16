@@ -1,5 +1,7 @@
 # 贡献
 
+> 原文：[Contributing - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/contrib.html)
+
 <!-- toc -->
 
 ## 公开分享牌组

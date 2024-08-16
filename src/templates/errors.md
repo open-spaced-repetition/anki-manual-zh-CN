@@ -1,5 +1,8 @@
 # 检查与错误
 
+> 原
+> 文：[Checks and Errors - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/templates/errors.html)
+
 <!-- toc -->
 
 当你保存一个笔记模板或导出一个牌组时，Anki 2.1.45+ 会检查一些常见错误。这些错误会在之后当任何人学习

@@ -1,5 +1,8 @@
 # 各 Linux 发行版分发的软件包
 
+> 原
+> 文：[Linux Distro Packages - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/platform/linux/distro-packages.html)
+
 我们发现，由 Linux 发行版分发的 Anki 自定义版本导致了许多问题：
 
 - Anki 依赖于像 Qt 这样的第三方库，Linux 发行版经常在未测试这些更改影响的情况下替换不同版本的这些

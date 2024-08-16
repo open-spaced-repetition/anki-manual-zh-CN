@@ -1,5 +1,7 @@
 # Linux
 
+> 原文：[Linux - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/platform/linux/intro.html)
+
 ## 在 Linux 上安装与升级 Anki
 
 有关如何在 Linux 上安装或升级 Anki 的说明，请参见：

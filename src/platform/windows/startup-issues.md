@@ -1,5 +1,8 @@
 # Windows 启动问题
 
+> 原
+> 文：[Startup Issues - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/platform/windows/startup-issues.html)
+
 <!-- toc -->
 
 ## 没有错误，但应用未出现

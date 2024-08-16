@@ -1,5 +1,7 @@
 # 介绍
 
+> 原文：[Introduction - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/)
+
 ## 快速开始
 
 着急吗？直接跳到[入门指南](getting-started.md)。

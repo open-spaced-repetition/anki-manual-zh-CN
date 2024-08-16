@@ -1,11 +1,14 @@
 # 样式与 HTML
 
+> 原
+> 文：[Styling & HTML - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/templates/styling.html)
+
 <!-- toc -->
 
 ## 卡片样式
 
-你可以在 YouTube 上观看 [关于卡片样式的视频](http://www.youtube.com/watch?v=F1j1Zx0mXME&yt:cc=on)。
-视频展示的是 Anki 2.0 的界面，但其概念大体相同。
+你可以在 YouTube 上观看[关于卡片样式的视频](http://www.youtube.com/watch?v=F1j1Zx0mXME&yt:cc=on)。视
+频展示的是 Anki 2.0 的界面，但其概念大体相同。
 
 可以通过单击「样式」按钮来访问卡片屏幕的样式部分，该按钮位于「背面模板」按钮旁边。在该部分，你可以更
 改卡片的背景颜色、默认字体、文本对齐方式等。
@@ -90,31 +93,31 @@ Anki 2.1.50+ 原生支持在编辑器中调整图像大小。
 
 假设你有一个「Expression」字段，你想给它设置 OSX 泰语字体「Ayuthaya」。假设你的模板已经显示：
 
-What is {{Expression}}?
+    What is {{Expression}}?
 
-{{Notes}}
+    {{Notes}}
 
 我们需要做的是在我们想要设置样式的文本前后加上一些 HTML。我们将在文本前放置以下内容：
 
-<div class=mystyle1>
+    <div class=mystyle1>
 
 然后在其后放置以下内容：
 
-</div>
+    </div>
 
 通过像上面那样包裹文本，我们告诉 Anki 用我们稍后要创建的自定义样式「mystyle1」设置包裹的文本样式。
 
 因此，如果我们希望整个「What is …​?」表达式使用泰语字体，我们会使用：
 
-<div class=mystyle1>What is {{Expression}}?</div>
+    <div class=mystyle1>What is {{Expression}}?</div>
 
-{{Notes}}
+    {{Notes}}
 
 如果我们只希望表达式字段本身使用泰语字体，我们将使用：
 
-What is <div class=mystyle1>{{Expression}}</div>?
+    What is <div class=mystyle1>{{Expression}}</div>?
 
-{{Notes}}
+    {{Notes}}
 
 编辑模板后，我们现在需要转到模板之间的样式部分。在编辑之前，它看起来应该像这样：
 
@@ -191,7 +194,7 @@ What is <div class=mystyle1>{{Expression}}</div>?
 
 这会改变整个卡片的方向。你可以通过在一些 HTML 中包装字段参考来仅更改某些字段的方向：
 
-<div dir="rtl">{{Front}}</div>
+    <div dir="rtl">{{Front}}</div>
 
 要在编辑器中更改字段的方向，请参阅 [编辑](../editing.md#自定义字段)部分。
 

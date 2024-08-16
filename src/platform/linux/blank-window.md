@@ -1,5 +1,8 @@
 # 空白主窗口
 
+> 原
+> 文：[Blank Main Window - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/platform/linux/blank-window.html)
+
 一些 Linux 发行版最近更新了 glibc。最新版本破坏了 Anki 所基于的 web 工具包，导致 Anki 的主窗口显示为
 空白。
 

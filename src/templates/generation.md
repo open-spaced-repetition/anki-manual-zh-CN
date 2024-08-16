@@ -1,10 +1,13 @@
 # 卡片生成
 
+> 原
+> 文：[Card Generation - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/templates/generation.html)
+
 <!-- toc -->
 
 ## 反向卡片
 
-你可以在 YouTube 上观看 [有关反向卡片的视频](http://www.youtube.com/watch?v=DnbKwHEQ1mA&yt:cc=on)。
+你可以在 YouTube 上观看[有关反向卡片的视频](http://www.youtube.com/watch?v=DnbKwHEQ1mA&yt:cc=on)。
 
 如果你想创建双向的卡片（例如，「ookii」→「big」和「big」→「ookii」），你有几种选择。最简单的方法是选
 择内置的「基础（及反向卡片）」笔记模板。这将生成两张卡片，每个方向一张。
@@ -40,61 +43,85 @@ Anki 在卡片生成时不考虑特殊字段或非字段文本。因此，如果
 
 你可以仅在字段为空或不为空时在卡片上包含某些文本、字段或 HTML。示例：
 
-文本总是显示。
+    文本总是显示。
 
-{{#FieldName}} 当 FieldName 有文本时，只有这个文本显示 {{/FieldName}}
+    {{#FieldName}}
+        当 FieldName 有文本时，只有这个文本显示
+    {{/FieldName}}
 
-{{^FieldName}} 当 FieldName 为空时，只有这个文本显示 {{/FieldName}}
+    {{^FieldName}}
+        当 FieldName 为空时，只有这个文本显示
+    {{/FieldName}}
 
 现实生活中的一个例子是只有在字段不为空时显示标签：
 
-{{#Tags}} 标签：{{Tags}} {{/Tags}}
+    {{#Tags}}
+        标签：{{Tags}}
+    {{/Tags}}
 
 或者假设你希望在卡片的正面以蓝色显示特定字段，如果背面有额外的笔记（可能有笔记表明你应该花更多时间思
 考答案）。你可以按如下方式样式化字段：
 
-{{#Notes}} <span style="color:blue;"> {{/Notes}}
+    {{#Notes}}
+        <span style="color:blue;">
+    {{/Notes}}
 
-{{FieldToFormat}}
+    {{FieldToFormat}}
 
-{{#Notes}} </span> {{/Notes}}
+    {{#Notes}}
+        </span>
+    {{/Notes}}
 
 你也可以使用条件替换来控制生成哪些卡片。这是因为 Anki 不会生成正面为空的卡片。例如，考虑一张正面有两
 个字段的卡片：
 
-{{Expression}} {{Notes}}
+    {{Expression}}
+    {{Notes}}
 
 通常，如果表达式或笔记字段中有文本，则会生成卡片。如果你只想在表达式不为空时生成卡片，那么你可以将模
 板更改为：
 
-{{#Expression}} {{Expression}} {{Notes}} {{/Expression}}
+    {{#Expression}}
+        {{Expression}}
+        {{Notes}}
+    {{/Expression}}
 
 如果你想要求两个字段都不为空，则可以使用两个条件替换：
 
-{{#Expression}} {{#Notes}} {{Expression}} {{Notes}} {{/Notes}} {{/Expression}}
+    {{#Expression}}
+        {{#Notes}}
+            {{Expression}}
+            {{Notes}}
+        {{/Notes}}
+    {{/Expression}}
 
 请记住，这仅在你将条件替换代码放在卡片的正面时有效；如果你这样做在背面，你只会得到背面为空的卡片。同
 样，因为这通过检查正面字段是否为空来工作，确保用条件替换包住「整个」正面是很重要的；例如，以下内容无
 法按预期工作：
 
-{{#Expression}} {{Expression}} {{/Expression}} {{Notes}}
+    {{#Expression}}
+        {{Expression}}
+    {{/Expression}}
+    {{Notes}}
 
 ## 空白背面
 
 卡片生成只查看卡片的正面。例如，如果你有一个正面模板：
 
-{{Field 1}}
+    {{Field 1}}
 
 和一个背面模板：
 
-{{Field 2}}
+    {{Field 2}}
 
 那么如果 Field 1 非空，就会生成一张卡片。如果 Field 2 为空，这张卡片依然会被生成，而你将得到一个空白
 的背面。
 
 如果你希望避免一个空白的背面，你需要在正面模板上作为条件放置一个必需字段，像这样：
 
-{{#Field 2}} {{Field 1}} {{/Field 2}}
+    {{#Field 2}}
+        {{Field 1}}
+    {{/Field 2}}
 
 这将确保只有当 Field 2 和 Field 1 都非空时生成卡片。
 
@@ -105,22 +132,37 @@ Anki 在卡片生成时不考虑特殊字段或非字段文本。因此，如果
 旧版本的 Anki 不能使用否定条件用于卡片生成。例如，在 Anki 2.1.28 上，以下内容将在名为 AddIfEmpty 的
 字段为空和 Front 非空时添加一张卡片：
 
-{{^AddIfEmpty}} {{Front}} {{/AddIfEmpty}}
+    {{^AddIfEmpty}}
+        {{Front}}
+    {{/AddIfEmpty}}
 
 在更早的 Anki 版本中，否定条件会被忽略，卡片生成将仅依赖于 Front 是否非空。
 
 在旧版本中混合使用 **AND** 和 **OR** 条件也可能导致问题。例如，以下内容（“如果 A **或** B **或** C非
 空则添加卡片”）是可以的：
 
-{{A}} {{B}} {{C}}
+    {{A}}
+        {{B}}
+    {{C}}
 
 以下内容（“如果 A **和** B **和** C 非空则添加卡片”）也是可以的：
 
-{{#A}} {{#B}} {{#C}} {{A}} {{/C}} {{/B}} {{/A}}
+    {{#A}}
+        {{#B}}
+            {{#C}}
+                {{A}}
+            {{/C}}
+        {{/B}}
+    {{/A}}
 
 但是以下内容（“如果 A **或** (B **和** C) 非空则添加卡片”）将无法正常工作：
 
-{{A}} {{#B}} {{#C}} {{B}} {{/C}} {{/B}}
+    {{A}}
+    {{#B}}
+        {{#C}}
+            {{B}}
+        {{/C}}
+    {/B}}
 
 ## 添加空笔记
 
@@ -151,8 +193,12 @@ Anki 在卡片生成时不考虑特殊字段或非字段文本。因此，如果
 条件生成提供了一个特殊字段，以便你检测所呈现的卡片。例如，如果你想在第一个填空上显示「hint1」字段，
 并在第二个填空上显示「hint2」字段，你可以使用以下模板：
 
-{{cloze:Text}}
+    {{cloze:Text}}
 
-{{#c1}} {{Hint1}} {{/c1}}
+    {{#c1}}
+        {{Hint1}}
+    {{/c1}}
 
-{{#c2}} {{Hint2}} {{/c2}}
+    {{#c2}}
+        {{Hint2}}
+    {{/c2}}

@@ -1,5 +1,7 @@
 # 杂项
 
+> 原文：[Miscellaneous - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/misc.html)
+
 <!-- toc -->
 
 ## 菜单快捷键

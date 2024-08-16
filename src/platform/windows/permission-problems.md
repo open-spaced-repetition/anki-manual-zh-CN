@@ -1,5 +1,8 @@
 # Windows 权限问题
 
+> 原
+> 文：[Permission Problems - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/platform/windows/permission-problems.html)
+
 <!-- toc -->
 
 ## 权限问题

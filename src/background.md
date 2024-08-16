@@ -1,5 +1,7 @@
 # 背景
 
+> 原文：[Background - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/background.html)
+
 <!-- toc -->
 
 Anki 是一款让记忆更简单的程序。因为它比传统学习方法更加高效，因此你可以大幅减少学习时间，或者大幅增

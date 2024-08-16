@@ -1,6 +1,8 @@
 # 获取帮助
 
-## 提问好问题
+> 原文：[Getting Help - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/getting-help.html)
+
+## 问个好问题
 
 除了 AnkiMobile 之外，Anki 及其支持是由慷慨志愿者免费提供的。请在发帖时牢记这一点——如果你态度粗鲁并
 要求苛刻，或没有努力自行解决问题，别人可能不太愿意帮助你。
@@ -36,7 +38,7 @@
 
 用户论坛使用不同于 AnkiWeb 的登录信息，如果是第一次使用，请在那里创建一个账户。
 
-## Anki 桌面版（电脑版本）和 AnkiWeb
+## Anki Desktop（电脑版本）和 AnkiWeb
 
 阅读上述部分后，请在[用户论坛](https://forums.ankiweb.net)上发帖寻求帮助。
 

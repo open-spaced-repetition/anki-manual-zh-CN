@@ -1,5 +1,7 @@
 # 与 AnkiWeb 同步
 
+> 原文：[Syncing with AnkiWeb - Anki Manual](https://docs.ankiweb.net/syncing.html)
+
 <!-- toc -->
 
 AnkiWeb 是一项服务，允许你在多个设备上保持你的集合同步，并在线学习。请在按照以下步骤操作之前注册一
@@ -8,7 +10,7 @@ AnkiWeb 是一项服务，允许你在多个设备上保持你的集合同步，
 ## 入门视频
 
 要快速了解同步，请查
-看[syncing intro videos](https://www.youtube.com/watch?v=YkiM4DPzSVc&list=PLGgmaKOIHykFoomqkBJAyGiDQ2kyiuTao&yt:cc=on)。
+看[同步介绍视频](https://www.youtube.com/watch?v=YkiM4DPzSVc&list=PLGgmaKOIHykFoomqkBJAyGiDQ2kyiuTao&yt:cc=on)。
 
 ## 设置
 
@@ -57,8 +59,8 @@ Anki 可能无法检测到 FAT32 文件系统上的媒体更改。
 
 相关视频：<https://www.youtube.com/watch?v=UEAcpfMQnjo>
 
-在正常情况下，复习和笔记编辑是可以合并的，因此如果你在同步前在两个不同设备上进行了复习或编辑，Anki
-将保留你在两个位置的更改。如果同一张卡片在两个不同位置被复习，两个复习都会在修订历史中标记，卡片将保
+在正常情况下，复习和笔记编辑是可以合并的，因此如果你在同步前在两个不同的设备上进行了复习或编辑，Anki
+将保留你在两个位置的更改。如果同一张卡片在两个不同位置被复习，两个复习都会在复习历史中标记，卡片将保
 持在最新被回答时的状态。
 
 有某些更改是 Anki 无法合并的。这些主要与笔记的格式有关：比如添加新字段或删除卡片模板。当你执行不能合

@@ -1,5 +1,7 @@
 # 管理文件和你的集合
 
+> 原文：[Managing Files - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/files.html)
+
 <!-- toc -->
 
 ## 检查你的集合
@@ -54,7 +56,7 @@ Anki，你的 Anki 文件会在 `Documents/Anki` 文件夹中。
 
 指定备用文件夹的语法如下：
 
-anki -b /path/to/anki/folder
+    anki -b /path/to/anki/folder
 
 - 如果你有多个配置文件，你可以传递 -p &lt;name&gt; 来加载一个特定的配置文件。
 - 如果你传递 -p some-fake-name，Anki 将在启动时显示配置文件屏幕。如果没有提供配置文件，将加载最后使
@@ -65,7 +67,7 @@ anki -b /path/to/anki/folder
 如果你总是想使用自定义文件夹位置，你可以修改 Anki 的快捷方式。在 Windows 上，右键点击快捷方式，选择
 属性，选择快捷方式选项卡，然后在程序路径后添加 "-b \\path\\to\\data\\folder"，这样应该会给你类似于
 
-"C:\Program Files\Anki\anki.exe" -b "C:\AnkiDataFolder"
+    "C:\Program Files\Anki\anki.exe" -b "C:\AnkiDataFolder"
 
 的结果。
 
@@ -75,25 +77,24 @@ anki -b /path/to/anki/folder
 
 在 Mac 上，没有简单的方法来在点击 Anki 图标时改变行为，但可以从终端启动 Anki 并使用自定义基文件夹：
 
-open /Applications/Anki.app --args -b ~/myankifolder
+    open /Applications/Anki.app --args -b ~/myankifolder
 
 另一种方法是定义环境变量 "ANKI_BASE"。在 Windows 上，你可以定义这个环境变量如下：
 
-set "ANKI_BASE=C:/path/to/AnkiDataFolder"
+    set "ANKI_BASE=C:/path/to/AnkiDataFolder"
 
 在 Linux 和 macOS 上，你可以使用：
 
-export ANKI_BASE="/path/to/AnkiDataFolder"
+    export ANKI_BASE="/path/to/AnkiDataFolder"
 
 ## DropBox 和文件同步
 
 我们不建议你直接使用第三方同步服务同步你的 Anki 文件夹，因为在文件使用中进行同步会导致数据库损坏。
 
-如果你只是想同步媒体，可以将外部文件夹链接到像 DropBox 这样的服务中。请参阅 [DropboxWiki: 同步
-Dropbox 以外的文件夹 (archive.org)][dropboxwiki-sync-other] 了解更多信息。
-
-[dropboxwiki-sync-other]:
-  http://web.archive.org/web/20180919153730/http://www.dropboxwiki.com/tips-and-tricks/sync-other-folders
+如果你只是想同步媒体，可以将外部文件夹链接到像 DropBox 这样的服务中。请参阅 [DropboxWiki：同步
+Dropbox 以外的文件夹
+(archive.org)][http://web.archive.org/web/20180919153730/http://www.dropboxwiki.com/tips-and-tricks/sync-other-folders]
+了解更多信息。
 
 如果你还希望保持集合同步，强烈建议你创建一个脚本，将文件从同步文件夹复制到本地文件夹，启动 Anki，然
 后在 Anki 关闭后将文件复制回去。这样可以确保文件在打开时不会被同步。
@@ -112,11 +113,11 @@ Dropbox 以外的文件夹 (archive.org)][dropboxwiki-sync-other] 了解更多�
 
 - 创建一个名为 G:\\anki.bat 的文本文件，包含以下文本：
 
-g:\anki\anki.exe -b g:\ankidata
+  g:\anki\anki.exe -b g:\ankidata
 
 如果你希望防止黑色命令提示窗口保持打开状态，你可以改用以下命令：
 
-start /b g:\anki\anki.exe -b g:\ankidata
+    start /b g:\anki\anki.exe -b g:\ankidata
 
 - 双击 anki.bat 应该会启动 Anki，并将用户数据存储在 G:\\ankidata 中。
 
@@ -170,13 +171,13 @@ Anki 使用一个防止程序和计算机崩溃的文件格式，但如果在 An
 
 打开终端，切换到集合所在的文件夹，并输入：
 
-sqlite3 collection.anki2 .dump > dump.txt
+    sqlite3 collection.anki2 .dump > dump.txt
 
 在文本编辑器中打开生成的 dump.txt 文件，查看最后一行。如果显示「rollback;」，将其更改为「commit;」。
 
 然后在终端中运行以下命令：
 
-cat dump.txt | sqlite3 temp.file
+    cat dump.txt | sqlite3 temp.file
 
 确保使用 temp.file - 不要在右侧放置 collection.anki2，否则将覆盖文件。完成后，继续进行最后一步。
 
@@ -187,17 +188,17 @@ cat dump.txt | sqlite3 temp.file
 如果你使用的是较新的 Windows，命令提示符可能不会在桌面上启动。如果在命令提示符中没有看到桌面，输入如
 下内容，将 "administrator" 替换为你的登录名。
 
-cd C:\Users\Administrator\Desktop
+    cd C:\Users\Administrator\Desktop
 
 然后输入：
 
-sqlite3 collection.anki2 .dump > dump.txt
+    sqlite3 collection.anki2 .dump > dump.txt
 
 在文本编辑器中打开生成的 dump.txt 文件，查看最后一行。如果显示「rollback;」，将其更改为「commit;」。
 
 然后在终端中运行以下命令：
 
-type dump.txt | sqlite3 temp.file
+    type dump.txt | sqlite3 temp.file
 
 确保使用 temp.file - 不要在右侧放置 collection.anki2，否则将覆盖文件。完成后，继续进行最后一步。
 

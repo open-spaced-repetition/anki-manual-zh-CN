@@ -1,5 +1,8 @@
 # 在 macOS 上安装和升级 Anki
 
+> 原
+> 文：[Install & Upgrade - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/platform/mac/installing.html)
+
 <!-- toc -->
 
 ## 要求

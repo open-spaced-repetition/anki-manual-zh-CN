@@ -1,5 +1,7 @@
 # 学习
 
+> 原文：[Studying - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/studying.html)
+
 <!-- toc -->
 
 当你找到了一个喜欢的牌组或者输入了一些笔记后，就可以开始学习了。

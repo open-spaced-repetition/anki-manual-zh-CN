@@ -1,11 +1,13 @@
 # 卡片信息、图表和统计
 
+> 原文：[Statistics - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/stats.html)
+
 <!-- toc -->
 
 ## 卡片信息
 
-你可以通过使用卡片&gt;信息菜单项，通过右键单击卡片然后选择 **信息**，或在复习界面按 <kbd>I</kbd> 来
-显示一张卡片的信息。
+你可以通过使用「卡片&gt;信息」菜单项，通过右键单击卡片然后选择**信息**，或在复习界面按 <kbd>I</kbd>
+来显示一张卡片的信息。
 
 ![卡片信息](media/card_info.png)
 

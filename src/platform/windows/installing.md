@@ -1,5 +1,8 @@
 # 在 Windows 上安装和升级 Anki
 
+> 原
+> 文：[Install & Upgrade - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/platform/windows/installing.html)
+
 <!-- toc -->
 
 ## 要求

@@ -1,5 +1,7 @@
 # 疑难解答
 
+> 原文：[Troubleshooting - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/troubleshooting.html)
+
 如果你在使用 Anki 的过程中遇到了问题，请按顺序尝试以下步骤：
 
 **1. 重启 Anki**
@@ -19,7 +21,7 @@
 
 **3. 检查 Anki 版本**
 
-你可以在 帮助>关于 Anki 或 Anki>关于 Anki 菜单中找到你的版本信息。如果你使用的版本不是发布在
+你可以在「帮助>关于 Anki」或「Anki>关于 Anki」菜单中找到你的版本信息。如果你使用的版本不是发布在
 <https://apps.ankiweb.net> 的最新版本，请关闭 Anki，安装最新版本，然后重新启动 Anki，查看问题是否消
 失。
 

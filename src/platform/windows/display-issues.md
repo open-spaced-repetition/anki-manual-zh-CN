@@ -1,5 +1,8 @@
 # Windows 显示问题
 
+> 原
+> 文：[Display Issues - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/platform/windows/display-issues.html)
+
 <!-- toc -->
 
 在 Windows 上，有三种内容显示在屏幕上的方式。默认是 _software_，它比较慢， 但兼容性最强。另有两种更

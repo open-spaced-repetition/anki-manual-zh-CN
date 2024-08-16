@@ -1,5 +1,7 @@
 # 插件
 
+> 原文：[Add-ons - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/addons.html)
+
 Anki 的功能可以通过插件进行扩展。插件可以提供诸如额外支持特定语言、额外排程控制等功能。
 
 要浏览可用插件的列表，请选择 `工具` → `插件`，然后点击 `获取插件`。或者，在网络浏览器中打开

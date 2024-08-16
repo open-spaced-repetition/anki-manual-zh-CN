@@ -1,5 +1,7 @@
 # 导出
 
+> 原文：[Exporting - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/exporting.html)
+
 <!-- toc -->
 
 导出功能允许你将集合的一部分保存为文本文件或打包的 Anki 牌组。要导出，请点击「文件」菜单并选择「导

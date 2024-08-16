@@ -1,5 +1,7 @@
 # 自托管同步服务器
 
+> 原文：[Sync Server - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/sync-server.html)
+
 不愿意或无法使用 AnkiWeb 的高级用户可以选择使用自托管同步服务器。
 
 需要注意的事项：

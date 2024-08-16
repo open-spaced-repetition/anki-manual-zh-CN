@@ -1,5 +1,7 @@
 # 文本文件
 
+> 原文：[Text Files - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/importing/text-files.html)
+
 <!-- toc -->
 
 任何包含以逗号、分号或制表符分隔字段的**纯文本**文件都可以导入到 Anki，前提是满足一些条件。

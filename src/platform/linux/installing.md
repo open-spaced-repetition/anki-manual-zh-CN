@@ -1,5 +1,8 @@
 # 在 Linux 上安装和升级 Anki
 
+> 原
+> 文：[Install & Upgrade - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/platform/linux/installing.html)
+
 <!-- toc -->
 
 ## 要求

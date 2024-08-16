@@ -1,5 +1,7 @@
 # 浏览
 
+> 原文：[Browsing - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/browsing.html)
+
 <!-- toc -->
 
 浏览窗口允许你搜索并编辑卡片和笔记。它可以通过点击主窗口中的「浏览」按钮，或按下 <kbd>B</kbd> 键来打
@@ -207,7 +209,7 @@ Anki 应在哪里查找要替换的文本：笔记的标签中（需要 Anki 2.1
 
 正则表达式选项允许你进行复杂的替换。例如，假设字段中有以下文本：
 
-<img src="pic.jpg" />
+    <img src="pic.jpg" />
 
 我们使用以下设置：
 
@@ -217,7 +219,7 @@ Anki 应在哪里查找要替换的文本：笔记的标签中（需要 Anki 2.1
 
 然后，假定的字段内容将更改为：
 
-pic.jpg
+    pic.jpg
 
 有关正则表达式的详细讨论超出了本文档的范围。网上有许多语法指南：
 
@@ -236,11 +238,11 @@ pic.jpg
 **可选筛选器**文本框允许你缩小 Anki 的重复检查范围。如果你只想在「French Vocab」和「French Verbs」笔
 记类型中查找重复项，你可以输入：
 
-"note:french vocab" 或 "note:french verbs"
+    "note:french vocab" or "note:french verbs"
 
 或者你可能只想在特定牌组中查找重复项，因此你可以使用：
 
-"deck:myDeck"
+    "deck:myDeck"
 
 搜索语法和在浏览器中搜索时使用的语法相同。更多信息，请参见[搜索](searching.md)。
 

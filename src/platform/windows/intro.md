@@ -1,5 +1,7 @@
 # Windows
 
+> 原文：[Windows - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/platform/windows/intro.html)
+
 ## 在 Windows 上安装和升级 Anki
 
 关于如何在 Windows 上安装或升级 Anki 的说明，请参见：

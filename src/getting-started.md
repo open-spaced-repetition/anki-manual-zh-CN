@@ -1,5 +1,7 @@
 # 入门
 
+> 原文：[Getting Started - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/getting-started.html)
+
 <!-- toc -->
 
 ## 安装与升级

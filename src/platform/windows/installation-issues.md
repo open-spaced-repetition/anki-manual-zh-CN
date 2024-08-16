@@ -1,5 +1,8 @@
 # Windows 安装问题
 
+> 原
+> 文：[Installation Issues - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/platform/windows/installation-issues.html)
+
 安装 Anki 时可能遇到的一些错误信息：
 
 <!-- toc -->

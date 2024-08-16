@@ -1,5 +1,7 @@
 # 数学和符号
 
+> 原文：[Math & Symbols - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/math.html)
+
 <!-- toc -->
 
 ## MathJax
@@ -71,7 +73,7 @@ Anki 的 LaTeX 支持并非即插即用：假定你已经知道如何使用 LaTe
 在 macOS 上，仅在 MacTeX 和 BasicTeX 上测试过 LaTeX。如果你使用 BasicTeX，需要单独安装 dvipng，使用
 以下命令：
 
-sudo tlmgr update --self; sudo tlmgr install dvipng
+    sudo tlmgr update --self; sudo tlmgr install dvipng
 
 该命令可能不在路径上，所以你可能需要提供完整路径，例如
 /usr/local/texlive/2014basic/bin/x86_64-darwin/tlmgr。
@@ -202,7 +204,8 @@ chemtex 示例文件：
 
 将其更改为以下内容，将不太可能发生 LaTeX 冲突：
 
-    {{=<% %>=}} <%latex field%>
+    {{=<% %>=}}
+    <%latex field%>
 
 ### 挖空冲突
 

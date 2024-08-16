@@ -1,5 +1,8 @@
 # 文字大小
 
+> 原
+> 文：[Text Size - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/platform/windows/text-size.html)
+
 如果你发现文字大小不合适，可以尝试以下两个环境变量：
 
 - ANKI_NOHIGHDPI=1 会关闭部分 Qt 的高 DPI 支持

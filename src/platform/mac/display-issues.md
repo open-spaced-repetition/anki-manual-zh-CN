@@ -1,5 +1,8 @@
 # macOS 上的显示问题
 
+> 原
+> 文：[Display Issues - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/platform/mac/display-issues.html)
+
 <!-- toc -->
 
 ## Qt6 视频驱动

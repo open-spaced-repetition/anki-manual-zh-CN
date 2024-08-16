@@ -1,12 +1,15 @@
 # 字段替换
 
+> 原
+> 文：[Field Replacements - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/templates/fields.html)
+
 <!-- toc -->
 
 ## 基础替换
 
 最基本的模板看起来是这样的：
 
-{{Front}}
+    {{Front}}
 
 当你把文本放在大括号内时，Anki 会寻找该名称对应的字段，并用字段的实际内容替换文本。
 
@@ -15,15 +18,15 @@
 你的模板不是仅限于列出字段。你还可以在模板中包含任意文本。例如，如果你在学习首都城市，并且你创建了一
 个包含「国家」字段的笔记模板，你可能会创建一个前面这样的模板：
 
-What's the capital city of {{Country}}?
+    What's the capital city of {{Country}}?
 
 默认的背面模板会看起来是这样的：
 
-{{FrontSide}}
+    {{FrontSide}}
 
-<hr id=answer>
+    <hr id=answer>
 
-{{Back}}
+    {{Back}}
 
 这意味着「先显示正面的文本，然后是一条分隔线，再然后是背面字段」。
 
@@ -35,23 +38,24 @@ HTML 元素，如段落或 div。
 
 卡片模板就像网页，这意味着需要一个特殊的命令才能创建换行。例如，如果你在模板中写下如下内容：
 
-one two
+    one
+    two
 
 在预览中，你实际会看到：
 
-one two
+    one two
 
 要添加换行，你需要在行末添加 &lt;br&gt; 代码，如下所示：
 
-one<br>  
-two
+    one<br>
+    two
 
 br 代码代表「(line) br(eak)」。
 
 同样适用于字段。如果你想显示两个字段，每个字段在一行：
 
-{{Field 1}}<br>  
-{{Field 2}}
+    {{Field 1}}<br>
+    {{Field 2}}
 
 ## 单个字段的文字转语音
 
@@ -59,24 +63,24 @@ br 代码代表「(line) br(eak)」。
 
 要让 Anki 以美式英语发音朗读 Front 字段，你可以在卡片模板中这样写：
 
-{{tts en_US:Front}}
+    {{tts en_US:Front}}
 
 在 Windows、macOS 和 iOS 上，Anki 会使用操作系统自带的语音。在 Linux 上，默认没有语音，但可以通过安
 装插件提供，例如 [此插件](https://ankiweb.net/shared/info/391644525)。
 
 若要查看所有可用语言/语音的列表，可以在卡片模板中放置以下内容：
 
-{{tts-voices:}}
+    {{tts-voices:}}
 
 如果有多种语音支持你选择的语言，你可以在列表中指定想要的语音，Anki 将选择第一个可用的语音。例如：
 
-{{tts ja_JP voices=Apple_Otoya,Microsoft_Haruka:Field}}
+    {{tts ja_JP voices=Apple_Otoya,Microsoft_Haruka:Field}}
 
 这样在 Apple 设备上使用 Otoya，在 Windows PC 上使用 Haruka。
 
 在某些 TTS 实现中可以指定不同的速度：
 
-{{tts fr_FR speed=0.8:SomeField}}
+    {{tts fr_FR speed=0.8:SomeField}}
 
 速度和语音都是可选的，但必须包含语言。
 
@@ -97,7 +101,7 @@ br 代码代表「(line) br(eak)」。
 
 在完形填空笔记模板中，你可以使用 `cloze-only` 筛选器来让 Anki 只朗读隐藏部分，如下所示：
 
-{{tts en_US:cloze-only:Text}}
+    {{tts en_US:cloze-only:Text}}
 
 cloze-only 筛选器在 Anki 2.1.29+、AnkiMobile 2.0.65+ 及 AnkiDroid 2.17+ 上受支持。
 
@@ -117,19 +121,19 @@ This is other text on the template. It is outside of the tags so it should not b
 
 你可以在模板中包含一些特殊字段：
 
-笔记的标签：{{Tags}}
+    笔记的标签：{{Tags}}
 
-笔记的类型：{{Type}}
+    笔记的类型：{{Type}}
 
-卡片的牌组：{{Deck}}
+    卡片的牌组：{{Deck}}
 
-卡片的子牌组：{{Subdeck}}
+    卡片的子牌组：{{Subdeck}}
 
-卡片的旗标：{{CardFlag}}
+    卡片的旗标：{{CardFlag}}
 
-卡片的模板（「正向」等）：{{Card}}
+    卡片的模板（「正向」等）：{{Card}}
 
-前模板的内容（仅在背面模板中有效）：{{FrontSide}}
+    前模板的内容（仅在背面模板中有效）：{{FrontSide}}
 
 FrontSide 不会自动播放卡片正面的任何音频。如果你希望在卡片的正反两面自动播放相同音频，你需要手动在背
 面也包含音频字段。
@@ -148,7 +152,7 @@ FrontSide 不会自动播放卡片正面的任何音频。如果你希望在卡�
 假设你创建了一个名为 MyField 的字段，你可以告诉 Anki 将其包含在卡片上但默认隐藏，通过在模板中添加以
 下内容：
 
-{{hint:MyField}}
+    {{hint:MyField}}
 
 这将显示一个标记为「显示提示」的链接；当你点击它时，字段的内容将在卡片上显示。（如果 MyField 为空，
 则不会显示任何内容。）
@@ -160,22 +164,26 @@ FrontSide 不会自动播放卡片正面的任何音频。如果你希望在卡�
 
 如果你希望自定义外观或行为，你需要自己实现提示字段。我们无法为此提供支持，但以下代码应可作为起步：
 
-{{#Back}} ﻿<a class=hint href="#"
-onclick="this.style.display='none';document.getElementById('hint4753594160').style.display='inline-block';return false;"> 显
-示背面</a><div id="hint4753594160" class=hint style="display: none">{{Back}}</div> {{/Back}}
+```
+{{#Back}}
+﻿<a class=hint href="#"
+onclick="this.style.display='none';document.getElementById('hint4753594160').style.display='inline-block';return false;">
+Show Back</a><div id="hint4753594160" class=hint style="display: none">{{Back}}</div>
+{{/Back}}
+```
 
 ## 字典链接
 
 你还可以使用字段替换来创建字典链接。假设你正在学习一门语言，而你喜欢的在线字典允许你通过 URL 搜索文
 本，例如：
 
-http://example.com/search?q=myword
+    http://example.com/search?q=myword
 
 你可以通过在模板中这样做来添加自动链接：
 
-{{Expression}}
+    {{Expression}}
 
-<a href="http://example.com/search?q={{Expression}}">在字典中查询</a>
+    <a href="http://example.com/search?q={{Expression}}">在字典中查询</a>
 
 上面的模板允许你在复习时通过单击链接来搜索每个笔记的表达。然而这里有一个问题，因此请查看下一部分。
 
@@ -187,20 +195,20 @@ http://example.com/search?q=myword
 
 这可能会对字典链接等事情造成问题。在上面的示例中，字典链接最终会是：
 
-<a href="http://example.com/search?q=<b>myword</b>">在字典中查询</a>
+    <a href="http://example.com/search?q=<b>myword</b>">在字典中查询</a>
 
 链接中的额外字符可能会让字典网站感到困惑，从而可能无法匹配到任何内容。
 
 为了解决这个问题，Anki 提供了在字段替换时剥离格式的能力。如果你在字段名称前加上 `text:`，Anki 将不包
 括任何格式。因此，即使使用格式化文本，字典链接也可以正常工作：
 
-<a href="http://example.com/search?q={{text:Expression}}">在字典中查询</a>
+    <a href="http://example.com/search?q={{text:Expression}}">在字典中查询</a>
 
 ## 从右到左文本
 
 如果你使用的语言是从右到左书写的，你需要像这样调整模板：
 
-<div dir=rtl>{{FieldThatHasRTLTextInIt}}</div>
+    <div dir=rtl>{{FieldThatHasRTLTextInIt}}</div>
 
 ## 注音字符
 
@@ -215,7 +223,7 @@ http://example.com/search?q=myword
 假设上面的文本写在 MyField 中。默认情况下，如果你只是使用 `{{Myfield}}`，字段将以原样显示。要正确地
 将注音字符放置在文本上方，请在模板中使用 `furigana` 筛选器，如下所示：
 
-{{furigana:MyField}}
+    {{furigana:MyField}}
 
 以下是一些示例：
 
@@ -258,8 +266,6 @@ Anki 不会扫描模板中的媒体引用，因为这样做很慢。这对在模
 
 2. 在你的正面或背面模板中添加对媒体的引用，如下：
 
-<!-- -->
-
 <img src="_logo.jpg">
 
 ### 字段引用
@@ -283,18 +289,18 @@ Anki 不会扫描模板中的媒体引用，因为这样做很慢。这对在模
 检查答案的最简单方法是在卡片添加屏幕的左上角单击「Basic」，然后选择「Basic (type in the answer)」。
 如果你已经下载了一个共享牌组，并希望在其中输入答案，你可以修改它的卡片模板。如果它有一个模板像这样：
 
-{{Native Word}}
+    {{Native Word}}
 
-{{FrontSide}}
+    {{FrontSide}}
 
-<hr id=answer>
+    <hr id=answer>
 
-{{Foreign Word}}
+    {{Foreign Word}}
 
 要输入外语单词并检查是否正确，你需要编辑前面的模板，使其看起来像这样：
 
-{{Native Word}}  
-{{type:Foreign Word}}
+    {{Native Word}}
+    {{type:Foreign Word}}
 
 注意，我们在想要比较的字段前添加了 `type:`。由于 FrontSide 在卡片的背面，输入答案框也会出现在背面。
 
@@ -336,11 +342,9 @@ code#typeans {
 
 还可以为填空删除卡片输入答案。为此，请在前后模板中添加 `{{type:cloze:Text}}`，这样背面看起来像这样：
 
-```text
-{{cloze:Text}}
-{{type:cloze:Text}}
-{{Extra}}
-```
+    {{cloze:Text}}
+    {{type:cloze:Text}}
+    {{Extra}}
 
 注意，由于填空类型不使用 FrontSide，这必须添加到填空笔记模板的两边。
 

@@ -1,5 +1,8 @@
 ## 在 Linux 上的显示问题
 
+> 原
+> 文：[Display Issues - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/platform/linux/display-issues.html)
+
 ### Qt5
 
 硬件加速默认是关闭的。在偏好设置屏幕中启用它并重启 Anki 可能会让 Anki 的界面响应更加灵敏，但有些用户

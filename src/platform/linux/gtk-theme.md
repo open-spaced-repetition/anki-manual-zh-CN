@@ -1,5 +1,8 @@
 # Anki 在 Gnome/Linux 上未应用 GTK 主题
 
+> 原
+> 文：[Incorrect GTK Theme - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/platform/linux/gtk-theme.html)
+
 你可以通过明确告诉 Anki GTK 主题是什么来解决这个问题。在终端中运行以下命令：
 
 ```shell
