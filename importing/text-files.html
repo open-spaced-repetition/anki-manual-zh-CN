@@ -157,7 +157,7 @@
 <li><a href="#%E9%87%8D%E5%A4%8D%E5%92%8C%E6%9B%B4%E6%96%B0">重复和更新</a></li>
 <li><a href="#%E6%96%87%E4%BB%B6%E6%A0%87%E9%A2%98">文件标题</a>
 <ul>
-<li><a href="#%E7%AC%94%E8%AE%B0%E7%B1%BB%E5%9E%8B%E5%88%97">笔记类型列</a></li>
+<li><a href="#%E7%AC%94%E8%AE%B0%E6%A8%A1%E6%9D%BF%E5%88%97">笔记模板列</a></li>
 <li><a href="#%E7%89%8C%E7%BB%84%E5%88%97">牌组列</a></li>
 <li><a href="#guid-%E5%88%97">GUID 列</a></li>
 </ul>
@@ -258,7 +258,7 @@ LibreOffice 电子表格程序而不是 Excel 来编辑文件是最简单的方�
 <p>批量导入大量媒体的另一种选择是使用<a href="https://ankiweb.net/shared/info/129299120">媒体导入插件</a>。此插件
 会自动为你选择的文件夹中的所有文件创建笔记，文件名前部内容（去掉文件扩展名后，如 apple.jpg，则前部为
 &quot;apple&quot;）位于正面，图片或音频在背面。如果你希望媒体和文件名的安排不同，之后可
-以<a href="../browsing.html">更改创建的卡片的笔记类型</a>。</p>
+以<a href="../browsing.html">更改创建的卡片的笔记模板</a>。</p>
 <h2 id="添加标签"><a class="header" href="#添加标签">添加标签</a></h2>
 <p>如果你想为导入的每一行添加「tag1」和「tag2」，请在文本文件的开头添加以下内容：</p>
 <pre><code>tags:tag1 tag2
@@ -268,7 +268,7 @@ LibreOffice 电子表格程序而不是 Excel 来编辑文件是最简单的方�
 与集合中的现有笔记匹配，并且该笔记的类型与导入类型相同，则现有笔记的其他字段将根据导入文件的内容进行
 更新。导入屏幕中的下拉框允许你更改此行为，可以完全忽略重复，或将它们作为新笔记导入而非更新现有笔记。</p>
 <p>「匹配范围」设置控制如何识别重复。当选择「notetype」时，如果另一条笔记具有相同的 notetype 且第一个字
-段相同，Anki 将识别为重复。当设置为「笔记类型和牌组」时，只有在现有笔记也在你要导入的牌组中时才会标
+段相同，Anki 将识别为重复。当设置为「笔记模板和牌组」时，只有在现有笔记也在你要导入的牌组中时才会标
 记为重复。</p>
 <p>如果你开启了更新并且已在集合中存在你导入的笔记的旧版本，它们将更新就地（在当前牌组中），而不是移动到
 你在导入对话框中设置的牌组中。如果笔记进行原位更新，它们的卡片上的现有安排信息将被保留。</p>
@@ -285,20 +285,20 @@ Anki 客户端将只会忽略它们。</p>
 <tr><td><code>html</code></td><td><code>true</code>, <code>false</code></td><td>确定文件是否被视为 HTML。</td></tr>
 <tr><td><code>tags</code></td><td>用空格分隔的标签列表</td><td>同<a href="#%E6%B7%BB%E5%8A%A0%E6%A0%87%E7%AD%BE">旧语法</a>。</td></tr>
 <tr><td><code>columns</code></td><td>用先前设置的分隔符分隔的名称列表</td><td>确定列数并在导入时显示其给定名称。</td></tr>
-<tr><td><code>notetype</code></td><td>笔记类型名称或 id</td><td>如果存在，则预设笔记类型。</td></tr>
+<tr><td><code>notetype</code></td><td>笔记模板名称或 id</td><td>如果存在，则预设笔记模板。</td></tr>
 <tr><td><code>deck</code></td><td>牌组名称或 id</td><td>如果存在，则预设牌组。</td></tr>
-<tr><td><code>notetype column</code></td><td><code>1</code>, <code>2</code>, <code>3</code>, ...</td><td>确定哪一列包含每个笔记的笔记类型名称或 id，见<a href="#%E7%AC%94%E8%AE%B0%E7%B1%BB%E5%9E%8B%E5%88%97">笔记类型列</a>。</td></tr>
+<tr><td><code>notetype column</code></td><td><code>1</code>, <code>2</code>, <code>3</code>, ...</td><td>确定哪一列包含每个笔记的笔记模板名称或 id，见<a href="#%E7%AC%94%E8%AE%B0%E6%A8%A1%E6%9D%BF%E5%88%97">笔记模板列</a>。</td></tr>
 <tr><td><code>deck column</code></td><td><code>1</code>, <code>2</code>, <code>3</code>, ...</td><td>确定哪一列包含每个笔记的牌组名称或 id，见<a href="#%E7%89%8C%E7%BB%84%E5%88%97">牌组列</a>。</td></tr>
 <tr><td><code>tags column</code></td><td><code>1</code>, <code>2</code>, <code>3</code>, ...</td><td>确定哪一列包含每个笔记的标签。</td></tr>
 <tr><td><code>guid column</code></td><td><code>1</code>, <code>2</code>, <code>3</code>, ...</td><td>确定哪一列包含每个笔记的 GUID，见<a href="#guid-%E5%88%97">GUID 列</a>。</td></tr>
 </tbody></table>
 </div>
 <p>一些标题有进一步的影响。</p>
-<h3 id="笔记类型列"><a class="header" href="#笔记类型列">笔记类型列</a></h3>
-<p>通常，文件中的所有笔记都会映射到单一笔记类型，你可以选择哪个列映射到该笔记类型的哪个字段。</p>
-<p>然而，如果有一列包含笔记类型名称或 id 时，这就会发生变化。这允许导入不同笔记类型的笔记，其字段将隐含
-映射：第一个常规列用于任何笔记的第一个字段，无论其笔记类型是什么，第二个常规列用于第二个字段，依此类
-推。这里所说的「常规列」是指不包含特殊信息的列，比如牌组、标签、笔记类型或 GUID。</p>
+<h3 id="笔记模板列"><a class="header" href="#笔记模板列">笔记模板列</a></h3>
+<p>通常，文件中的所有笔记都会映射到单一笔记模板，你可以选择哪个列映射到该笔记模板的哪个字段。</p>
+<p>然而，如果有一列包含笔记模板名称或 id 时，这就会发生变化。这允许导入不同笔记模板的笔记，其字段将隐含
+映射：第一个常规列用于任何笔记的第一个字段，无论其笔记模板是什么，第二个常规列用于第二个字段，依此类
+推。这里所说的「常规列」是指不包含特殊信息的列，比如牌组、标签、笔记模板或 GUID。</p>
 <h3 id="牌组列"><a class="header" href="#牌组列">牌组列</a></h3>
 <p>通常，导入文本文件产生的任何新卡片都会放置在你选择的单一牌组中。如果文件中包含牌组列，则新笔记的卡片
 将放置在其指定的牌组中。如果牌组不存在，将创建一个具有给定名称的牌组。</p>

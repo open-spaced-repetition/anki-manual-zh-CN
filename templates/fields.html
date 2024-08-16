@@ -177,7 +177,7 @@
 <p>当你把文本放在大括号内时，Anki 会寻找该名称对应的字段，并用字段的实际内容替换文本。</p>
 <p>字段名称区分大小写。如果你有一个名为 <code>Front</code> 的字段，写成 <code>{{front}}</code> 是无法正常工作的。</p>
 <p>你的模板不是仅限于列出字段。你还可以在模板中包含任意文本。例如，如果你在学习首都城市，并且你创建了一
-个包含「国家」字段的笔记类型，你可能会创建一个前面这样的模板：</p>
+个包含「国家」字段的笔记模板，你可能会创建一个前面这样的模板：</p>
 <p>What's the capital city of {{Country}}?</p>
 <p>默认的背面模板会看起来是这样的：</p>
 <p>{{FrontSide}}</p>
@@ -231,7 +231,7 @@ two</p>
 <p>某些语音听起来会比其他更好，请试验以选择你喜欢的。需注意 Siri 语音仅能用于 Apple 应用程序。安装新语
 音后，你需要重启 Anki 以便新语音可用。</p>
 <p>在 Windows 上，有些像 Cortana 的语音无法选择，因为 Microsoft 不允许其他应用程序使用这些语音。</p>
-<p>在完形填空笔记类型中，你可以使用 <code>cloze-only</code> 筛选器来让 Anki 只朗读隐藏部分，如下所示：</p>
+<p>在完形填空笔记模板中，你可以使用 <code>cloze-only</code> 筛选器来让 Anki 只朗读隐藏部分，如下所示：</p>
 <p>{{tts en_US:cloze-only:Text}}</p>
 <p>cloze-only 筛选器在 Anki 2.1.29+、AnkiMobile 2.0.65+ 及 AnkiDroid 2.17+ 上受支持。</p>
 <h2 id="对多个字段和静态文本的文字转语音"><a class="header" href="#对多个字段和静态文本的文字转语音">对多个字段和静态文本的文字转语音</a></h2>
@@ -248,7 +248,7 @@ This is other text on the template. It is outside of the tags so it should not b
 <p>卡片的牌组：{{Deck}}</p>
 <p>卡片的子牌组：{{Subdeck}}</p>
 <p>卡片的旗标：{{CardFlag}}</p>
-<p>卡片的类型（「正向」等）：{{Card}}</p>
+<p>卡片的模板（「正向」等）：{{Card}}</p>
 <p>前模板的内容（仅在背面模板中有效）：{{FrontSide}}</p>
 <p>FrontSide 不会自动播放卡片正面的任何音频。如果你希望在卡片的正反两面自动播放相同音频，你需要手动在背
 面也包含音频字段。</p>
@@ -391,7 +391,7 @@ onclick="this.style.display='none';document.getElementById('hint4753594160').sty
 {{type:cloze:Text}}
 {{Extra}}
 </code></pre>
-<p>注意，由于填空类型不使用 FrontSide，这必须添加到填空笔记类型的两边。</p>
+<p>注意，由于填空类型不使用 FrontSide，这必须添加到填空笔记模板的两边。</p>
 <p>如果有多个部分被省略，你可以在文本框中用逗号分隔答案。</p>
 <p>在浏览器中的「<a href="intro.html">预览」对话框</a>中不会显示输入答案框。当你复习或在卡片类型窗口中查看预览时，它
 们将显示。</p>
