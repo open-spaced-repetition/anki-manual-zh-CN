@@ -95,7 +95,7 @@ sudo tlmgr update --self; sudo tlmgr install dvipng
 
 例如，在 Anki 闪卡正面输入以下内容：
 
-Does [latex]\begin{math}\sum\_{k = 1}^{\infty}\frac{1}{k}\end{math}[/latex] converge?
+    [latex]\begin{math}\sum\_{k = 1}^{\infty}\frac{1}{k}\end{math}[/latex] 收敛吗？
 
 当查看闪卡时，将会生成：
 
@@ -103,37 +103,37 @@ Does [latex]\begin{math}\sum\_{k = 1}^{\infty}\frac{1}{k}\end{math}[/latex] conv
 
 上例中的公式称为文本公式，因为它直接显示在非数学文本中。相对地，以下示例显示的是显示公式：
 
-Does the sum below converge?
+    下面这个求和是否收敛？
 
-[latex]\begin{displaymath}\sum\_{k = 1}^{\infty}\frac{1}{k}\end{displaymath}[/latex]
+    [latex]\begin{displaymath}\sum\_{k = 1}^{\infty}\frac{1}{k}\end{displaymath}[/latex]
 
 ![收敛性问题 2](math/convergence_question_2.png)
 
 『文本公式』和『显示公式』是最常见的 LaTeX 表达式类型，因此 Anki 为它们提供了缩略版本。形式为：
 
-[latex]\begin{math}...\end{math}[/latex]
+    [latex]\begin{math}...\end{math}[/latex]
 
 可以缩短为
 
-[$]...[/$]
+    [$]...[/$]
 
 形式为
 
-[latex]\begin{displaymath}...\end{displaymath}[/latex]
+    [latex]\begin{displaymath}...\end{displaymath}[/latex]
 
 可以缩短为
 
-[$$]...[/$$]
+    [$$]...[/$$]
 
 例如，之前展示的两个 LaTeX 代码片段相当于
 
-Does [$]\sum\_{k = 1}^{\infty}\frac{1}{k}[/$] converge?
+    [$]\sum\_{k = 1}^{\infty}\frac{1}{k}[/$] 收敛吗？
 
 和
 
-Does the sum below converge?
+    以下这个求和是否收敛？
 
-[$$]\sum\_{k = 1}^{\infty}\frac{1}{k}[/$$]
+    [$$]\sum\_{k = 1}^{\infty}\frac{1}{k}[/$$]
 
 分别地。
 
@@ -142,14 +142,23 @@ Does the sum below converge?
 Anki 允许你自定义 LaTeX 引言，以便你可以导入化学、音乐等的自定义包。例如，假设你在网上找到一个
 chemtex 示例文件：
 
-\documentclass[a4paper,12pt]{report} \usepackage{chemtex} \begin{document}
+    \documentclass[a4paper,12pt]{report}
+    \usepackage{chemtex}
+    \begin{document}
 
-\initial \begin{figure}[h]\centering \parbox{.3\textwidth}{\ethene{H}{H$_3$C}{CH$_3$}{Br}} \hfil
-\parbox{.3\textwidth}{\cbranch{H}{S}{H}{S}{C}{S}{}{S}{H} \xi=-200 \cright{}{Q}{C}{D}{O}{S}{OH}}
-\hfil \parbox{.3\textwidth}{\hetisix{Q}{Q}{Q}{Q}{Q}{Q}{O}{Q}{O} \xi=-171
-\fuseup{Q}{Q}{Q}{Q}{D}{Q}{D}{Q}{D}} \caption{Chemie mit {\tt CHEMTEX}\label{a1}} \end{figure}
+    \initial
+    \begin{figure}[h]\centering
+    \parbox{.3\textwidth}{\ethene{H}{H$_3$C}{CH$_3$}{Br}}
+    \hfil
+    \parbox{.3\textwidth}{\cbranch{H}{S}{H}{S}{C}{S}{}{S}{H}
+      \xi=-200 \cright{}{Q}{C}{D}{O}{S}{OH}}
+    \hfil
+    \parbox{.3\textwidth}{\hetisix{Q}{Q}{Q}{Q}{Q}{Q}{O}{Q}{O}
+      \xi=-171 \fuseup{Q}{Q}{Q}{Q}{D}{Q}{D}{Q}{D}}
+    \caption{Chemie mit {\tt CHEMTEX}\label{a1}}
+    \end{figure}
 
-\end{document}
+    \end{document}
 
 首先，按照包和 MiKTeX/MacTeX 的文档来安装包。为了检查包是否正常工作，你需要将上述代码放入 .latex 文
 件中，并测试能否在命令行中编译。一旦确认包可用且正常工作，就可以将其集成到 Anki 中。
@@ -157,17 +166,26 @@ chemtex 示例文件：
 要在 Anki 中使用该包，点击主窗口中的「添加」，然后点击笔记类型选择按钮。点击「管理」按钮，然后选择你
 计划使用的笔记类型并点击「选项」。显示出的 LaTeX 头部和尾部。头部看起来如下：
 
-\documentclass[12pt]{article} \special{papersize=3in,5in} \usepackage{amssymb,amsmath}
-\pagestyle{empty} \setlength{\parindent}{0in} \begin{document}
+    \documentclass[12pt]{article}
+    \special{papersize=3in,5in}
+    \usepackage{amssymb,amsmath}
+    \pagestyle{empty}
+    \setlength{\parindent}{0in}
+    \begin{document}
 
 要使用 chemtex，你需要添加早期示例中的 usepackage 行，使之看起来像：
 
-\documentclass[12pt]{article} \special{papersize=3in,5in} \usepackage{amssymb,amsmath}
-\usepackage{chemtex} \pagestyle{empty} \setlength{\parindent}{0in} \begin{document}
+    \documentclass[12pt]{article}
+    \special{papersize=3in,5in}
+    \usepackage{amssymb,amsmath}
+    \usepackage{chemtex}
+    \pagestyle{empty}
+    \setlength{\parindent}{0in}
+    \begin{document}
 
 之后，你应该能够在你的 Anki 卡片中包含如下行：
 
-[latex]\ethene{H}{H$_3$C}{CH$_3$}{Br}[/latex]
+    [latex]\ethene{H}{H$_3$C}{CH$_3$}{Br}[/latex]
 
 ### 模板冲突
 
@@ -182,33 +200,33 @@ chemtex 示例文件：
 
 例如，如果你有一个模板：
 
-{{latex field}}
+    {{latex field}}
 
 将其更改为以下内容，将不太可能发生 LaTeX 冲突：
 
-{{=<% %>=}} <%latex field%>
+    {{=<% %>=}} <%latex field%>
 
 ### 填空冲突
 
 填空删除用 `}}` 终止，这可能与你的 LaTeX 中出现的 `}}` 冲突。为了防止 LaTeX 被解释为一个关闭的填空标
 记，可以在不表示填空结束的任意双闭合大括号之间加一个空格，这样
 
-{{c1::[$]\frac{foo}{\frac{bar}{baz}}[/$] blah blah blah.}}
+    {{c1::[$]\frac{foo}{\frac{bar}{baz}}[/$] blah blah blah.}}
 
 将不起作用，但
 
-{{c1::[$]\frac{foo}{\frac{bar}{baz} }[/$] blah blah blah.}}
+    {{c1::[$]\frac{foo}{\frac{bar}{baz} }[/$] blah blah blah.}}
 
 将正常工作（并且 LaTeX 在数学模式中忽略空格，所以你的方程渲染相同）。如果你想避免在渲染文本中增加额
 外的空间（例如，当你制作编程语言学习用的填空卡片时），另一种选择是在 HTML 模式下编辑卡片时使用 HTML
 注释：
 
-{{c1::[$]\frac{foo}{\frac{bar}{baz}<!-- -->}[/$] blah blah blah.}}
+    {{c1::[$]\frac{foo}{\frac{bar}{baz}<!-- -->}[/$] blah blah blah.}}
 
 如果你需要在被填空删除的文本中使用 `::` 字符序列，可以使用任一制作法。以下笔记文本生成的第一张卡片将
-是『[type] in C++ is a type-safe union』：
+是 `[type] in C++ is a type-safe union`：
 
-{{c1::std:<!-- -->:variant::~type~}} in C++ is a {{c2::type-safe union}}
+    {{c1::std:<!-- -->:variant::~type~}} in C++ is a {{c2::type-safe union}}
 
 ### 不安全命令
 

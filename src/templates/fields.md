@@ -210,7 +210,7 @@ http://example.com/search?q=myword
 
 在 Anki 中，你可以使用以下语法来显示注音字符：
 
-Text[Ruby]
+    Text[Ruby]
 
 假设上面的文本写在 MyField 中。默认情况下，如果你只是使用 `{{Myfield}}`，字段将以原样显示。要正确地
 将注音字符放置在文本上方，请在模板中使用 `furigana` 过滤器，如下所示：
@@ -267,11 +267,11 @@ Anki 不会扫描模板中的媒体引用，因为这样做很慢。这对在模
 对字段的媒体引用不受支持。它们在复习期间可能显示，也可能不显示，并且在检查未使用的媒体、导入/导出等
 操作中将无法正常工作。无法正常工作的示例：
 
-<img src="{{Expression}}.jpg">
+    <img src="{{Expression}}.jpg">
 
-[sound:{{Word}}]
+    [sound:{{Word}}]
 
-[latex]{{Field 1}}[/latex]
+    [latex]{{Field 1}}[/latex]
 
 相反，你应该在字段中包含媒体引用。请查看[导入部分](../importing/text-files.md#importing-media) 以获
 取更多信息。

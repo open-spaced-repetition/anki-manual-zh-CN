@@ -1,4 +1,3 @@
-```markdown
 # 背景
 
 <!-- toc -->
@@ -93,4 +92,3 @@ Anki 的间隔重复系统基于 [SM-2](https://faqs.ankiweb.net/what-spaced-rep
 本的 SuperMemo 算法。最近，一个新算法
 [FSRS](https://docs.ankiweb.net/deck-options.html?highlight=FSRS#fsrs) 被集成为传统 SM-2 算法的替代
 选择。
-```
