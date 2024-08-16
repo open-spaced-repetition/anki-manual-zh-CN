@@ -1,0 +1,418 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>入门 - Anki 手册</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Anki 的用户手册。Anki 是一款让学习更容易的抽认卡程序。">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="css/misc.css">
+        <link rel="stylesheet" href="css/kbd.css">
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="intro.html">介绍</a></li><li class="chapter-item "><a href="background.html"><strong aria-hidden="true">1.</strong> 背景</a></li><li class="chapter-item "><a href="platform/intro.html"><strong aria-hidden="true">2.</strong> 平台说明</a></li><li class="chapter-item "><a href="platform/windows/intro.html"><strong aria-hidden="true">3.</strong> Windows</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/windows/installing.html"><strong aria-hidden="true">3.1.</strong> 安装与升级</a></li><li class="chapter-item "><a href="platform/windows/installation-issues.html"><strong aria-hidden="true">3.2.</strong> 安装问题</a></li><li class="chapter-item "><a href="platform/windows/startup-issues.html"><strong aria-hidden="true">3.3.</strong> 启动问题</a></li><li class="chapter-item "><a href="platform/windows/display-issues.html"><strong aria-hidden="true">3.4.</strong> 显示问题</a></li><li class="chapter-item "><a href="platform/windows/copy-and-paste.html"><strong aria-hidden="true">3.5.</strong> 复制和粘贴问题</a></li><li class="chapter-item "><a href="platform/windows/text-size.html"><strong aria-hidden="true">3.6.</strong> 文字大小</a></li><li class="chapter-item "><a href="platform/windows/permission-problems.html"><strong aria-hidden="true">3.7.</strong> 权限问题</a></li></ol></li><li class="chapter-item "><a href="platform/mac/intro.html"><strong aria-hidden="true">4.</strong> macOS</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/mac/installing.html"><strong aria-hidden="true">4.1.</strong> 安装与升级</a></li><li class="chapter-item "><a href="platform/mac/display-issues.html"><strong aria-hidden="true">4.2.</strong> 显示问题</a></li></ol></li><li class="chapter-item "><a href="platform/linux/intro.html"><strong aria-hidden="true">5.</strong> Linux</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/linux/installing.html"><strong aria-hidden="true">5.1.</strong> 安装与升级</a></li><li class="chapter-item "><a href="platform/linux/missing-libraries.html"><strong aria-hidden="true">5.2.</strong> 缺少的库</a></li><li class="chapter-item "><a href="platform/linux/display-issues.html"><strong aria-hidden="true">5.3.</strong> 显示问题</a></li><li class="chapter-item "><a href="platform/linux/blank-window.html"><strong aria-hidden="true">5.4.</strong> 空白主窗口</a></li><li class="chapter-item "><a href="platform/linux/distro-packages.html"><strong aria-hidden="true">5.5.</strong> Linux 发行版包</a></li><li class="chapter-item "><a href="platform/linux/gtk-theme.html"><strong aria-hidden="true">5.6.</strong> 错误的 GTK 主题</a></li><li class="chapter-item "><a href="platform/linux/wayland.html"><strong aria-hidden="true">5.7.</strong> Wayland</a></li><li class="chapter-item "><a href="platform/linux/input-methods.html"><strong aria-hidden="true">5.8.</strong> 输入法</a></li></ol></li><li class="chapter-item expanded "><a href="getting-started.html" class="active"><strong aria-hidden="true">6.</strong> 入门</a></li><li class="chapter-item "><a href="getting-help.html"><strong aria-hidden="true">7.</strong> 获取帮助</a></li><li class="chapter-item "><a href="studying.html"><strong aria-hidden="true">8.</strong> 学习</a></li><li class="chapter-item "><a href="editing.html"><strong aria-hidden="true">9.</strong> 添加/编辑</a></li><li class="chapter-item "><a href="templates/intro.html"><strong aria-hidden="true">10.</strong> 卡片模板</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="templates/fields.html"><strong aria-hidden="true">10.1.</strong> 字段替换</a></li><li class="chapter-item "><a href="templates/generation.html"><strong aria-hidden="true">10.2.</strong> 卡片生成</a></li><li class="chapter-item "><a href="templates/styling.html"><strong aria-hidden="true">10.3.</strong> 样式与 HTML</a></li><li class="chapter-item "><a href="templates/errors.html"><strong aria-hidden="true">10.4.</strong> 检查和错误</a></li></ol></li><li class="chapter-item "><a href="preferences.html"><strong aria-hidden="true">11.</strong> 偏好设置</a></li><li class="chapter-item "><a href="deck-options.html"><strong aria-hidden="true">12.</strong> 牌组选项</a></li><li class="chapter-item "><a href="syncing.html"><strong aria-hidden="true">13.</strong> 与 AnkiWeb 同步</a></li><li class="chapter-item "><a href="profiles.html"><strong aria-hidden="true">14.</strong> 用户档案</a></li><li class="chapter-item "><a href="browsing.html"><strong aria-hidden="true">15.</strong> 浏览</a></li><li class="chapter-item "><a href="filtered-decks.html"><strong aria-hidden="true">16.</strong> 过滤牌组</a></li><li class="chapter-item "><a href="searching.html"><strong aria-hidden="true">17.</strong> 搜索</a></li><li class="chapter-item "><a href="importing/intro.html"><strong aria-hidden="true">18.</strong> 导入</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="importing/text-files.html"><strong aria-hidden="true">18.1.</strong> 文本文件</a></li><li class="chapter-item "><a href="importing/packaged-decks.html"><strong aria-hidden="true">18.2.</strong> 打包的牌组</a></li></ol></li><li class="chapter-item "><a href="exporting.html"><strong aria-hidden="true">19.</strong> 导出</a></li><li class="chapter-item "><a href="backups.html"><strong aria-hidden="true">20.</strong> 备份</a></li><li class="chapter-item "><a href="files.html"><strong aria-hidden="true">21.</strong> 管理文件</a></li><li class="chapter-item "><a href="stats.html"><strong aria-hidden="true">22.</strong> 统计</a></li><li class="chapter-item "><a href="media.html"><strong aria-hidden="true">23.</strong> 媒体</a></li><li class="chapter-item "><a href="math.html"><strong aria-hidden="true">24.</strong> 数学与符号</a></li><li class="chapter-item "><a href="leeches.html"><strong aria-hidden="true">25.</strong> 吸血卡</a></li><li class="chapter-item "><a href="addons.html"><strong aria-hidden="true">26.</strong> 插件</a></li><li class="chapter-item "><a href="troubleshooting.html"><strong aria-hidden="true">27.</strong> 故障排除</a></li><li class="chapter-item "><a href="sync-server.html"><strong aria-hidden="true">28.</strong> 同步服务器</a></li><li class="chapter-item "><a href="misc.html"><strong aria-hidden="true">29.</strong> 其他</a></li><li class="chapter-item affix "><a href="contrib.html">贡献</a></li><li class="chapter-item affix "><a href="faqs.html">常见问题</a></li><li class="chapter-item affix "><a href="resources.html">资源</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Anki 手册</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/L-M-Sherlock/anki-manual-zh-CN" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="入门"><a class="header" href="#入门">入门</a></h1>
+<ul>
+<li><a href="#%E5%AE%89%E8%A3%85%E4%B8%8E%E5%8D%87%E7%BA%A7">安装与升级</a></li>
+<li><a href="#%E8%A7%86%E9%A2%91">视频</a></li>
+<li><a href="#%E5%85%B3%E9%94%AE%E6%A6%82%E5%BF%B5">关键概念</a>
+<ul>
+<li><a href="#%E5%8D%A1%E7%89%87">卡片</a>
+<ul>
+<li><a href="#%E5%8D%A1%E7%89%87%E7%9A%84%E7%B1%BB%E5%9E%8B">卡片的类型</a></li>
+</ul>
+</li>
+<li><a href="#%E7%89%8C%E7%BB%84">牌组</a></li>
+<li><a href="#%E7%AC%94%E8%AE%B0%E4%B8%8E%E5%AD%97%E6%AE%B5">笔记与字段</a></li>
+<li><a href="#%E5%8D%A1%E7%89%87%E7%B1%BB%E5%9E%8B">卡片类型</a></li>
+<li><a href="#%E7%AC%94%E8%AE%B0%E7%B1%BB%E5%9E%8B">笔记类型</a></li>
+<li><a href="#%E9%9B%86%E5%90%88">集合</a></li>
+</ul>
+</li>
+<li><a href="#%E5%85%B1%E4%BA%AB%E7%89%8C%E7%BB%84">共享牌组</a></li>
+</ul>
+<h2 id="安装与升级"><a class="header" href="#安装与升级">安装与升级</a></h2>
+<p>请查看适合您计算机的安装指南：</p>
+<ul>
+<li><a href="./platform/windows/installing.html">Windows</a></li>
+<li><a href="./platform/mac/installing.html">Mac</a></li>
+<li><a href="./platform/linux/installing.html">Linux</a></li>
+</ul>
+<h2 id="视频"><a class="header" href="#视频">视频</a></h2>
+<p>想快速了解 Anki，请查看这些简介视频。有些视频是用旧版 Anki 制作的，但概念相同。</p>
+<ul>
+<li>
+<p><a href="http://www.youtube.com/watch?v=QS2G-k2hQyg&amp;yt:cc=on">共享牌组与复习基础</a></p>
+</li>
+<li>
+<p><a href="https://www.youtube.com/watch?v=YkiM4DPzSVc&amp;list=PLGgmaKOIHykFoomqkBJAyGiDQ2kyiuTao&amp;yt:cc=on">同步</a></p>
+</li>
+<li>
+<p><a href="http://www.youtube.com/watch?v=DnbKwHEQ1mA&amp;yt:cc=on">切换卡片顺序</a></p>
+</li>
+<li>
+<p><a href="http://www.youtube.com/watch?v=F1j1Zx0mXME&amp;yt:cc=on">样式化卡片</a></p>
+</li>
+<li>
+<p><a href="http://www.youtube.com/watch?v=5tYObQ3ocrw&amp;yt:cc=on">输入答案</a></p>
+</li>
+</ul>
+<p>如果您所在国家无法访问 YouTube，可
+以<a href="https://apps.ankiweb.net/downloads/archive/screencasts/2.0/">下载视频</a>。</p>
+<h2 id="关键概念"><a class="header" href="#关键概念">关键概念</a></h2>
+<h3 id="卡片"><a class="header" href="#卡片">卡片</a></h3>
+<p>问答对被称为「卡片」。这基于纸质闪卡，一面是问题，另一面是答案。在 Anki 中，卡片并不是真正的卡片，当
+您显示答案时，默认情况下题目仍然可见。例如，如果您在学习基础化学，您可能会看到这样的问题：</p>
+<p>Q: 氧气的化学符号？</p>
+<p>考虑后，您认为答案是 O，点击显示答案按钮，Anki 会显示：</p>
+<p>Q: 氧气的化学符号？A: O</p>
+<p>确认答案正确后，您可以告诉 Anki 您记住的程度，然后 Anki 会决定下次何时再显示给您。</p>
+<h4 id="卡片的类型"><a class="header" href="#卡片的类型">卡片的类型</a></h4>
+<ul>
+<li>
+<p><strong>新卡片：</strong> 新卡片是您下载或输入的卡片，但从未学习过。</p>
+</li>
+<li>
+<p><strong>学习中：</strong> 最近第一次看到的卡片，尚在学习中。</p>
+</li>
+<li>
+<p><strong>复习：</strong> 之前学过，现在需要复习的卡片，防止遗忘。复习卡片有两种类型：</p>
+</li>
+<li>
+<p><strong>年轻卡片：</strong> 年轻卡片的间隔小于 21 天，但不在学习中。</p>
+</li>
+<li>
+<p><strong>成熟卡片：</strong> 成熟卡片的间隔为 21 天或更长。</p>
+</li>
+<li>
+<p><strong>重新学习：</strong> 复习模式下失败的卡片，返回学习模式以重新学习。</p>
+</li>
+</ul>
+<h3 id="牌组"><a class="header" href="#牌组">牌组</a></h3>
+<p>「牌组」是一组卡片。您可以将卡片放入不同的牌组中，以便部分学习您的卡片集合，而不是一次性学习所有内
+容。每个牌组可以有不同的设置，例如每天显示多少新卡片，或卡片再次显示的等待时间。</p>
+<p>牌组可以包含其他牌组，这使您可以将牌组组织成树状结构。Anki 使用「::」表示不同级别。名为
+「Chinese::Hanzi」的牌组指的是一个「汉字」牌组，是「中文」牌组的一部分。如果您选择「汉字」，那么只显
+示汉字卡片；如果您选择「中文」，那么包括汉字卡在内的所有中文卡片都会显示。</p>
+<p>要将牌组放入树中，您可以在每个级别之间用「::」命名，或者从牌组列表中拖放牌组。嵌套在另一个牌组下的牌
+组（即名称中至少有一个「::」）通常称为『子牌组』，顶级牌组有时称为『超级牌组』或『父牌组』。</p>
+<p>Anki 的起始牌组名为「默认」；任何与其他牌组分离的卡片都将进入这里。如果该默认牌组中没有卡片，且您已
+添加其他牌组，Anki 会隐藏该牌组。或者，您可以重命名此牌组，并将其用于其他卡片。</p>
+<p>牌组按字母顺序在牌组列表中显示。如果您的牌组包含数字，这可能导致出乎意料的顺序 - 例如，「我的牌组
+10」会在「我的牌组 9」之前，因为 1 在 9 之前。如果您希望对牌组编号，可以在单个数字前加一个「0」，例
+如「牌组 01」、「牌组 02」……「牌组 10」。</p>
+<p>牌组最好用于广泛类别的卡片，而不是像「食物动词」或「第一课」这样的特定主题。有关更多信息，请参阅
+<a href="editing.html#using-decks-appropriately">适当使用牌组</a> 部分。</p>
+<p>有关牌组如何影响卡片显示顺序的信息，请参阅 <a href="studying.html#display-order">显示顺序</a> 部分。</p>
+<h3 id="笔记与字段"><a class="header" href="#笔记与字段">笔记与字段</a></h3>
+<p>制作闪卡时，通常希望制作多个与某些信息相关的卡片。例如，如果您正在学习法语，并了解到单词「bonjour」
+意味着「你好」，您可能希望创建一张显示「bonjour」并要求您记住「你好」的卡片，以及另一张显示「你好」
+并要求您记住「bonjour」的卡片。一个卡片测试您识别外语单词的能力，另一个卡片测试您产生单词的能力。</p>
+<p>使用纸质闪卡时，您只有一种选择，即为每张卡片重复写信息。一些电脑闪卡程序通过提供翻转正面和背面的功能
+使生活更轻松。这比纸质情况有所改进，但存在两个主要缺点：</p>
+<ul>
+<li>
+<p>由于此类程序不会分别跟踪您对识别和生产的表现，卡片往往不会在最佳时机展示给您，这意味着比您期望的更
+容易忘记，或者学习的内容超过必要。</p>
+</li>
+<li>
+<p>反转问题和答案仅在您想在每一面上具有完全相同内容时有效。这意味着无法在每张卡片的反面显示额外信息，
+例如。</p>
+</li>
+</ul>
+<p>Anki 通过允许您将卡片的内容拆分为独立的信息片段来解决这些问题。然后，您可以告诉 Anki 您希望在每张卡
+片上显示哪些信息片段，Anki 将负责为您创建卡片，如果您以后有任何修改，它会相应更新卡片。</p>
+<p>假设我们想学习法语词汇，并希望在每张卡片的背面包含页码。我们希望我们的卡片看起来像这样：</p>
+<p>Q: Bonjour A: Hello 页码 #12</p>
+<p>以及：</p>
+<p>Q: Hello A: Bonjour 页码 #12</p>
+<p>在此示例中，我们有三个相关的信息：一个法语单词，一个英语含义和一个页码。如果我们将它们组合在一起，它
+们看起来像这样：</p>
+<p>法语：Bonjour英语：Hello页码：12</p>
+<p>在 Anki 中，这些相关的信息称为『笔记』，每个信息片段称为『字段』。因此，我们可以说这种类型的笔记有三
+个字段：法语，英语和页码。</p>
+<p>要添加和编辑字段，请在添加或编辑笔记时点击「字段…​」按钮。有关字段的更多信息，请参阅
+<a href="editing.html#customizing-fields">自定义字段</a> 部分。</p>
+<h3 id="卡片类型"><a class="header" href="#卡片类型">卡片类型</a></h3>
+<p>为了让 Anki 基于我们的笔记创建卡片，我们需要给它一份蓝图，说明每张卡片的正反面应显示哪些字段。此蓝图
+被称为『卡片类型』。每种类型的笔记可以有一个或多个卡片类型；当您添加笔记时，Anki 将为每个卡片类型创
+建一张卡片。</p>
+<p>每种卡片类型有两个『模板』，一个用于题目，一个用于答案。在前述的法语示例中，我们希望识别卡片看起来像
+这样：</p>
+<p>Q: Bonjour A: Hello 页码 #12</p>
+<p>为此，我们可以将题目和答案模板设置为：</p>
+<p>Q: {{法语}} A: {{英语}}<br> 页码 #{{页码}}</p>
+<p>通过将字段名称用双大括号括起来，我们告诉 Anki 用字段中的实际信息替换该部分。未用大括号括起来的内容在
+每张卡片上保持不变。（例如，在添加材料时，我们不必在页码字段中键入「页码 #」——它会自动添加到每张卡
+片。）&lt;br&gt; 是一个特殊的代码，告诉 Anki 换行；有关更多细节，请参阅 <a href="templates/intro.html">模板</a>
+部分。</p>
+<p>生成卡片模板的工作方式类似：</p>
+<p>Q: {{英语}} A: {{法语}}<br> 页码 #{{页码}}</p>
+<p>一旦创建了卡片类型，每次您添加新笔记时，都会基于该卡片类型创建一张卡片。卡片类型使得保持卡片格式一致
+变得容易，并且能大大减少添加信息所需的工作量。它们还意味着 Anki 可以确保相关卡片不会出现在离得太近的
+位置，并允许您一次性修正打字错误或事实错误，所有相关卡片都会同时更新。</p>
+<p>要添加和编辑卡片类型，请在添加或编辑笔记时点击「卡片…​」按钮。有关卡片类型的更多信息，请参阅
+<a href="templates/intro.html">卡片和模板</a> 部分。</p>
+<h3 id="笔记类型"><a class="header" href="#笔记类型">笔记类型</a></h3>
+<p>Anki 允许您为不同的材料创建不同类型的笔记。每种类型的笔记都有其自己的字段和卡片类型集。为每个广泛主
+题创建单独的笔记类型是个好主意。在前述法语示例中，我们可以为此创建一个名为「法语」的笔记类型。如果我
+们想学习首都，可以为此创建一个单独的笔记类型，字段如「国家」和「首都」等。</p>
+<p>当 Anki 检查重复项时，它只与同类型的其他笔记进行比较。因此，如果您使用首都笔记类型添加了一个名为
+「橙」的首都，在学习如何用法语说「橙」时不会出现重复消息。</p>
+<p>当您创建新的集合时，Anki 会自动添加一些标准的笔记类型。这些笔记类型便于新用户使用 Anki，但从长远来
+看，建议您为所学习的内容定义自己的笔记类型。标准笔记类型如下：</p>
+<ul>
+<li>
+<p><strong>基础</strong><br />
+具有前方和背面字段，并会创建一张卡片。您输入在前方的文本会出现在卡片前面，输入在背面的文本会出现在
+卡片背面。</p>
+</li>
+<li>
+<p><strong>基础（及反向卡片）</strong><br />
+如基础，但为您输入的文本创建两张卡片：一张从前→后，一张从后→前。</p>
+</li>
+<li>
+<p><strong>基础（可选反向卡片）</strong><br />
+这是一张从前→后的卡片，并可选从后→前卡片。为此，它有一个名为「添加反向」的第三个字段。如果您在该字
+段中输入任意文本，就会创建反向卡片。有关这方面的更多信息，请参阅<a href="templates/intro.html">卡片和模板</a>部
+分。</p>
+</li>
+<li>
+<p><strong>基础（输入答案）</strong><br />
+本质上是基础，前面有一个额外的文本框，您可以在其中输入答案，翻转到背面后会检查并与答案进行比较。更
+多信息请参阅<a href="templates/fields.html#checking-your-answer">检查答案</a>部分。</p>
+</li>
+<li>
+<p><strong>完形填空</strong><br />
+一种笔记类型，使得轻松选择文字并将其变成完形填空（如，「人类在[...]年登陆月球」→「人类在1969年登
+陆月球」）。更多信息请参阅<a href="editing.html#cloze-deletion">完形填空</a>部分。</p>
+</li>
+<li>
+<p><strong>图像遮掩</strong><br />
+类似于完形填空笔记类型，但适用于图像而非文字，这在研究重度依赖图像的材料时尤其有用，如解剖学、地理
+等。详细信息请参阅手册的<a href="editing.html#image-occlusion">图像遮掩</a>部分。</p>
+</li>
+</ul>
+<p>要添加您自己的笔记类型并修改现有的类型，可以从主 Anki 窗口中使用 工具 → 管理笔记类型。笔记和笔记类型
+是针对你整个集合的，而不是仅限于单个牌组。这意味着你可以在一个特定的牌组中使用许多不同类型的笔记，或
+者从一个特定的笔记中在不同的牌组中生成不同的卡片。当你使用添加窗口添加笔记时，你可以选择要使用的笔记
+类型和要使用的牌组，这些选择相互之间是完全独立的。你也可以在<a href="browsing.html">笔记创建后</a>更改某些笔记的
+类型。</p>
+<h3 id="集合"><a class="header" href="#集合">集合</a></h3>
+<p>你的「集合」是存储在 Anki 中的所有材料——你的卡片、笔记、牌组、笔记类型、牌组选项等。</p>
+<h2 id="共享牌组"><a class="header" href="#共享牌组">共享牌组</a></h2>
+<p>你可以在 YouTube 上观
+看<a href="http://www.youtube.com/watch?v=QS2G-k2hQyg&amp;yt:cc=on">关于共享牌组和复习基础</a>的视频。</p>
+<p>开始使用 Anki 最简单的方法是下载别人共享的卡片牌组：</p>
+<ol>
+<li>
+<p>点击牌组列表底部的「获取共享」按钮。</p>
+</li>
+<li>
+<p>当你找到感兴趣的牌组时，点击「下载」按钮下载牌组包。</p>
+</li>
+<li>
+<p>双击下载的包将其载入 Anki，或者选择文件→导入。</p>
+</li>
+</ol>
+<p>请注意，目前还无法将共享牌组直接添加到你的 AnkiWeb 账户。你需要使用桌面程序导入它们，然后同步上传到
+AnkiWeb。</p>
+<p>创建你自己的牌组是学习复杂主题最有效的方法。像语言和科学这样的科目不仅仅通过记忆事实来理解——它们需要
+解释和背景信息来有效学习。此外，自己输入信息迫使你决定哪些是关键点，从而更好地理解内容。</p>
+<p>如果你是语言学习者，你可能会想下载一长串单词及其翻译，但这并不会教会你一门语言，就像记忆科学方程不会
+教会你天体物理一样。要正确学习，你需要教科书、老师或接触真实的句子。</p>
+<p>不理解就不要学习。--SuperMemo</p>
+<p>大多数共享牌组是由那些在 Anki 之外学习资料的人创建的——来自教科书、课程、电视等。他们从所学中选择有趣
+的点并将其放入 Anki。他们不会在卡片中添加背景信息或解释，因为他们自己已经理解了材料。因此，当其他人
+下载他们的牌组并尝试使用时，会发现非常困难，因为缺少背景信息和解释。</p>
+<p>这并不是说共享牌组毫无用处——只是对于复杂的主题，它们应作为外部材料的『补充』而不是『替代』。如果你正
+在学习教科书 ABC，而其他人共享了一些来自 ABC 的想法牌组，这将是一个很好的节省时间的方法。对于一些基
+本上是事实清单的简单主题，比如首都城市名称或酒吧测验小知识，可能不需要外部材料。但如果尝试在没有外部
+材料的情况下学习复杂主题，你可能会得到令人失望的结果。</p>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="platform/linux/input-methods.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="getting-help.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="platform/linux/input-methods.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="getting-help.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

@@ -1,0 +1,540 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>搜索 - Anki 手册</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Anki 的用户手册。Anki 是一款让学习更容易的抽认卡程序。">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="css/misc.css">
+        <link rel="stylesheet" href="css/kbd.css">
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="intro.html">介绍</a></li><li class="chapter-item "><a href="background.html"><strong aria-hidden="true">1.</strong> 背景</a></li><li class="chapter-item "><a href="platform/intro.html"><strong aria-hidden="true">2.</strong> 平台说明</a></li><li class="chapter-item "><a href="platform/windows/intro.html"><strong aria-hidden="true">3.</strong> Windows</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/windows/installing.html"><strong aria-hidden="true">3.1.</strong> 安装与升级</a></li><li class="chapter-item "><a href="platform/windows/installation-issues.html"><strong aria-hidden="true">3.2.</strong> 安装问题</a></li><li class="chapter-item "><a href="platform/windows/startup-issues.html"><strong aria-hidden="true">3.3.</strong> 启动问题</a></li><li class="chapter-item "><a href="platform/windows/display-issues.html"><strong aria-hidden="true">3.4.</strong> 显示问题</a></li><li class="chapter-item "><a href="platform/windows/copy-and-paste.html"><strong aria-hidden="true">3.5.</strong> 复制和粘贴问题</a></li><li class="chapter-item "><a href="platform/windows/text-size.html"><strong aria-hidden="true">3.6.</strong> 文字大小</a></li><li class="chapter-item "><a href="platform/windows/permission-problems.html"><strong aria-hidden="true">3.7.</strong> 权限问题</a></li></ol></li><li class="chapter-item "><a href="platform/mac/intro.html"><strong aria-hidden="true">4.</strong> macOS</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/mac/installing.html"><strong aria-hidden="true">4.1.</strong> 安装与升级</a></li><li class="chapter-item "><a href="platform/mac/display-issues.html"><strong aria-hidden="true">4.2.</strong> 显示问题</a></li></ol></li><li class="chapter-item "><a href="platform/linux/intro.html"><strong aria-hidden="true">5.</strong> Linux</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/linux/installing.html"><strong aria-hidden="true">5.1.</strong> 安装与升级</a></li><li class="chapter-item "><a href="platform/linux/missing-libraries.html"><strong aria-hidden="true">5.2.</strong> 缺少的库</a></li><li class="chapter-item "><a href="platform/linux/display-issues.html"><strong aria-hidden="true">5.3.</strong> 显示问题</a></li><li class="chapter-item "><a href="platform/linux/blank-window.html"><strong aria-hidden="true">5.4.</strong> 空白主窗口</a></li><li class="chapter-item "><a href="platform/linux/distro-packages.html"><strong aria-hidden="true">5.5.</strong> Linux 发行版包</a></li><li class="chapter-item "><a href="platform/linux/gtk-theme.html"><strong aria-hidden="true">5.6.</strong> 错误的 GTK 主题</a></li><li class="chapter-item "><a href="platform/linux/wayland.html"><strong aria-hidden="true">5.7.</strong> Wayland</a></li><li class="chapter-item "><a href="platform/linux/input-methods.html"><strong aria-hidden="true">5.8.</strong> 输入法</a></li></ol></li><li class="chapter-item "><a href="getting-started.html"><strong aria-hidden="true">6.</strong> 入门</a></li><li class="chapter-item "><a href="getting-help.html"><strong aria-hidden="true">7.</strong> 获取帮助</a></li><li class="chapter-item "><a href="studying.html"><strong aria-hidden="true">8.</strong> 学习</a></li><li class="chapter-item "><a href="editing.html"><strong aria-hidden="true">9.</strong> 添加/编辑</a></li><li class="chapter-item "><a href="templates/intro.html"><strong aria-hidden="true">10.</strong> 卡片模板</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="templates/fields.html"><strong aria-hidden="true">10.1.</strong> 字段替换</a></li><li class="chapter-item "><a href="templates/generation.html"><strong aria-hidden="true">10.2.</strong> 卡片生成</a></li><li class="chapter-item "><a href="templates/styling.html"><strong aria-hidden="true">10.3.</strong> 样式与 HTML</a></li><li class="chapter-item "><a href="templates/errors.html"><strong aria-hidden="true">10.4.</strong> 检查和错误</a></li></ol></li><li class="chapter-item "><a href="preferences.html"><strong aria-hidden="true">11.</strong> 偏好设置</a></li><li class="chapter-item "><a href="deck-options.html"><strong aria-hidden="true">12.</strong> 牌组选项</a></li><li class="chapter-item "><a href="syncing.html"><strong aria-hidden="true">13.</strong> 与 AnkiWeb 同步</a></li><li class="chapter-item "><a href="profiles.html"><strong aria-hidden="true">14.</strong> 用户档案</a></li><li class="chapter-item "><a href="browsing.html"><strong aria-hidden="true">15.</strong> 浏览</a></li><li class="chapter-item "><a href="filtered-decks.html"><strong aria-hidden="true">16.</strong> 过滤牌组</a></li><li class="chapter-item expanded "><a href="searching.html" class="active"><strong aria-hidden="true">17.</strong> 搜索</a></li><li class="chapter-item "><a href="importing/intro.html"><strong aria-hidden="true">18.</strong> 导入</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="importing/text-files.html"><strong aria-hidden="true">18.1.</strong> 文本文件</a></li><li class="chapter-item "><a href="importing/packaged-decks.html"><strong aria-hidden="true">18.2.</strong> 打包的牌组</a></li></ol></li><li class="chapter-item "><a href="exporting.html"><strong aria-hidden="true">19.</strong> 导出</a></li><li class="chapter-item "><a href="backups.html"><strong aria-hidden="true">20.</strong> 备份</a></li><li class="chapter-item "><a href="files.html"><strong aria-hidden="true">21.</strong> 管理文件</a></li><li class="chapter-item "><a href="stats.html"><strong aria-hidden="true">22.</strong> 统计</a></li><li class="chapter-item "><a href="media.html"><strong aria-hidden="true">23.</strong> 媒体</a></li><li class="chapter-item "><a href="math.html"><strong aria-hidden="true">24.</strong> 数学与符号</a></li><li class="chapter-item "><a href="leeches.html"><strong aria-hidden="true">25.</strong> 吸血卡</a></li><li class="chapter-item "><a href="addons.html"><strong aria-hidden="true">26.</strong> 插件</a></li><li class="chapter-item "><a href="troubleshooting.html"><strong aria-hidden="true">27.</strong> 故障排除</a></li><li class="chapter-item "><a href="sync-server.html"><strong aria-hidden="true">28.</strong> 同步服务器</a></li><li class="chapter-item "><a href="misc.html"><strong aria-hidden="true">29.</strong> 其他</a></li><li class="chapter-item affix "><a href="contrib.html">贡献</a></li><li class="chapter-item affix "><a href="faqs.html">常见问题</a></li><li class="chapter-item affix "><a href="resources.html">资源</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Anki 手册</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/L-M-Sherlock/anki-manual-zh-CN" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h1 id="搜索"><a class="header" href="#搜索">搜索</a></h1>
+<ul>
+<li><a href="#%E7%AE%80%E5%8D%95%E6%90%9C%E7%B4%A2">简单搜索</a></li>
+<li><a href="#%E9%99%90%E5%AE%9A%E5%88%B0%E6%9F%90%E4%B8%AA%E5%AD%97%E6%AE%B5">限定到某个字段</a></li>
+<li><a href="#%E6%A0%87%E7%AD%BE%E7%89%8C%E7%BB%84%E5%8D%A1%E7%89%87%E5%92%8C%E7%AC%94%E8%AE%B0">标签、牌组、卡片和笔记</a></li>
+<li><a href="#%E5%BF%BD%E7%95%A5%E9%87%8D%E9%9F%B3%E7%BB%84%E5%90%88%E5%AD%97%E7%AC%A6">忽略重音/组合字符</a></li>
+<li><a href="#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F">正则表达式</a></li>
+<li><a href="#%E5%8D%A1%E7%89%87%E7%8A%B6%E6%80%81">卡片状态</a></li>
+<li><a href="#%E6%A0%87%E8%AE%B0">标记</a></li>
+<li><a href="#%E5%8D%A1%E7%89%87%E5%B1%9E%E6%80%A7">卡片属性</a></li>
+<li><a href="#%E6%9C%80%E8%BF%91%E4%BA%8B%E4%BB%B6">最近事件</a>
+<ul>
+<li><a href="#%E6%B7%BB%E5%8A%A0">添加</a></li>
+<li><a href="#%E7%BC%96%E8%BE%91">编辑</a></li>
+<li><a href="#%E5%9B%9E%E7%AD%94">回答</a></li>
+<li><a href="#%E7%AC%AC%E4%B8%80%E6%AC%A1%E5%9B%9E%E7%AD%94">第一次回答</a></li>
+</ul>
+</li>
+<li><a href="#%E5%8C%B9%E9%85%8D%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6">匹配特殊字符</a>
+<ul>
+<li><a href="#%E5%8E%9F%E5%A7%8B%E8%BE%93%E5%85%A5">原始输入</a></li>
+</ul>
+</li>
+<li><a href="#%E5%AF%B9%E8%B1%A1-id">对象 ID</a></li>
+</ul>
+<p>Anki 的浏览屏幕和过滤牌组功能使用了一种通用的方法来搜索特定的卡片/笔记。这个方法也可以用于调整 FSRS
+优化的范围。</p>
+<h2 id="简单搜索"><a class="header" href="#简单搜索">简单搜索</a></h2>
+<p>当你在搜索框中输入一些文本时，Anki 会找到匹配的笔记并显示它们的卡片。Anki 会在笔记的所有字段中搜索，
+但不会搜索标签（查看<a href="#tags-decks-cards-and-notes">本节后面</a>以了解如何搜索标签）。一些示例：</p>
+<p><code>dog</code><br />
+搜索「dog」- 会匹配类似「doggy」和「underdog」的单词。</p>
+<p><code>dog cat</code><br />
+找到同时包含「dog」和「cat」的笔记，比如「raining cats and dogs」。</p>
+<p><code>dog or cat</code><br />
+找到包含「dog」或者「cat」的笔记。</p>
+<p><code>dog (cat or mouse)</code><br />
+找到包含「dog」和「cat」，或者「dog」和「mouse」的笔记。</p>
+<p><code>-cat</code><br />
+找到不包含「cat」的笔记。</p>
+<p><code>-cat -mouse</code><br />
+找到既不包含「cat」也不包含「mouse」的笔记。</p>
+<p><code>-(cat or mouse)</code><br />
+与上面相同。</p>
+<p><code>&quot;a dog&quot;</code><br />
+找到确切包含字符序列「a dog」的笔记，比如「atta dog」，但不包括「dog a」或「adog」。</p>
+<p><code>-&quot;a dog&quot;</code><br />
+找到不包含确切字符序列「a dog」的笔记。</p>
+<p><code>d_g</code><br />
+找到包含 d，&lt;一个字符&gt;，g 的笔记，如 dog、dig、dug 等。</p>
+<p><code>d*g</code><br />
+找到包含 d，&lt;零个或多个字符&gt;，g 的笔记，如 dg、dog、dung 等。</p>
+<p><code>w:dog</code><br />
+搜索单词「dog」而不是字符序列 - 会匹配「dog」但不包括「doggy」或「underdog」。需要 Anki
+2.1.24+、AnkiMobile 2.1.61+ 或 AnkiDroid 2.17+。请注意，格式变化可能会被解释为单词边界。例如，搜索
+<code>w:exam</code> 会匹配 <strong>exam</strong>ple，因为 example 中的「exam」部分是粗体格式。</p>
+<p><code>w:dog*</code><br />
+会匹配「dog」和「doggy」，但不包括「underdog」。</p>
+<p><code>w:*dog</code><br />
+会匹配「dog」和「underdog」，但不包括「doggy」。</p>
+<p>从以上可以注意到以下几点：</p>
+<ul>
+<li>
+<p>搜索术语以空格分隔。</p>
+</li>
+<li>
+<p>当提供多个搜索术语时，Anki 会查找同时匹配所有术语的笔记 - 在每个术语之间插入一个隐式的「and」。在
+Anki 2.1.24+、AnkiMobile 2.0.60+ 和 AnkiDroid 2.17+ 上，你可以显式设置（「dog and cat」与「dog
+cat」相同），但较旧的 Anki 版本会将「and」视为要搜索的另一个单词。</p>
+</li>
+<li>
+<p>如果你只需要匹配其中一个术语，可以使用「or」。</p>
+</li>
+<li>
+<p>你可以在术语前加上减号来查找不匹配该术语的笔记。</p>
+</li>
+<li>
+<p>你可以通过将搜索术语放在括号中来对其进行分组，如「dog (cat or mouse)」示例中那样。这在组合 OR 和
+AND 搜索时变得很重要 — 在示例中有括号时，它匹配「dog cat」或「dog mouse」，而没有括号时，它会匹配
+「dog and cat」或「mouse」。</p>
+</li>
+<li>
+<p>Anki 只能在你配置的<a href="editing.html#customizing-fields">排序字段</a>中的格式内搜索。例如，如果你在某个字段
+中添加「<strong>exa</strong>mple」，其中「exa」部分是粗体，那么除非该字段是排序字段，否则在搜索「example」时将
+不会匹配。如果单词没有格式化，或者格式化没有在单词中间变化，那么 Anki 将能够在任何字段中找到它。</p>
+</li>
+<li>
+<p>标准搜索对拉丁字符进行不区分大小写 - a-z 将匹配 A-Z，反之亦然。其他字符如西里尔字母在标准搜索中是
+区分大小写的，但可以通过在单词边界或正则表达式上进行搜索来取消区分大小写（<code>w:</code>，<code>re:</code>）。</p>
+</li>
+</ul>
+<h2 id="限定到某个字段"><a class="header" href="#限定到某个字段">限定到某个字段</a></h2>
+<p>你也可以要求 Anki 只有在特定字段包含某些文本时才匹配。与前面的搜索示例不同，字段搜索默认需要精确匹
+配。</p>
+<p><code>front:dog</code><br />
+找到 Front 字段内容精确为「dog」的笔记。内容为「a dog」的字段将不匹配。</p>
+<p><code>&quot;animal front:a dog&quot;</code><br />
+找到「Animal Front」字段内容精确为「a dog」的笔记。双引号是必需的：请参
+阅<a href="#matching-special-characters">本节后面</a>。</p>
+<p><code>front:*dog*</code><br />
+找到 Front 字段包含 dog 的笔记。</p>
+<p><code>front:</code><br />
+找到 Front 字段为空的笔记。</p>
+<p><code>front:_*</code><br />
+找到 Front 字段不为空的笔记。</p>
+<p><code>front:*</code><br />
+找到有 Front 字段的笔记，无论是否为空。</p>
+<p><code>fr*:text</code><br />
+在字段前缀为「fr」的字段中找到笔记。需要 Anki 2.1.24+、AnkiMobile 2.1.60+ 或 AnkiDroid 2.17+。</p>
+<h2 id="标签牌组卡片和笔记"><a class="header" href="#标签牌组卡片和笔记">标签、牌组、卡片和笔记</a></h2>
+<p><code>tag:animal</code><br />
+找到带有「animal」标签的笔记，或类似「animal::mammal」的子标签。</p>
+<p><code>tag:none</code><br />
+找到没有标签的笔记。</p>
+<p><code>tag:ani*</code><br />
+找到标签前缀为「ani」的笔记。</p>
+<p><code>deck:french</code><br />
+在名为「French」的牌组中或其子牌组如「French::Vocab」中寻找卡片。</p>
+<p><code>deck:french -deck:french::*</code><br />
+找到「French」中的卡片，但不包括其子牌组。</p>
+<p><code>deck:&quot;french vocab&quot;</code><br />
+搜索带有空格的牌组名称。</p>
+<p><code>&quot;deck:french vocab&quot;</code><br />
+与前面相同。</p>
+<p><code>deck:filtered</code><br />
+仅过滤的牌组。</p>
+<p><code>-deck:filtered</code><br />
+仅普通牌组。</p>
+<p><code>preset:&quot;Default&quot;</code><br />
+在所有使用「Default」牌组选项预设的牌组中的卡片。需要 Anki 23.10+、AnkiMobile 23.10+ 或 AnkiDroid
+2.17+。</p>
+<p><code>card:forward</code><br />
+找到由名为「Forward」的卡片类型创建的卡片。</p>
+<p><code>card:1</code><br />
+按卡片类型编号搜索卡片，例如要查找笔记的第二个填空删除，你可以使用 <code>card:2</code></p>
+<p><code>note:basic</code><br />
+搜索由名为「Basic」的笔记类型创建的卡片。</p>
+<h2 id="忽略重音组合字符"><a class="header" href="#忽略重音组合字符">忽略重音/组合字符</a></h2>
+<p>需要 Anki 2.1.24+、AnkiMobile 2.0.60+ 或 AnkiDroid 2.17+。</p>
+<p>你可以使用 <code>nc:</code>（nc 代表「no combining」）使 Anki 忽略组合字符。例如：</p>
+<p><code>nc:uber</code><br />
+匹配带有「uber」、&quot;über&quot;、&quot;Über&quot; 等的笔记。</p>
+<p><code>nc:は</code><br />
+匹配「は」、「ば」、「ぱ」。</p>
+<p>忽略组合字符的搜索比正常搜索速度慢。</p>
+<h2 id="正则表达式"><a class="header" href="#正则表达式">正则表达式</a></h2>
+<p>Anki 2.1.24+、AnkiMobile 2.0.60+ 和 AnkiDroid 2.17+ 支持使用「正则表达式」在笔记中搜索，正则表达式是
+一种标准而强大的文本搜索方式。</p>
+<p>以 <code>re:</code> 开始搜索以使用正则表达式。为了简化操作，Anki 会将以下内容视为<a href="#raw-input">原始输入</a>，因此请
+记住那里的规则。</p>
+<p>一些示例：</p>
+<p><code>&quot;re:(some|another).*thing&quot;</code><br />
+找到带有「some」或「another」，后跟 0 个或多个字符，再后跟「thing」的笔记。</p>
+<p><code>re:\d{3}</code><br />
+找到笔记中连续三个数字的笔记。</p>
+<p>正则表达式也可以限定在特定字段中。请注意，与特定字段中的普通搜索不同，字段中的正则表达式不要求精确匹
+配：</p>
+<p><code>front:re:[a-c]1</code><br />
+匹配出现在「Front」字段中的大小写 a1、B1 或 c1。</p>
+<p><code>front:re:^[a-c]1$</code><br />
+与前一个示例相同，但如果在 a1/b1/c1 之前或之后有任何其他文本，则不匹配。</p>
+<p>Anki 2.1.50+ 支持对标签使用正则表达式：</p>
+<p><code>tag:re:^parent$</code><br />
+找到带有确切标签「parent」的笔记，不考虑任何子标签如「parent::child」。</p>
+<p><code>&quot;tag:re:lesson-(1[7-9]|2[0-5])&quot;</code><br />
+找到带有「lesson-17」至「lesson-25」标签的笔记。</p>
+<p>有关正则表达式的更多信息，请参见<a href="https://regexone.com/lesson/introduction_abcs">本网站</a>。</p>
+<p>需要注意的一些事项：</p>
+<ul>
+<li>搜索默认不区分大小写；在搜索的开头使用 <code>(?-i)</code> 来开启区分大小写。</li>
+<li>某些文本如空格和换行在 HTML 中可能会有不同的表示 - 你可以在编辑屏幕中使用 HTML 编辑器查看底层 HTML
+内容。</li>
+<li>有关 Anki 正则表达式支持的具体细节，请参
+见<a href="https://docs.rs/regex/1.3.9/regex/#syntax">regex crate 文档</a>。</li>
+</ul>
+<h2 id="卡片状态"><a class="header" href="#卡片状态">卡片状态</a></h2>
+<p><code>is:due</code><br />
+等待学习的复习卡片和学习卡片。</p>
+<p><code>is:new</code><br />
+新卡片。</p>
+<p><code>is:learn</code><br />
+在学习中的卡片。</p>
+<p><code>is:review</code><br />
+复习（包括到期的和未到期的）和失效的卡片。</p>
+<p><code>is:suspended</code><br />
+被<a href="leeches.html">自动</a>或手动暂停的卡片。</p>
+<p><code>is:buried</code><br />
+被<a href="studying.html#siblings-and-burying">自动</a>或手动埋藏的卡片。</p>
+<p><a href="deck-options.html#lapses">失效的</a>卡片属于前面几个类别中的一些，因此可能有必要结合不同的搜索术语以获得
+更准确的结果：</p>
+<p><code>is:learn is:review</code><br />
+失效并等待重新学习的卡片。</p>
+<p><code>-is:learn is:review</code><br />
+不包括失效卡片的复习卡片。</p>
+<p><code>is:learn -is:review</code><br />
+第一次在学习中的卡片。</p>
+<h2 id="标记"><a class="header" href="#标记">标记</a></h2>
+<p><code>flag:1</code><br />
+带有红色标记的卡片。</p>
+<p><code>flag:2</code><br />
+带有橙色标记的卡片。</p>
+<p><code>flag:3</code><br />
+带有绿色标记的卡片。</p>
+<p><code>flag:4</code><br />
+带有蓝色标记的卡片。</p>
+<p><code>flag:5</code><br />
+带有粉色标记的卡片。</p>
+<p><code>flag:6</code><br />
+带有绿松石色标记的卡片。</p>
+<p><code>flag:7</code><br />
+带有紫色标记的卡片。</p>
+<h2 id="卡片属性"><a class="header" href="#卡片属性">卡片属性</a></h2>
+<p><code>prop:ivl&gt;=10</code><br />
+间隔为 10 天或更长的卡片。</p>
+<p><code>prop:due=1</code><br />
+明天到期的卡片。</p>
+<p><code>prop:due=-1</code><br />
+昨天到期但尚未回答的卡片。</p>
+<p><code>prop:due&gt;=1</code><br />
+所有未来到期的卡片，包括明天。</p>
+<p><code>prop:due&lt;=-1</code><br />
+所有过期的卡片。</p>
+<p><code>prop:due&gt;-1 prop:due&lt;1</code><br />
+昨天、今天和明天到期的卡片。</p>
+<p><code>prop:reps&lt;10</code><br />
+回答次数少于 10 次的卡片。</p>
+<p><code>prop:lapses&gt;3</code><br />
+失效次数超过 3 次的卡片。</p>
+<p><code>prop:ease!=2.5</code><br />
+比默认容易度更容易或更难的卡片。</p>
+<p><code>prop:cdn:d&gt;5</code><br />
+在自定义数据中 d 的值大于 5 的卡片（通常指 FSRS 中的难度，需要 Anki 2.1.64+）。</p>
+<p><code>prop:cds:v=reschedule</code><br />
+在自定义数据中 v 的值等于 <code>reschedule</code> 的卡片（需要 Anki 23.10+）。</p>
+<p>以下搜索需要 Anki 23.10+ 并启用 FSRS：</p>
+<p><code>prop:s&gt;21</code><br />
+稳定性超过 21 天的卡片。</p>
+<p><code>prop:d&gt;0.3</code><br />
+难度超过 0.3 的卡片。</p>
+<p><code>prop:r&lt;0.9</code><br />
+可提取性低于 0.9 的卡片。</p>
+<h2 id="最近事件"><a class="header" href="#最近事件">最近事件</a></h2>
+<h3 id="添加"><a class="header" href="#添加">添加</a></h3>
+<p><code>added:1</code><br />
+今天添加的卡片。</p>
+<p><code>added:7</code><br />
+最近 7 天内添加的卡片。</p>
+<p>检查是针对卡片创建时间而不是笔记创建时间进行的，因此在时间范围内生成的卡片即使其笔记是很久之前添加的
+也会包含在内。</p>
+<h3 id="编辑"><a class="header" href="#编辑">编辑</a></h3>
+<p><code>edited:n</code><br />
+笔记文本在最近 n 天内被添加/编辑的卡片。</p>
+<p>这需要 Anki 2.1.28+ 或 AnkiMobile 2.0.64+。</p>
+<h3 id="回答"><a class="header" href="#回答">回答</a></h3>
+<p><code>rated:1</code><br />
+今天回答的卡片。</p>
+<p><code>rated:1:2</code><br />
+今天回答为困难（2）的卡片。</p>
+<p><code>rated:7:1</code><br />
+最近 7 天回答为再次（1）的卡片。</p>
+<p><code>rated:31:4</code><br />
+最近 31 天回答为简单（4）的卡片。</p>
+<p>Anki 2.1.39+ 支持超过 31 天的评分搜索。</p>
+<h3 id="第一次回答"><a class="header" href="#第一次回答">第一次回答</a></h3>
+<p>需要 Anki 2.1.45+。</p>
+<p><code>introduced:1</code><br />
+今天第一次回答的卡片。</p>
+<p><code>introduced:365</code><br />
+最近 365 天内第一次回答的卡片。</p>
+<h2 id="匹配特殊字符"><a class="header" href="#匹配特殊字符">匹配特殊字符</a></h2>
+<p>如果你使用的是早于 Anki 2.1.36 的版本，以下搜索可能不起作用。</p>
+<p>如上一节所示，一些字符如 <code>*</code>，<code>_</code> 和 <code>&quot;</code> 在搜索中具有特殊含义。如果你需要在搜索中定位这些字符，需告
+诉 Anki 不要将它们视为特殊字符。这称为「转义字符」，主要是通过使用双引号和反斜杠实现的。</p>
+<ul>
+<li>
+<p>空格<br />
+要匹配包含空格的内容，请将「整个术语」用双引号括起来。如果是冒号搜索，你也可以选择只引用
+<code>部分：&quot;在冒号之后&quot;</code>。</p>
+</li>
+<li>
+<p><code>And</code>/<code>Or</code><br />
+要搜索 <code>or</code> 和 <code>and</code> 的单词，用双引号包围它们。例如，<code>dog &quot;and&quot; cat</code> 搜索「dog」、「cat」和「and」
+这个词。如果你像前面的例子那样用引号包围整个搜索术语，则不需要转义 <code>and</code> 或 <code>or</code>。</p>
+</li>
+<li>
+<p><code>&quot;</code>, <code>*</code> 和 <code>_</code><br />
+在这些字符前加上反斜杠以将它们视为字面上。例如，<code>_</code> 将匹配任何单个字符，但 <code>\_</code> 只匹配实际的下划
+线。</p>
+</li>
+<li>
+<p><code>\ </code><br />
+因为反斜杠用于去除其他字符的特殊含义，它本身也被视为特别的。如果你需要搜索实际的反斜杠，请使用
+<code>\\</code> 而不是 <code>\</code>。</p>
+</li>
+<li>
+<p><code>(</code> 和 <code>)</code><br />
+你可以通过用引号括起整个术语、使用反斜杠或同时使用这两者来搜索括号。例如，<code>&quot;(text)&quot;</code>、<code>\ (text\ )</code>
+和 <code>&quot;\(text\)&quot;</code> 是等价搜索，都搜索「(text)」。```markdown</p>
+</li>
+<li>
+<p><code>-</code><br />
+以 <code>-</code> 开头的搜索词通常会反转它：例如，<code>-dog</code> 匹配除了 dog 之外的所有内容。如果您希望包含实际的连
+字符，可以使用反斜杠，或将文本包含在引号中。例如，<code>\-free</code> 或 <code>&quot;-free&quot;</code> 将匹配「guilt-free」和
+「cruelty-free」。</p>
+</li>
+<li>
+<p><code>:</code><br />
+除非冒号前面有另一个未转义的冒号，否则冒号必须使用反斜杠进行转义。例如，<code>w:3:30</code> 在单词边界上搜索
+「3:30」，不需要使用反斜杠。然而，如果您不使用冒号搜索，则冒号需要像这样转义：<code>3\:30</code>。</p>
+</li>
+<li>
+<p><code>&amp;</code>、<code>&lt;</code> 和 <code>&gt;</code><br />
+<code>&amp;</code>、<code>&lt;</code> 和 <code>&gt;</code> 在 Anki 中搜索时被视为 HTML，因此包含它们的搜索无法按预期工作。但是，您可以通过使
+用它们对应的 HTML 实体名称进行搜索（<code>&amp;amp;</code> 表示 <code>&amp;</code>，<code>&amp;lt;</code> 表示 <code>&lt;</code>，<code>&amp;gt;</code> 表示 <code>&gt;</code>）。例如，搜
+索 <code>&amp;amp;text</code> 会在字段中搜索包含 <code>&amp;text</code> 的笔记。</p>
+</li>
+</ul>
+<h3 id="原始输入"><a class="header" href="#原始输入">原始输入</a></h3>
+<p>由某些关键词（如 <code>re:</code>）前缀的文本将被视为原始输入。也就是说，上面列出的字符在很大程度上失去了它们的
+特殊含义。在这样的上下文中，只需要最少的转义以防止歧义：</p>
+<ul>
+<li>
+<p><code>&quot;</code> 必须转义。</p>
+</li>
+<li>
+<p>空格和未转义的括号需要将搜索词加上引号。</p>
+</li>
+<li>
+<p>搜索词不能以奇数个反斜杠结尾。</p>
+</li>
+</ul>
+<h2 id="对象-id"><a class="header" href="#对象-id">对象 ID</a></h2>
+<p><code>nid:123</code><br />
+笔记 ID 为 123 的笔记</p>
+<p><code>cid:123,456,789</code><br />
+卡片 ID 为 123、456 或 789 的所有卡片</p>
+<p>笔记和卡片 ID 可以在浏览器中的 <a href="stats.html">卡片信息</a> 对话框中找到。这些搜索在进行插件开发或与数据库紧
+密工作时也可能会有所帮助。</p>
+<pre><code>
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="filtered-decks.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="importing/intro.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="filtered-decks.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="importing/intro.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

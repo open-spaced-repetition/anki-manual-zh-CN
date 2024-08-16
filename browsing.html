@@ -1,0 +1,452 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>浏览 - Anki 手册</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Anki 的用户手册。Anki 是一款让学习更容易的抽认卡程序。">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="css/misc.css">
+        <link rel="stylesheet" href="css/kbd.css">
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="intro.html">介绍</a></li><li class="chapter-item "><a href="background.html"><strong aria-hidden="true">1.</strong> 背景</a></li><li class="chapter-item "><a href="platform/intro.html"><strong aria-hidden="true">2.</strong> 平台说明</a></li><li class="chapter-item "><a href="platform/windows/intro.html"><strong aria-hidden="true">3.</strong> Windows</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/windows/installing.html"><strong aria-hidden="true">3.1.</strong> 安装与升级</a></li><li class="chapter-item "><a href="platform/windows/installation-issues.html"><strong aria-hidden="true">3.2.</strong> 安装问题</a></li><li class="chapter-item "><a href="platform/windows/startup-issues.html"><strong aria-hidden="true">3.3.</strong> 启动问题</a></li><li class="chapter-item "><a href="platform/windows/display-issues.html"><strong aria-hidden="true">3.4.</strong> 显示问题</a></li><li class="chapter-item "><a href="platform/windows/copy-and-paste.html"><strong aria-hidden="true">3.5.</strong> 复制和粘贴问题</a></li><li class="chapter-item "><a href="platform/windows/text-size.html"><strong aria-hidden="true">3.6.</strong> 文字大小</a></li><li class="chapter-item "><a href="platform/windows/permission-problems.html"><strong aria-hidden="true">3.7.</strong> 权限问题</a></li></ol></li><li class="chapter-item "><a href="platform/mac/intro.html"><strong aria-hidden="true">4.</strong> macOS</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/mac/installing.html"><strong aria-hidden="true">4.1.</strong> 安装与升级</a></li><li class="chapter-item "><a href="platform/mac/display-issues.html"><strong aria-hidden="true">4.2.</strong> 显示问题</a></li></ol></li><li class="chapter-item "><a href="platform/linux/intro.html"><strong aria-hidden="true">5.</strong> Linux</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/linux/installing.html"><strong aria-hidden="true">5.1.</strong> 安装与升级</a></li><li class="chapter-item "><a href="platform/linux/missing-libraries.html"><strong aria-hidden="true">5.2.</strong> 缺少的库</a></li><li class="chapter-item "><a href="platform/linux/display-issues.html"><strong aria-hidden="true">5.3.</strong> 显示问题</a></li><li class="chapter-item "><a href="platform/linux/blank-window.html"><strong aria-hidden="true">5.4.</strong> 空白主窗口</a></li><li class="chapter-item "><a href="platform/linux/distro-packages.html"><strong aria-hidden="true">5.5.</strong> Linux 发行版包</a></li><li class="chapter-item "><a href="platform/linux/gtk-theme.html"><strong aria-hidden="true">5.6.</strong> 错误的 GTK 主题</a></li><li class="chapter-item "><a href="platform/linux/wayland.html"><strong aria-hidden="true">5.7.</strong> Wayland</a></li><li class="chapter-item "><a href="platform/linux/input-methods.html"><strong aria-hidden="true">5.8.</strong> 输入法</a></li></ol></li><li class="chapter-item "><a href="getting-started.html"><strong aria-hidden="true">6.</strong> 入门</a></li><li class="chapter-item "><a href="getting-help.html"><strong aria-hidden="true">7.</strong> 获取帮助</a></li><li class="chapter-item "><a href="studying.html"><strong aria-hidden="true">8.</strong> 学习</a></li><li class="chapter-item "><a href="editing.html"><strong aria-hidden="true">9.</strong> 添加/编辑</a></li><li class="chapter-item "><a href="templates/intro.html"><strong aria-hidden="true">10.</strong> 卡片模板</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="templates/fields.html"><strong aria-hidden="true">10.1.</strong> 字段替换</a></li><li class="chapter-item "><a href="templates/generation.html"><strong aria-hidden="true">10.2.</strong> 卡片生成</a></li><li class="chapter-item "><a href="templates/styling.html"><strong aria-hidden="true">10.3.</strong> 样式与 HTML</a></li><li class="chapter-item "><a href="templates/errors.html"><strong aria-hidden="true">10.4.</strong> 检查和错误</a></li></ol></li><li class="chapter-item "><a href="preferences.html"><strong aria-hidden="true">11.</strong> 偏好设置</a></li><li class="chapter-item "><a href="deck-options.html"><strong aria-hidden="true">12.</strong> 牌组选项</a></li><li class="chapter-item "><a href="syncing.html"><strong aria-hidden="true">13.</strong> 与 AnkiWeb 同步</a></li><li class="chapter-item "><a href="profiles.html"><strong aria-hidden="true">14.</strong> 用户档案</a></li><li class="chapter-item expanded "><a href="browsing.html" class="active"><strong aria-hidden="true">15.</strong> 浏览</a></li><li class="chapter-item "><a href="filtered-decks.html"><strong aria-hidden="true">16.</strong> 过滤牌组</a></li><li class="chapter-item "><a href="searching.html"><strong aria-hidden="true">17.</strong> 搜索</a></li><li class="chapter-item "><a href="importing/intro.html"><strong aria-hidden="true">18.</strong> 导入</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="importing/text-files.html"><strong aria-hidden="true">18.1.</strong> 文本文件</a></li><li class="chapter-item "><a href="importing/packaged-decks.html"><strong aria-hidden="true">18.2.</strong> 打包的牌组</a></li></ol></li><li class="chapter-item "><a href="exporting.html"><strong aria-hidden="true">19.</strong> 导出</a></li><li class="chapter-item "><a href="backups.html"><strong aria-hidden="true">20.</strong> 备份</a></li><li class="chapter-item "><a href="files.html"><strong aria-hidden="true">21.</strong> 管理文件</a></li><li class="chapter-item "><a href="stats.html"><strong aria-hidden="true">22.</strong> 统计</a></li><li class="chapter-item "><a href="media.html"><strong aria-hidden="true">23.</strong> 媒体</a></li><li class="chapter-item "><a href="math.html"><strong aria-hidden="true">24.</strong> 数学与符号</a></li><li class="chapter-item "><a href="leeches.html"><strong aria-hidden="true">25.</strong> 吸血卡</a></li><li class="chapter-item "><a href="addons.html"><strong aria-hidden="true">26.</strong> 插件</a></li><li class="chapter-item "><a href="troubleshooting.html"><strong aria-hidden="true">27.</strong> 故障排除</a></li><li class="chapter-item "><a href="sync-server.html"><strong aria-hidden="true">28.</strong> 同步服务器</a></li><li class="chapter-item "><a href="misc.html"><strong aria-hidden="true">29.</strong> 其他</a></li><li class="chapter-item affix "><a href="contrib.html">贡献</a></li><li class="chapter-item affix "><a href="faqs.html">常见问题</a></li><li class="chapter-item affix "><a href="resources.html">资源</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Anki 手册</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/L-M-Sherlock/anki-manual-zh-CN" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <pre><code class="language-markdown"># 浏览
+
+&lt;!-- toc --&gt;
+
+浏览窗口允许你搜索并编辑卡片和笔记。它可以通过点击主窗口中的「浏览」按钮，或按下 &lt;kbd&gt;B&lt;/kbd&gt; 键来打
+开。该窗口由三个部分组成：左侧的*侧边栏*、右上部的*卡片/笔记表格*和右下部的*编辑区域*。通过将鼠标指
+向两个部分之间，可以进行点击并拖动来扩展一个部分，并缩小另一个部分。
+
+## 表格模式
+
+![表格模式](media/browser_table_modes.png)
+
+Anki 2.1.45+ 提供了两种模式：卡片模式或笔记模式可以在数据表格中显示。你可以通过点击搜索区域左侧顶部
+的开关，或按下 &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;T&lt;/kbd&gt; 或
+&lt;kbd&gt;Cmd&lt;/kbd&gt;+&lt;kbd&gt;Opt&lt;/kbd&gt;+&lt;kbd&gt;T&lt;/kbd&gt; 来更改当前模式。开关也会指示当前显示的是**C**ard 还
+是**N**ote。
+
+**注意**：为了简化说明，本手册一般假定卡片模式为活动模式。当提到选择/查找等&quot;卡片&quot;时，读者可以将其替
+换成「根据活动模式选择卡片或笔记」。
+
+## 侧边栏
+
+左侧的*侧边栏*允许快速访问常用搜索项。在 Anki 2.1.45+ 上，它还提供了一个搜索栏，功能包括编辑标签和牌
+组，以及可以选择的两个不同工具，将在接下来的章节中讨论。你可以使用侧边栏顶部的工具栏或快捷键
+&lt;kbd&gt;Alt&lt;/kbd&gt;+&lt;kbd&gt;1&lt;/kbd&gt;/&lt;kbd&gt;2&lt;/kbd&gt; 来切换工具。
+
+### 搜索工具
+
+![搜索工具](media/browser_search_tool.png)
+
+在此工具中，侧边栏行为与以前的版本类似：点击一个项目将搜索它。
+
+你可以在点击时按住 &lt;kbd&gt;Ctrl&lt;/kbd&gt;（Mac 上为 &lt;kbd&gt;Command&lt;/kbd&gt;）以用 AND 条件将点击的项目附加到当前
+搜索，而不是开始新搜索。例如，如果你想显示*学习*卡片，同时还在德语牌组中，你可以先点击「学习」，然后
+&lt;kbd&gt;Ctrl&lt;/kbd&gt;-点击「德语」。
+
+你可以按住 &lt;kbd&gt;Shift&lt;/kbd&gt; 以创建 OR 搜索而不是 AND 搜索。例如，你可以先点击一个牌组，然后
+&lt;kbd&gt;Shift&lt;/kbd&gt;-点击另一个牌组，以在同一视图中显示来自任意牌组的卡片。
+
+你可以按住 &lt;kbd&gt;Alt&lt;/kbd&gt;（Mac 上为 &lt;kbd&gt;Option&lt;/kbd&gt;）以反转搜索（在前面添加一个 `-`）：例如，显示
+当前牌组中*没有*某个标签的所有卡片。&lt;kbd&gt;Alt&lt;/kbd&gt;/&lt;kbd&gt;Option&lt;/kbd&gt; 可以与 &lt;kbd&gt;Ctrl&lt;/kbd&gt; 或
+&lt;kbd&gt;Shift&lt;/kbd&gt; 结合使用（例如，用 &lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Alt&lt;/kbd&gt; 点击将添加一个被否定的新搜索条
+件）。
+
+在 Anki 2.1.39+ 上，当点击一个搜索项时，你还可以同时按住 &lt;kbd&gt;Ctrl&lt;/kbd&gt; 和 &lt;kbd&gt;Shift&lt;/kbd&gt; 来替换
+同类搜索的所有出现项。假设你之前输入了一个复杂的搜索表达式，比如
+`deck:Swahili (is:due or tag:important)`，现在想对你的乌尔都牌组进行相同的搜索。你可以在侧边栏中按住
+&lt;kbd&gt;Ctrl&lt;/kbd&gt;+&lt;kbd&gt;Shift&lt;/kbd&gt; 的同时点击乌尔都牌组，以获得以下搜索表达
+式：`deck:Urdu (is:due or tag:important)`。
+
+### 选择工具
+
+![选择工具](media/browser_selection_tool2.png)
+
+选择工具允许通过在点击时按住 &lt;kbd&gt;Ctrl&lt;/kbd&gt; 或 &lt;kbd&gt;Shift&lt;/kbd&gt; 来同时选择多个项目。它还支持拖放以
+重新排列牌组和标签。
+
+举个例子：假设你有标签 `Math`、`Calculus` 和 `Algebra`。点击 `Calculus` 标签，然后 &lt;kbd&gt;Ctrl&lt;/kbd&gt;-
+点击 `Algebra` 标签。现在两个标签都被选择，点击并拖动其中任一个到 `Math` 标签上，以使它们都成为此标
+签的子标签。在后台，Anki 将两个标签重命名为 `Math::Calculus` 和 `Math::Algebra`，并相应地更新你的笔
+记。
+
+选择多个项目的另一个用例是搜索：如果你右键点击一个项目集，你可以选择**搜索 &amp;gt; 所选项目中的所有/任
+一**。这可以与[搜索工具](#search-tool)中描述的键盘修饰符结合使用，以将结果搜索附加到当前搜索中。
+
+### 保存的搜索
+
+如果你经常搜索相同的内容，可以通过右键单击侧边栏的最顶级项目，选择「保存当前搜索」并输入名称，来保存
+当前搜索。你还可以将任何侧边栏项目拖放到此区域，添加一个等效的保存搜索，从而将其固定在顶部。
+
+### 编辑项目
+
+你可以直接从侧边栏通过右键菜单或快捷键（在 Windows 上为 &lt;kbd&gt;Del&lt;/kbd&gt; 和 &lt;kbd&gt;F2&lt;/kbd&gt;）删除或重命
+名标签、牌组和保存的搜索。删除甚至支持多项目同时操作（参见[选择工具](#selection-tool)）。
+
+### 查找项目
+
+要在侧边栏树中查找某个项目，可以在顶部的搜索栏中输入部分名称，以暂时隐藏所有不匹配的项目。
+
+## 搜索框
+
+卡片列表上方是一个搜索框。你可以在其中输入各种内容以搜索卡片。有关搜索语法的信息，请参
+见[搜索](searching.md)。
+
+## 卡片/笔记表格
+
+表格的行代表与当前搜索匹配的卡片或笔记。当你点击某一行时，相应的笔记将在底部区域显示。
+
+### 行
+
+如果你拖动鼠标或按住 &lt;kbd&gt;Ctrl&lt;/kbd&gt; 或 &lt;kbd&gt;Command&lt;/kbd&gt; 来选择多行，编辑器将被暂时隐藏。各种操作
+（如更改牌组）可以在多个卡片或笔记上同时进行，而不依赖于活动模式。因此，在卡片模式下，如果选择了其任
+意卡片，则认为选择了一个笔记；而在笔记模式下，如果选择了其笔记，则认为选择了一个卡片。
+
+其他操作（如显示卡片信息）仅对单个卡片或笔记操作。这被称为*当前*卡片或笔记，通常是最后选择或点击的那
+个。在卡片模式下，当前笔记是当前卡片的笔记；在笔记模式下，当前卡片是当前笔记的第一张卡片。
+
+卡片和笔记的背景颜色会根据状态有所改变。在卡片模式下，应用以下匹配规则的第一条：
+
+1. 如果卡片被**标记**，使用标记颜色，
+2. 如果卡片被**暂停**，则为黄色，
+3. 如果卡片的笔记被**标记**，则为紫色。
+
+在笔记模式下，仅对标记笔记应用颜色。\
+有关标记笔记和暂停卡片的详细信息，请参见[编辑和更多](studying.md#editing-and-more)。
+
+### 列
+
+列是可配置的：右键点击一列（在 Mac 上为 &lt;kbd&gt;Ctrl&lt;/kbd&gt;-点击）以选择想要显示的列。你可以拖动列来重新
+排序。点击一列将按该列排序；再次点击将反转排序顺序。请注意，你不能按问题和答案列排序。
+
+对于[卡片和笔记模式](#table-modes)，两种模式下所有列都可用，但有时名称和数据略有不同。以下表格列出了
+两种模式下的行为。
+
+&lt;!-- prettier-ignore --&gt;
+| 列              | 卡片模式                                                                                                                                                                        | 笔记模式                                                                                                                                                                     |
+| --------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 答案            | 卡片背面的文本行，问题已去除。你还可以在卡片类型编辑器中选择[自定义格式](templates/styling.md#browser-appearance)来代替。                                                    | 与卡片模式相同，仅限于笔记的第一张卡片。                                                                                                                                       |
+| 卡片            | 卡片模板的名称。                                                                                                                                                                | 笔记拥有的卡片数量。                                                                                                                                                           |
+| 卡片修改        | 卡片最后一次更改的时间（例如，当你点评卡片并且评论历史和间隔被更新时）。                                                                                                         | 笔记的卡片最后一次更改的时间。                                                                                                                                                |
+| 创建            | 与卡片的笔记中的创建日期相同。                                                                                                                                                   | 笔记的创建日期。                                                                                                                                                               |
+| 牌组            | 卡片所在牌组的名称。                                                                                                                                                            | 笔记的卡片所在不同牌组的数量，或如果所有卡片都在同一牌组，则为牌组名称。                                                                                                       |
+| 到期            | 审核或(再)学习中的卡片的到期日期，以及新卡在新卡队列中的位置。如果卡片被暂停或埋藏，该行将以括号包裹。排序按类型进行，仅此后按日期或位置排序。                                    | 笔记未暂停、未埋藏或未过滤牌组的卡片的下次到期审核或(再)学习的日期。                                                                                                          |
+| (平均)易度      | 如果卡片不是新卡，则为卡片的易度。                                                                                                                                               | 如果笔记的卡片不是新卡，则为其平均易度。                                                                                                                                       |
+| (平均)间隔      | 如果卡片处于审核或再学习中，则为卡片的间隔。                                                                                                                                     | 如果笔记的卡片处于审核或再学习中，则为其平均间隔。                                                                                                                             |
+| 倒退            | 卡片被评为「再次」的次数。                                                                                                                                                      | 笔记所有卡片的总倒退次数。                                                                                                                                                     |
+| 笔记            | 与卡片的笔记中的内容相同。                                                                                                                                                       | 笔记的类型名称。                                                                                                                                                               |
+| 笔记修改        | 与卡片的笔记中的内容相同。                                                                                                                                                       | 上次编辑（例如字段内容）的时间。                                                                                                                                                |
+| 问题            | 卡片正面的文本行。你还可以在卡片类型编辑器中选择[自定义格式](templates/styling.md#browser-appearance)来代替。                                                                    | 与卡片模式相同，仅限于笔记的第一张卡片。                                                                                                                                       |
+| 审核            | 卡片已被审核的次数。                                                                                                                                                            | 笔记所有卡片的总审核次数。                                                                                                                                                     |
+| 排序字段        | 与卡片的笔记中的内容相同。                                                                                                                                                       | 笔记字段中定义为笔记类型排序字段的内容。只有这一个字段可以显示和排序。你可以点击编辑区域中的「字段...」来更改排序字段。                                                           |
+| 标签            | 与卡片的笔记中的内容相同。                                                                                                                                                       | 笔记的标签。                                                                                                                                                                   |
+
+## 编辑区域
+
+右下区域显示当前选中行的笔记。有关卡片和笔记的更多信息，请参见[开始使用](getting-started.md)。有关格
+式化按钮的更多信息，请参见[编辑](editing.md)。
+
+你可以点击编辑区域顶部的**预览**按钮，查看当前所选卡片在复习时的样子。注意，这将不会显示你卡片上的任
+何回答类型的字段，从而更容易快速预览卡片。在笔记模式下，预览显示的是所选笔记的第一张卡片。
+
+## 菜单和操作
+
+浏览器窗口顶部有一个工具栏，包含各种菜单，提供浏览器中可以执行的各种操作。
+
+### 编辑
+
+&lt;!-- prettier-ignore --&gt;
+| 名称               | 操作                                                                                                                                                                                                    |
+| ------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 撤销               | 撤销最近执行的操作。                                                                                                                                                                                     |
+| 全选               | 选择所有显示的行。                                                                                                                                                                                       |
+| 选择笔记           | 仅显示当前选择的笔记并选择所有行。                                                                                                                                                                       |
+| 反向选择           | 选择未被选择的行，并取消选择当前选中的行。                                                                                                                                                               |
+| 创建过滤牌组       | 显示[过滤牌组](filtered-decks.md#creating-manually)对话框，并将当前浏览器搜索设置为过滤条件。使用 &lt;kbd&gt;Alt&lt;/kbd&gt; / &lt;kbd&gt;Option&lt;/kbd&gt; 代替设置第二个过滤条件（需要调度程序版本 2+）。                    |
+
+### 笔记
+
+下列大多数操作用于所选笔记。它们也可以通过右键点击笔记模式下选择的行时的上下文菜单来使用。在卡片模式
+下，可以在上下文菜单的子菜单中找到这些操作。
+
+```markdown
+| 名称           | 操作                                                                                                                                                                                                                                             |
+| -------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| 添加笔记       | 打开[添加](editing.md#adding-cards-and-notes)对话框。                                                                                                                                                                                            |
+| 创建副本       | 在[编辑器](editing.md#adding-cards-and-notes)中打开当前笔记的[副本](browsing.md#finding-duplicates)，可以稍作修改来轻松获取卡片的变体。默认情况下，副本卡片将创建在与原始卡片相同的牌组中。                                                      |
+| 导出笔记       | 打开[导出](exporting.md)对话框。                                                                                                                                                                                                                 |
+| 添加标签       | 将提供的标签添加到所有选定的笔记。                                                                                                                                                                                                               |
+| 移除标签       | 输入标签并从所有选定的笔记中移除它们。                                                                                                                                                                                                           |
+| 清除未使用标签 | 从侧栏中移除所有未被任何笔记使用的标签。                                                                                                                                                                                                         |
+| 切换标记       | 如果当前笔记被标记（即具有 _Marked_ 标签），则取消标记所有选定的笔记。如果当前未标记，则标记所有选定的笔记。                                                                                                                                     |
+| 更改笔记类型   | 将选定的笔记从一种类型转换为另一种类型。例如，假设你有一个「俄语」笔记类型和一个「计算机」笔记类型，而你不小心在「俄语」笔记中添加了一些与计算机相关的文本。你可以使用此选项来修复这种错误。卡片的计划不会受到影响。更改笔记的类型需要单向同步。 |
+| 查找重复项     | 打开[重复项](#finding-duplicates)对话框。                                                                                                                                                                                                        |
+| 查找和替换     | 打开[查找和替换](#find-and-replace)对话框。                                                                                                                                                                                                      |
+| 管理笔记类型   | 打开[笔记类型](editing.md#adding-a-note-type)对话框。                                                                                                                                                                                            |
+| 删除           | 删除所有选定的笔记及其卡片。无法删除单个卡片，因为单个卡片由[模板](templates/intro.md)控制。                                                                                                                                                     |
+
+### 卡片
+
+以下操作针对当前选定的卡片。当在卡片模式下右键单击选定行时，它们也可通过上下文菜单获得。在笔记模式
+下，它们可以在上下文菜单的子菜单中找到。
+
+&lt;!-- prettier-ignore --&gt;
+| 名称          | 操作                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |
+| ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 更改牌组      | 将当前选定的卡片移动到不同的牌组中。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| 设置到期日    | 将卡片变为复习卡片，并使其在特定日期到期。当你的学习计划受扰时，这可能有助于将卡片提前或推迟几天。输入一个范围如 `60-90` 将使所选卡片在 60 到 90 天内到期。新卡片的间隔将设置为相同的延迟，但复习将被重新安排而不改变其当前间隔，除非范围的末尾包含 '!'。 （请注意，当手动安排卡片时未记录答题时间，因为该操作可以在复习之外执行，Anki 无法知道哪个卡片可能会或不会在此时显示。）                                                                                                              |
+| 忘记          | 将当前选定的卡片移至新队列的末尾。现有的复习历史记录被保留。在 2.1.50+ 中，有恢复原始卡片位置的选项，并重置卡片的失误和重复计数器。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| 更改位置      | 更改新卡片的出现顺序。你可以通过启用 _due_ 列来查看现有位置，如上面的[表格](#cardnote-table)部分所述。如果在选定多个卡片时运行更改位置命令，它将依次对每张卡片应用递增的编号。默认情况下，每张卡片的编号增加 1，但可以通过更改「步进」设置进行调整。**Shift position of existing cards** 选项允许你将卡片插入当前存在的卡片之间，推动当前存在的卡片分开。例如，如果你有五张卡片并想将 3、4 和 5 移动到 1 和 2 之间，选择此设置将使卡片按 1、3、4、5、2 的顺序排列。 相比之下，如果关闭此选项，1 和 2 将获得相同的位置编号（因此无法预测同一个编号的卡片中哪个会首先出现）。请注意，当启用时，任何位置较高的卡片都会被修改，所有这些更改的卡片都需要在下次同步时发送。 |
+| 切换暂停      | 根据当前卡片是否暂停，[暂停](studying.md#editing-and-more)或取消暂停所有选定的卡片。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
+| 标记          | 切换所有选定卡片的标记。添加或移除标记取决于当前卡片是否具有所选标记。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| 信息          | 显示有关当前卡片的各种信息，包括其复习历史。更多信息，请参见[卡片信息](stats.md#card-info)。                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
+
+### 导航
+
+此菜单提供用于跳转到浏览器的各个部分以及上下移动卡片列表的键盘快捷键。
+
+## 查找和替换
+
+此对话框允许对笔记进行文本替换。如上所述，可以通过工具栏和表格的上下文菜单访问该功能。
+
+第一个输入字段用于输入要替换的文本，第二个输入字段用于替换文本。接下来，有一个下拉菜单可用于指定
+Anki 应在哪里查找要替换的文本：笔记的标签中（需要 Anki 2.1.45+），所有字段中，或仅限于特定字段（仅列
+出属于选定笔记的字段）。
+
+默认情况下，仅影响选定的笔记。如果你想取消这一限制，可以取消选中「仅选定笔记」复选框（需要Anki
+2.1.45+）。
+
+正则表达式选项允许你进行复杂的替换。例如，假设字段中有以下文本：
+
+&lt;img src=&quot;pic.jpg&quot; /&gt;
+
+我们使用以下设置：
+
+![查找和替换对话框](media/find_and_replace.png)
+
+（请注意，在 Anki 2.1.28 之前的版本中，你需要将 `${1}` 替换为 `\1`。）
+
+然后，假定的字段内容将更改为：
+
+pic.jpg
+
+有关正则表达式的详细讨论超出了本文档的范围。网上有许多语法指南：
+
+- 对于 Anki 2.1.28+，请参见 &lt;https://docs.rs/regex/latest/regex/index.html#syntax&gt;。
+- 对于较旧的 Anki 版本，请参见 &lt;http://docs.python.org/library/re.html&gt;。
+
+## 查找重复
+
+你可以使用 **笔记 &gt; 查找重复** 选项来搜索内容相同的笔记。当你打开窗口时，Anki 将查看你所有的笔记类
+型，并呈现所有可能字段的列表。如果你想在 _Back_ 字段中查找重复项，你需要从列表中选择它，然后点击
+**搜索**。
+
+默认情况下，它会在所有具备你提供字段的笔记类型中进行搜索。这与手动添加卡片时的重复检查不同，手动添加
+卡片时的检查限制在单一笔记类型内。
+
+**可选过滤器** 文本框允许你缩小 Anki 的重复检查范围。如果你只想在「French Vocab」和「French Verbs」
+笔记类型中查找重复项，你可以输入：
+
+&quot;note:french vocab&quot; 或 &quot;note:french verbs&quot;
+
+或者你可能只想在特定牌组中查找重复项，因此你可以使用：
+
+&quot;deck:myDeck&quot;
+
+搜索语法和在浏览器中搜索时使用的语法相同。更多信息，请参见[搜索](searching.md)。
+
+你可以点击搜索结果列表中的链接来显示该组中的重复笔记。如果搜索带来了大量重复项，你可能希望点击 **标
+记重复项** 按钮，这会为所有匹配的笔记标记为 _duplicate_。你可以随后在浏览器中搜索此标签，并从同一界
+面处理它们。
+```
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="profiles.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="filtered-decks.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="profiles.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="filtered-decks.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>

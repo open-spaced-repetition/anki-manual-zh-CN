@@ -1,0 +1,295 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN" class="sidebar-visible no-js light">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>背景 - Anki 手册</title>
+
+
+        <!-- Custom HTML head -->
+        
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <meta name="description" content="Anki 的用户手册。Anki 是一款让学习更容易的抽认卡程序。">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff" />
+
+        <link rel="icon" href="favicon.svg">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" href="css/variables.css">
+        <link rel="stylesheet" href="css/general.css">
+        <link rel="stylesheet" href="css/chrome.css">
+        <link rel="stylesheet" href="css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" href="highlight.css">
+        <link rel="stylesheet" href="tomorrow-night.css">
+        <link rel="stylesheet" href="ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+        <link rel="stylesheet" href="css/misc.css">
+        <link rel="stylesheet" href="css/kbd.css">
+
+    </head>
+    <body>
+        <!-- Provide site root to javascript -->
+        <script type="text/javascript">
+            var path_to_root = "";
+            var default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "navy" : "light";
+        </script>
+
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script type="text/javascript">
+            try {
+                var theme = localStorage.getItem('mdbook-theme');
+                var sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script type="text/javascript">
+            var theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            var html = document.querySelector('html');
+            html.classList.remove('no-js')
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add('js');
+        </script>
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script type="text/javascript">
+            var html = document.querySelector('html');
+            var sidebar = 'hidden';
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            }
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <div class="sidebar-scrollbox">
+                <ol class="chapter"><li class="chapter-item affix "><a href="intro.html">介绍</a></li><li class="chapter-item expanded "><a href="background.html" class="active"><strong aria-hidden="true">1.</strong> 背景</a></li><li class="chapter-item "><a href="platform/intro.html"><strong aria-hidden="true">2.</strong> 平台说明</a></li><li class="chapter-item "><a href="platform/windows/intro.html"><strong aria-hidden="true">3.</strong> Windows</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/windows/installing.html"><strong aria-hidden="true">3.1.</strong> 安装与升级</a></li><li class="chapter-item "><a href="platform/windows/installation-issues.html"><strong aria-hidden="true">3.2.</strong> 安装问题</a></li><li class="chapter-item "><a href="platform/windows/startup-issues.html"><strong aria-hidden="true">3.3.</strong> 启动问题</a></li><li class="chapter-item "><a href="platform/windows/display-issues.html"><strong aria-hidden="true">3.4.</strong> 显示问题</a></li><li class="chapter-item "><a href="platform/windows/copy-and-paste.html"><strong aria-hidden="true">3.5.</strong> 复制和粘贴问题</a></li><li class="chapter-item "><a href="platform/windows/text-size.html"><strong aria-hidden="true">3.6.</strong> 文字大小</a></li><li class="chapter-item "><a href="platform/windows/permission-problems.html"><strong aria-hidden="true">3.7.</strong> 权限问题</a></li></ol></li><li class="chapter-item "><a href="platform/mac/intro.html"><strong aria-hidden="true">4.</strong> macOS</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/mac/installing.html"><strong aria-hidden="true">4.1.</strong> 安装与升级</a></li><li class="chapter-item "><a href="platform/mac/display-issues.html"><strong aria-hidden="true">4.2.</strong> 显示问题</a></li></ol></li><li class="chapter-item "><a href="platform/linux/intro.html"><strong aria-hidden="true">5.</strong> Linux</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="platform/linux/installing.html"><strong aria-hidden="true">5.1.</strong> 安装与升级</a></li><li class="chapter-item "><a href="platform/linux/missing-libraries.html"><strong aria-hidden="true">5.2.</strong> 缺少的库</a></li><li class="chapter-item "><a href="platform/linux/display-issues.html"><strong aria-hidden="true">5.3.</strong> 显示问题</a></li><li class="chapter-item "><a href="platform/linux/blank-window.html"><strong aria-hidden="true">5.4.</strong> 空白主窗口</a></li><li class="chapter-item "><a href="platform/linux/distro-packages.html"><strong aria-hidden="true">5.5.</strong> Linux 发行版包</a></li><li class="chapter-item "><a href="platform/linux/gtk-theme.html"><strong aria-hidden="true">5.6.</strong> 错误的 GTK 主题</a></li><li class="chapter-item "><a href="platform/linux/wayland.html"><strong aria-hidden="true">5.7.</strong> Wayland</a></li><li class="chapter-item "><a href="platform/linux/input-methods.html"><strong aria-hidden="true">5.8.</strong> 输入法</a></li></ol></li><li class="chapter-item "><a href="getting-started.html"><strong aria-hidden="true">6.</strong> 入门</a></li><li class="chapter-item "><a href="getting-help.html"><strong aria-hidden="true">7.</strong> 获取帮助</a></li><li class="chapter-item "><a href="studying.html"><strong aria-hidden="true">8.</strong> 学习</a></li><li class="chapter-item "><a href="editing.html"><strong aria-hidden="true">9.</strong> 添加/编辑</a></li><li class="chapter-item "><a href="templates/intro.html"><strong aria-hidden="true">10.</strong> 卡片模板</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="templates/fields.html"><strong aria-hidden="true">10.1.</strong> 字段替换</a></li><li class="chapter-item "><a href="templates/generation.html"><strong aria-hidden="true">10.2.</strong> 卡片生成</a></li><li class="chapter-item "><a href="templates/styling.html"><strong aria-hidden="true">10.3.</strong> 样式与 HTML</a></li><li class="chapter-item "><a href="templates/errors.html"><strong aria-hidden="true">10.4.</strong> 检查和错误</a></li></ol></li><li class="chapter-item "><a href="preferences.html"><strong aria-hidden="true">11.</strong> 偏好设置</a></li><li class="chapter-item "><a href="deck-options.html"><strong aria-hidden="true">12.</strong> 牌组选项</a></li><li class="chapter-item "><a href="syncing.html"><strong aria-hidden="true">13.</strong> 与 AnkiWeb 同步</a></li><li class="chapter-item "><a href="profiles.html"><strong aria-hidden="true">14.</strong> 用户档案</a></li><li class="chapter-item "><a href="browsing.html"><strong aria-hidden="true">15.</strong> 浏览</a></li><li class="chapter-item "><a href="filtered-decks.html"><strong aria-hidden="true">16.</strong> 过滤牌组</a></li><li class="chapter-item "><a href="searching.html"><strong aria-hidden="true">17.</strong> 搜索</a></li><li class="chapter-item "><a href="importing/intro.html"><strong aria-hidden="true">18.</strong> 导入</a><a class="toggle"><div>❱</div></a></li><li><ol class="section"><li class="chapter-item "><a href="importing/text-files.html"><strong aria-hidden="true">18.1.</strong> 文本文件</a></li><li class="chapter-item "><a href="importing/packaged-decks.html"><strong aria-hidden="true">18.2.</strong> 打包的牌组</a></li></ol></li><li class="chapter-item "><a href="exporting.html"><strong aria-hidden="true">19.</strong> 导出</a></li><li class="chapter-item "><a href="backups.html"><strong aria-hidden="true">20.</strong> 备份</a></li><li class="chapter-item "><a href="files.html"><strong aria-hidden="true">21.</strong> 管理文件</a></li><li class="chapter-item "><a href="stats.html"><strong aria-hidden="true">22.</strong> 统计</a></li><li class="chapter-item "><a href="media.html"><strong aria-hidden="true">23.</strong> 媒体</a></li><li class="chapter-item "><a href="math.html"><strong aria-hidden="true">24.</strong> 数学与符号</a></li><li class="chapter-item "><a href="leeches.html"><strong aria-hidden="true">25.</strong> 吸血卡</a></li><li class="chapter-item "><a href="addons.html"><strong aria-hidden="true">26.</strong> 插件</a></li><li class="chapter-item "><a href="troubleshooting.html"><strong aria-hidden="true">27.</strong> 故障排除</a></li><li class="chapter-item "><a href="sync-server.html"><strong aria-hidden="true">28.</strong> 同步服务器</a></li><li class="chapter-item "><a href="misc.html"><strong aria-hidden="true">29.</strong> 其他</a></li><li class="chapter-item affix "><a href="contrib.html">贡献</a></li><li class="chapter-item affix "><a href="faqs.html">常见问题</a></li><li class="chapter-item affix "><a href="resources.html">资源</a></li></ol>
+            </div>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky bordered">
+                    <div class="left-buttons">
+                        <button id="sidebar-toggle" class="icon-button" type="button" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </button>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light (default)</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search. (Shortkey: s)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="S" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">Anki 手册</h1>
+
+                    <div class="right-buttons">
+                        <a href="print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/L-M-Sherlock/anki-manual-zh-CN" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script type="text/javascript">
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <pre><code class="language-markdown"># 背景
+
+&lt;!-- toc --&gt;
+
+Anki 是一款让记忆更简单的程序。因为它比传统学习方法更加高效，因此你可以大幅减少学习时间，或者大幅增
+加学习内容。
+
+任何需要在日常生活中记住事情的人都可以从 Anki 中受益。由于它对内容不设限，并支持图像、音频、视频和科
+学标记，可能性是无穷的。例如：
+
+- 学习语言
+
+- 为医学和法律考试学习
+
+- 记忆人物的姓名和面孔
+
+- 回顾地理知识
+
+- 掌握长诗
+
+- 甚至练习吉他和弦！
+
+Anki 背后有两个简单的概念：**主动回忆测试**和**间隔重复**。尽管科学文献中对其有详细记录，但大多数学
+习者并不了解这些概念。理解这些概念的工作原理将使你成为更有效的学习者。
+
+## 主动回忆测试
+
+_主动回忆测试_ 指的是被问到一个问题并尝试记住答案。这与 _被动学习_ 相对，我们在被动学习中阅读、观看
+或聆听内容，而不暂停考虑自己是否知道答案。研究表明，主动回忆测试在建立强大记忆方面远比被动学习更为有
+效。原因有二：
+
+- 回忆某样东西的行为 _强化_ 了记忆，提高了我们再次记住它的机会。
+
+- 当我们无法回答问题时，这告诉我们需要重新回顾或重新学习材料。
+
+你可能在上学时遇到过主动回忆测试而并未意识到这一点。当好的老师让你在读完一篇文章后回答一系列问题，或
+让你参加每周的测试时，他们并不仅仅是为了看看你是否理解了材料。通过测试你，他们增加了你未来能够记住材
+料的机会。
+
+将主动回忆测试整合到自己学习中的一个好方法是使用 _抽认卡_。在传统的纸质抽认卡上，你在卡片的一侧写下
+一个问题，在另一侧写下答案。在未回忆出答案前不翻转卡片，这样你可以比被动观察更有效地学习。
+
+## 用进废退
+
+我们的脑子是高效的机器，快速遗忘看似无用的信息。你可能不记得两周前星期一晚餐吃了什么，因为这种信息通
+常不太有用。然而，如果你那天去了一家绝佳的餐厅，并在过去两周里一直告诉人们它有多棒，你很可能仍然记得
+得清楚。
+
+大脑的「用进废退」政策适用于我们学过的所有东西。如果你花了一下午记住了一些科学术语，然后两周内再没想
+过这些材料，你很可能已经忘记了大部分内容。事实上，研究显示我们在学习 48 小时内就会忘记约 75% 的内
+容。当你需要学习大量信息时，这看起来可能很令人沮丧！
+
+然而，解决方案很简单：_复习_。通过复习新学的内容，我们可以大大减少遗忘。
+
+唯一的问题是，传统上，复习并不实际。使用纸质抽认卡时，如果只有 30 张卡来复习，很容易翻阅全部卡片，但
+当数量增加到 300 或 3000 时，就变得难以管理。
+
+## 间隔重复
+
+_间隔效应_ 于 1885 年由德国心理学家赫尔曼·艾宾浩斯报道。他观察到，我们把复习分散在时间里比在一次学习
+中多次复习更能有效记住东西。自 1930 年代以来，有许多利用间隔效应来改善学习的提议，这被称为 _间隔重
+复_。
+
+一个例子是在 1972 年，当时德国科学家 Sebastian Leitner 推广了一种间隔重复的纸质抽认卡方法。通过将纸
+卡分成一系列的盒子，并在每次成功或失败复习后将卡转到不同的盒子中，可以一眼看到某个卡片知晓程度的粗略
+估计以及何时应再次复习。这比只有一个卡片盒有了很大改进，并已被计算机化抽认卡软件广泛采用。然而，这是
+一种相当粗糙的方法，因为它无法给你一个准确的复习日期，并且对不同难度的材料效果不佳。
+
+近 30 年来最大的进展来自于 SuperMemo 的作者，这是一个实现了间隔重复的商用抽认卡程序。SuperMemo 率先
+提出了一种系统，能够记录理想的复习时间并根据用户的表现进行自我优化。
+
+在 SuperMemo 的间隔重复系统中，每次你回答一个问题，
+
+请告知程序你记忆得如何——是完全忘记、犯了小错误、有点困难地想起、轻松记起等等。程序利用这些反馈来决定
+再次出示问题的最佳时间。因为某个记忆在你成功回忆后变得更强，所以复习之间的时间越来越长——因此你可能今
+天第一次看到一个问题，然后 3 天后、15 天后、45 天后再见。
+
+这在学习中是一场革命，因为它意味着可以以绝对最低限度的努力学习和保留材料。SuperMemo 的口号总结得很
+好：通过间隔重复，你可以「忘掉遗忘」。
+
+## 为什么选择 Anki？
+
+尽管无法否认 SuperMemo 在这一领域的巨大影响，但它并非没有问题。该程序常被批评为漏洞多且难以导航。它
+仅在 Windows 电脑上运行。它是专有软件，意味着最终用户无法扩展或访问原始数据。虽然非常老的版本可以免
+费下载，但对现代使用而言相当有限。
+
+Anki 解决了这些问题。Anki 的免费客户端可以在多个平台上使用，因此预算有限的学生和老师也不会被排除在
+外。Anki 是开源的，已经有用户贡献的蓬勃发展附加库。它是跨平台的，可以在
+Windows、macOS、Linux/FreeBSD 以及一些移动设备上运行。并且比 SuperMemo 更容易使用。
+
+Anki 的间隔重复系统基于 [SM-2](https://faqs.ankiweb.net/what-spaced-repetition-algorithm) 这个更早版
+本的 SuperMemo 算法。最近，一个新算法
+[FSRS](https://docs.ankiweb.net/deck-options.html?highlight=FSRS#fsrs) 被集成为传统 SM-2 算法的替代
+选择。
+</code></pre>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="intro.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next" href="platform/intro.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="intro.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next" href="platform/intro.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script type="text/javascript">
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="elasticlunr.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="mark.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="searcher.js" type="text/javascript" charset="utf-8"></script>
+
+        <script src="clipboard.min.js" type="text/javascript" charset="utf-8"></script>
+        <script src="highlight.js" type="text/javascript" charset="utf-8"></script>
+        <script src="book.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </body>
+</html>
