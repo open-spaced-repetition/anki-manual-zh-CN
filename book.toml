@@ -1,0 +1,36 @@
+[book]
+authors = ["Ankitects Pty Ltd and contributors"]
+description = "Anki 的用户手册。Anki 是一款让学习更容易的抽认卡程序。"
+language = "zh-CN"
+multilingual = false
+src = "src"
+title = "Anki 手册"
+
+[build]
+create-missing = true
+
+[preprocessor.toc]
+command = "mdbook-toc"
+renderer = ["html"]
+
+[output.html]
+git-repository-url = "https://github.com/L-M-Sherlock/anki-manual-zh-CN"
+additional-css = ["css/misc.css", "css/kbd.css"]
+
+[output.linkcheck]
+optional = true
+warning-policy = "warn"
+follow-web-links = true
+exclude = [
+  'microsoft.com',
+  'twitter.com',
+  'stackexchange.com',
+  'stackoverflow.com',
+  'https://github.com/open-spaced-repetition/fsrs4anki#add-on-compatibility',
+  'support.google.com',
+  'wikiwiki.jp',
+]
+
+[output.html.fold]
+enable = true
+level = 0

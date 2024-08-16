@@ -24,7 +24,6 @@
 - [العربية](https://abdnh.github.io/anki-manual/)
 - [فارسى](http://ankidroid.ir/anki.pdf)
 - [日本語](http://wikiwiki.jp/rage2050/)
-- [简体中文](http://www.ankichina.net/manual/anki/)
 
 如果您希望帮助将手册翻译成其他语言，请参
 阅[翻译文档](https://translating.ankiweb.net/anki/manual.html)。
