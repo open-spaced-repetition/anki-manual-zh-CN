@@ -95,11 +95,11 @@ br 代码代表「(line) br(eak)」。
 
 在 Windows 上，有些像 Cortana 的语音无法选择，因为 Microsoft 不允许其他应用程序使用这些语音。
 
-在完形填空笔记类型中，你可以使用 `cloze-only` 过滤器来让 Anki 只朗读隐藏部分，如下所示：
+在完形填空笔记类型中，你可以使用 `cloze-only` 筛选器来让 Anki 只朗读隐藏部分，如下所示：
 
 {{tts en_US:cloze-only:Text}}
 
-cloze-only 过滤器在 Anki 2.1.29+、AnkiMobile 2.0.65+ 及 AnkiDroid 2.17+ 上受支持。
+cloze-only 筛选器在 Anki 2.1.29+、AnkiMobile 2.0.65+ 及 AnkiDroid 2.17+ 上受支持。
 
 ## 对多个字段和静态文本的文字转语音
 
@@ -213,7 +213,7 @@ http://example.com/search?q=myword
     Text[Ruby]
 
 假设上面的文本写在 MyField 中。默认情况下，如果你只是使用 `{{Myfield}}`，字段将以原样显示。要正确地
-将注音字符放置在文本上方，请在模板中使用 `furigana` 过滤器，如下所示：
+将注音字符放置在文本上方，请在模板中使用 `furigana` 筛选器，如下所示：
 
 {{furigana:MyField}}
 
@@ -230,13 +230,13 @@ http://example.com/search?q=myword
 注意第三个示例在「中」字符前有一个空格。这是为了指定注音文本只适用于该字符。如果没有空格，注音文本将
 被错误地放置在「の」字符上，如第四个示例所示。
 
-### 附加注音字符过滤器
+### 附加注音字符筛选器
 
-除了 `furigana` 过滤器，你还可以只显示注音文本的某些部分，使用 `kana` 和 `kanji` 过滤器。`kana` 过滤
-器只会显示注音文本，而 `kanji` 过滤器则完全去除注音文本。
+除了 `furigana` 筛选器，你还可以只显示注音文本的某些部分，使用 `kana` 和 `kanji` 筛选器。`kana` 过滤
+器只会显示注音文本，而 `kanji` 筛选器则完全去除注音文本。
 
 <!-- prettier-ignore -->
-| 原始文本 | 字段过滤器 | 渲染后文本 |
+| 原始文本 | 字段筛选器 | 渲染后文本 |
 | --- | --- | --- |
 | `日本語[にほんご]` | `{{furigana:MyField}}` | <ruby><rb>日本語</rb><rt>にほんご</rt></ruby> |
 | `日本語[にほんご]` | `{{kana:MyField}}` | にほんご |

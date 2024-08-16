@@ -13,13 +13,13 @@ Anki 2.1+、AnkiMobile 和 AnkiDroid 2.9+ 中已开箱即用地支持 MathJax。
 
 1. 在一个字段中输入以下内容：
 
-\sqrt{x}
+   \sqrt{x}
 
 2. 选择你刚刚输入的文本。
 
 3. 点击编辑器中最右侧的按钮，从菜单中选择「MathJax inline」。Anki 会将文本更改为：
 
-\(\sqrt{x}\)
+   \(\sqrt{x}\)
 
 4. 如果你点击「卡片…」按钮，你会看到卡片复习时方程的预览。
 
@@ -125,7 +125,7 @@ sudo tlmgr update --self; sudo tlmgr install dvipng
 
     [$$]...[/$$]
 
-例如，之前展示的两个 LaTeX 代码片段相当于
+例如，之前展示的两个 LaTeX 代码片段分别等价于
 
     [$]\sum\_{k = 1}^{\infty}\frac{1}{k}[/$] 收敛吗？
 
@@ -134,8 +134,6 @@ sudo tlmgr update --self; sudo tlmgr install dvipng
     以下这个求和是否收敛？
 
     [$$]\sum\_{k = 1}^{\infty}\frac{1}{k}[/$$]
-
-分别地。
 
 ### 包
 
@@ -206,10 +204,10 @@ chemtex 示例文件：
 
     {{=<% %>=}} <%latex field%>
 
-### 填空冲突
+### 挖空冲突
 
-填空删除用 `}}` 终止，这可能与你的 LaTeX 中出现的 `}}` 冲突。为了防止 LaTeX 被解释为一个关闭的填空标
-记，可以在不表示填空结束的任意双闭合大括号之间加一个空格，这样
+挖空以 `}}` 终止，这可能与你的 LaTeX 中出现的 `}}` 冲突。为了防止 LaTeX 被解释为一个关闭的挖空标记，
+可以在不表示填空结束的任意双闭合大括号之间加一个空格，这样
 
     {{c1::[$]\frac{foo}{\frac{bar}{baz}}[/$] blah blah blah.}}
 
@@ -223,8 +221,8 @@ chemtex 示例文件：
 
     {{c1::[$]\frac{foo}{\frac{bar}{baz}<!-- -->}[/$] blah blah blah.}}
 
-如果你需要在被填空删除的文本中使用 `::` 字符序列，可以使用任一制作法。以下笔记文本生成的第一张卡片将
-是 `[type] in C++ is a type-safe union`：
+如果你需要在被挖空的文本中使用 `::` 字符序列，可以使用任一制作法。以下笔记文本生成的第一张卡片将是
+`[type] in C++ is a type-safe union`：
 
     {{c1::std:<!-- -->:variant::~type~}} in C++ is a {{c2::type-safe union}}
 
