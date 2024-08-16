@@ -158,32 +158,32 @@
 </ul>
 <h2 id="要求"><a class="header" href="#要求">要求</a></h2>
 <p>封装版本要求近期的 64 位 Intel/AMD Linux，同样需要 glibc 和一些通用库，如 libwayland-client 和
-systemd。如果您使用的是不同的架构（例如 ARM/AArch64），或是一个精简的 Linux 发行版，您将无法使用封装
-版本，但您可以尝试使用 <a href="https://betas.ankiweb.net/#via-pypipip">Python wheels</a>。</p>
+systemd。如果你使用的是不同的架构（例如 ARM/AArch64），或是一个精简的 Linux 发行版，你将无法使用封装
+版本，但你可以尝试使用 <a href="https://betas.ankiweb.net/#via-pypipip">Python wheels</a>。</p>
 <p>Debian 及其衍生版本，例如 Ubuntu
 和<a href="https://support.google.com/chromebook/answer/9145439?">启用 Linux 的 Chromebook</a>，请在安装前使用
 以下命令：</p>
 <pre><code class="language-shell">sudo apt install libxcb-xinerama0 libxcb-cursor0 libnss3
 </code></pre>
-<p>如果安装后 Anki 无法启动，您可能<a href="./missing-libraries.html">缺少其他库</a>。</p>
-<p>如果您在 Ubuntu 24.04 上无法启动 Anki，请参
+<p>如果安装后 Anki 无法启动，你可能<a href="./missing-libraries.html">缺少其他库</a>。</p>
+<p>如果你在 Ubuntu 24.04 上无法启动 Anki，请参
 见<a href="https://forums.ankiweb.net/t/issues-running-on-ubuntu-24-04/40974">本主题</a>。</p>
 <p>Anki 的构建系统仅支持 glibc，因此目前不支持基于 musl 的发行版。</p>
 <h2 id="安装"><a class="header" href="#安装">安装</a></h2>
 <p>安装 Anki 的步骤：</p>
 <ol>
-<li>从 <a href="https://apps.ankiweb.net">https://apps.ankiweb.net</a> 下载 Anki 到您的 Downloads 文件夹。有关如何在 -qt5 和 -qt6 之间进行
+<li>从 <a href="https://apps.ankiweb.net">https://apps.ankiweb.net</a> 下载 Anki 到你的 Downloads 文件夹。有关如何在 -qt5 和 -qt6 之间进行
 选择，请参见下一节。</li>
-<li>如果您的系统上尚未安装 zstd，请安装它（例如 <code>sudo apt install zstd</code>）。</li>
+<li>如果你的系统上尚未安装 zstd，请安装它（例如 <code>sudo apt install zstd</code>）。</li>
 <li>打开终端并运行以下命令，根据需要替换文件名。</li>
 </ol>
 <pre><code class="language-shell">tar xaf Downloads/anki-2XXX-linux-qt6.tar.zst
 cd anki-2XXX-linux-qt6
 sudo ./install.sh
 </code></pre>
-<p>在某些 Linux 系统上，您可能需要使用 <code>tar xaf --use-compress-program=unzstd</code>。</p>
+<p>在某些 Linux 系统上，你可能需要使用 <code>tar xaf --use-compress-program=unzstd</code>。</p>
 <ol start="4">
-<li>然后，您可以通过输入「anki」并按回车键来启动 Anki。如果遇到任何问题，请参见左侧的链接。</li>
+<li>然后，你可以通过输入「anki」并按回车键来启动 Anki。如果遇到任何问题，请参见左侧的链接。</li>
 </ol>
 <h2 id="qt5-与-qt6"><a class="header" href="#qt5-与-qt6">Qt5 与 Qt6</a></h2>
 <p>近期的 Anki 版本有 Qt5 和 Qt6 两个变体。对于大多数用户，推荐使用 Qt6 版本。</p>
@@ -200,12 +200,12 @@ sudo ./install.sh
 <li>一些插件目前仅在 Qt5 版本上可用。</li>
 </ul>
 <h2 id="升级"><a class="header" href="#升级">升级</a></h2>
-<p>如果您过去是从 .deb/.rpm 等安装 Anki，请确保在安装此处提供的封装包之前删除系统版本。</p>
-<p>如果您是从之前的封装包升级，只需重复安装步骤，即可升级到最新版本。您的用户数据将会被保留。</p>
-<p>如果您希望降级到先前的版本，请确保您先进行 <a href="http://changes.ankiweb.net">降级</a>。</p>
+<p>如果你过去是从 .deb/.rpm 等安装 Anki，请确保在安装此处提供的封装包之前删除系统版本。</p>
+<p>如果你是从之前的封装包升级，只需重复安装步骤，即可升级到最新版本。你的用户数据将会被保留。</p>
+<p>如果你希望降级到先前的版本，请确保你先进行 <a href="http://changes.ankiweb.net">降级</a>。</p>
 <h2 id="插件兼容性"><a class="header" href="#插件兼容性">插件兼容性</a></h2>
-<p>某些插件可能不总是与最新的 Anki 版本兼容。如果您升级到最新的 Anki 版本并发现您不能没有的插件停止工
-作，您可以从<a href="https://github.com/ankitects/anki/releases">发布页面</a> 下载旧版本的Anki。</p>
+<p>某些插件可能不总是与最新的 Anki 版本兼容。如果你升级到最新的 Anki 版本并发现你不能没有的插件停止工
+作，你可以从<a href="https://github.com/ankitects/anki/releases">发布页面</a> 下载旧版本的Anki。</p>
 <h2 id="问题"><a class="header" href="#问题">问题</a></h2>
 <p>如果在安装或启动 Anki 时遇到任何问题，请参见以下页面：</p>
 <ul>
