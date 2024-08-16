@@ -220,12 +220,12 @@ http://example.com/search?q=myword
 以下是一些示例：
 
 <!-- prettier-ignore -->
-| 原始文本               | 渲染后文本                                                                                       |
-| -----------------------| ----------------------------------------------------------------------------------------------- |
-| `Text[Ruby]`           | <ruby><rb>Text</rb><rt>Ruby</rt></ruby>                                                         |
-| `日本語[にほんご]`     | <ruby><rb>日本語</rb><rt>にほんご</rt></ruby>                                                   |
-| `世[よ]の 中[なか]`     | <ruby><rb>世</rb><rt>よ</rt></ruby>の<ruby><rb>中</rb><rt>なか</rt></ruby>                      |
-| `世[よ]の中[なか]`     | <ruby><rb>世</rb><rt>よ</rt></ruby><ruby><rb>の中</rb><rt>なか</rt></ruby> _(不正确!)_          |
+| 原始文本 | 渲染后文本 |
+| --- | --- |
+| `Text[Ruby]` | <ruby><rb>Text</rb><rt>Ruby</rt></ruby> |
+| `日本語[にほんご]` | <ruby><rb>日本語</rb><rt>にほんご</rt></ruby> |
+| `世[よ]の 中[なか]` | <ruby><rb>世</rb><rt>よ</rt></ruby>の<ruby><rb>中</rb><rt>なか</rt></ruby> |
+| `世[よ]の中[なか]` | <ruby><rb>世</rb><rt>よ</rt></ruby><ruby><rb>の中</rb><rt>なか</rt></ruby> _(不正确!)_ |
 
 注意第三个示例在「中」字符前有一个空格。这是为了指定注音文本只适用于该字符。如果没有空格，注音文本将
 被错误地放置在「の」字符上，如第四个示例所示。
@@ -236,11 +236,11 @@ http://example.com/search?q=myword
 器只会显示注音文本，而 `kanji` 过滤器则完全去除注音文本。
 
 <!-- prettier-ignore -->
-| 原始文本              | 字段过滤器                 | 渲染后文本                               |
-| --------------------- | -------------------------- | --------------------------------------- |
-| `日本語[にほんご]`     | `{{furigana:MyField}}`     | <ruby><rb>日本語</rb><rt>にほんご</rt></ruby> |
-| `日本語[にほんご]`     | `{{kana:MyField}}`         | にほんご                                |
-| `日本語[にほんご]`     | `{{kanji:MyField}}`        | 日本語                                  |
+| 原始文本 | 字段过滤器 | 渲染后文本 |
+| --- | --- | --- |
+| `日本語[にほんご]` | `{{furigana:MyField}}` | <ruby><rb>日本語</rb><rt>にほんご</rt></ruby> |
+| `日本語[にほんご]` | `{{kana:MyField}}` | にほんご |
+| `日本語[にほんご]` | `{{kanji:MyField}}` | 日本語 |
 
 这些名称同样来源于日语。术语 [kana](https://en.wikipedia.org/wiki/Kana) 代表用于描述单词发音的音节系
 统，而术语 [kanji](https://en.wikipedia.org/wiki/Kanji) 代表其汉字。
