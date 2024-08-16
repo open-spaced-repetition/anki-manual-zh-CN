@@ -229,47 +229,81 @@
 <p>输入 LaTeX 内容最常用的方法是用 [latex] [/latex] 标签将其包裹。编辑器部分记录了快捷按钮。</p>
 <p>[latex] 标签必须在字段中使用——将它们放在卡片模板中会<a href="templates/fields.html">导致问题</a>。</p>
 <p>例如，在 Anki 闪卡正面输入以下内容：</p>
-<p>Does [latex]\begin{math}\sum_{k = 1}^{\infty}\frac{1}{k}\end{math}[/latex] converge?</p>
+<pre><code>[latex]\begin{math}\sum\_{k = 1}^{\infty}\frac{1}{k}\end{math}[/latex] 收敛吗？
+</code></pre>
 <p>当查看闪卡时，将会生成：</p>
 <p><img src="math/convergence_question.png" alt="收敛性问题" /></p>
 <p>上例中的公式称为文本公式，因为它直接显示在非数学文本中。相对地，以下示例显示的是显示公式：</p>
-<p>Does the sum below converge?</p>
-<p>[latex]\begin{displaymath}\sum_{k = 1}^{\infty}\frac{1}{k}\end{displaymath}[/latex]</p>
+<pre><code>下面这个求和是否收敛？
+
+[latex]\begin{displaymath}\sum\_{k = 1}^{\infty}\frac{1}{k}\end{displaymath}[/latex]
+</code></pre>
 <p><img src="math/convergence_question_2.png" alt="收敛性问题 2" /></p>
 <p>『文本公式』和『显示公式』是最常见的 LaTeX 表达式类型，因此 Anki 为它们提供了缩略版本。形式为：</p>
-<p>[latex]\begin{math}...\end{math}[/latex]</p>
+<pre><code>[latex]\begin{math}...\end{math}[/latex]
+</code></pre>
 <p>可以缩短为</p>
-<p>[$]...[/$]</p>
+<pre><code>[$]...[/$]
+</code></pre>
 <p>形式为</p>
-<p>[latex]\begin{displaymath}...\end{displaymath}[/latex]</p>
+<pre><code>[latex]\begin{displaymath}...\end{displaymath}[/latex]
+</code></pre>
 <p>可以缩短为</p>
-<p>[$$]...[/$$]</p>
+<pre><code>[$$]...[/$$]
+</code></pre>
 <p>例如，之前展示的两个 LaTeX 代码片段相当于</p>
-<p>Does [$]\sum_{k = 1}^{\infty}\frac{1}{k}[/$] converge?</p>
+<pre><code>[$]\sum\_{k = 1}^{\infty}\frac{1}{k}[/$] 收敛吗？
+</code></pre>
 <p>和</p>
-<p>Does the sum below converge?</p>
-<p>[$$]\sum_{k = 1}^{\infty}\frac{1}{k}[/$$]</p>
+<pre><code>以下这个求和是否收敛？
+
+[$$]\sum\_{k = 1}^{\infty}\frac{1}{k}[/$$]
+</code></pre>
 <p>分别地。</p>
 <h3 id="包"><a class="header" href="#包">包</a></h3>
 <p>Anki 允许你自定义 LaTeX 引言，以便你可以导入化学、音乐等的自定义包。例如，假设你在网上找到一个
 chemtex 示例文件：</p>
-<p>\documentclass[a4paper,12pt]{report} \usepackage{chemtex} \begin{document}</p>
-<p>\initial \begin{figure}[h]\centering \parbox{.3\textwidth}{\ethene{H}{H$_3$C}{CH$_3$}{Br}} \hfil
-\parbox{.3\textwidth}{\cbranch{H}{S}{H}{S}{C}{S}{}{S}{H} \xi=-200 \cright{}{Q}{C}{D}{O}{S}{OH}}
-\hfil \parbox{.3\textwidth}{\hetisix{Q}{Q}{Q}{Q}{Q}{Q}{O}{Q}{O} \xi=-171
-\fuseup{Q}{Q}{Q}{Q}{D}{Q}{D}{Q}{D}} \caption{Chemie mit {\tt CHEMTEX}\label{a1}} \end{figure}</p>
-<p>\end{document}</p>
+<pre><code>\documentclass[a4paper,12pt]{report}
+\usepackage{chemtex}
+\begin{document}
+
+\initial
+\begin{figure}[h]\centering
+\parbox{.3\textwidth}{\ethene{H}{H$_3$C}{CH$_3$}{Br}}
+\hfil
+\parbox{.3\textwidth}{\cbranch{H}{S}{H}{S}{C}{S}{}{S}{H}
+  \xi=-200 \cright{}{Q}{C}{D}{O}{S}{OH}}
+\hfil
+\parbox{.3\textwidth}{\hetisix{Q}{Q}{Q}{Q}{Q}{Q}{O}{Q}{O}
+  \xi=-171 \fuseup{Q}{Q}{Q}{Q}{D}{Q}{D}{Q}{D}}
+\caption{Chemie mit {\tt CHEMTEX}\label{a1}}
+\end{figure}
+
+\end{document}
+</code></pre>
 <p>首先，按照包和 MiKTeX/MacTeX 的文档来安装包。为了检查包是否正常工作，你需要将上述代码放入 .latex 文
 件中，并测试能否在命令行中编译。一旦确认包可用且正常工作，就可以将其集成到 Anki 中。</p>
 <p>要在 Anki 中使用该包，点击主窗口中的「添加」，然后点击笔记类型选择按钮。点击「管理」按钮，然后选择你
 计划使用的笔记类型并点击「选项」。显示出的 LaTeX 头部和尾部。头部看起来如下：</p>
-<p>\documentclass[12pt]{article} \special{papersize=3in,5in} \usepackage{amssymb,amsmath}
-\pagestyle{empty} \setlength{\parindent}{0in} \begin{document}</p>
+<pre><code>\documentclass[12pt]{article}
+\special{papersize=3in,5in}
+\usepackage{amssymb,amsmath}
+\pagestyle{empty}
+\setlength{\parindent}{0in}
+\begin{document}
+</code></pre>
 <p>要使用 chemtex，你需要添加早期示例中的 usepackage 行，使之看起来像：</p>
-<p>\documentclass[12pt]{article} \special{papersize=3in,5in} \usepackage{amssymb,amsmath}
-\usepackage{chemtex} \pagestyle{empty} \setlength{\parindent}{0in} \begin{document}</p>
+<pre><code>\documentclass[12pt]{article}
+\special{papersize=3in,5in}
+\usepackage{amssymb,amsmath}
+\usepackage{chemtex}
+\pagestyle{empty}
+\setlength{\parindent}{0in}
+\begin{document}
+</code></pre>
 <p>之后，你应该能够在你的 Anki 卡片中包含如下行：</p>
-<p>[latex]\ethene{H}{H$_3$C}{CH$_3$}{Br}[/latex]</p>
+<pre><code>[latex]\ethene{H}{H$_3$C}{CH$_3$}{Br}[/latex]
+</code></pre>
 <h3 id="模板冲突"><a class="header" href="#模板冲突">模板冲突</a></h3>
 <p>从 Anki 2.1.20 / AnkiMobile 2.0.56 / AnkiDroid 2.13 开始，该解决方法不再需要，因为字段中的
 <code>{{field}}</code> 文本不再会导致问题。如果你需要支持更旧版本并希望继续使用这种语法，请确保在正面和背面模板
@@ -278,22 +312,28 @@ chemtex 示例文件：</p>
 <p>在编写数学方程时，{{ 和 }} 在 LaTeX 代码中出现是常见现象。为了确保使用 LaTeX 方程不会与 Anki 的字段
 替换冲突，可以将分隔符更改为其他内容。</p>
 <p>例如，如果你有一个模板：</p>
-<p>{{latex field}}</p>
+<pre><code>{{latex field}}
+</code></pre>
 <p>将其更改为以下内容，将不太可能发生 LaTeX 冲突：</p>
-<p>{{=&lt;% %&gt;=}} &lt;%latex field%&gt;</p>
+<pre><code>{{=&lt;% %&gt;=}} &lt;%latex field%&gt;
+</code></pre>
 <h3 id="填空冲突"><a class="header" href="#填空冲突">填空冲突</a></h3>
 <p>填空删除用 <code>}}</code> 终止，这可能与你的 LaTeX 中出现的 <code>}}</code> 冲突。为了防止 LaTeX 被解释为一个关闭的填空标
 记，可以在不表示填空结束的任意双闭合大括号之间加一个空格，这样</p>
-<p>{{c1::[$]\frac{foo}{\frac{bar}{baz}}[/$] blah blah blah.}}</p>
+<pre><code>{{c1::[$]\frac{foo}{\frac{bar}{baz}}[/$] blah blah blah.}}
+</code></pre>
 <p>将不起作用，但</p>
-<p>{{c1::[$]\frac{foo}{\frac{bar}{baz} }[/$] blah blah blah.}}</p>
+<pre><code>{{c1::[$]\frac{foo}{\frac{bar}{baz} }[/$] blah blah blah.}}
+</code></pre>
 <p>将正常工作（并且 LaTeX 在数学模式中忽略空格，所以你的方程渲染相同）。如果你想避免在渲染文本中增加额
 外的空间（例如，当你制作编程语言学习用的填空卡片时），另一种选择是在 HTML 模式下编辑卡片时使用 HTML
 注释：</p>
-<p>{{c1::[$]\frac{foo}{\frac{bar}{baz}<!-- -->}[/$] blah blah blah.}}</p>
+<pre><code>{{c1::[$]\frac{foo}{\frac{bar}{baz}&lt;!-- --&gt;}[/$] blah blah blah.}}
+</code></pre>
 <p>如果你需要在被填空删除的文本中使用 <code>::</code> 字符序列，可以使用任一制作法。以下笔记文本生成的第一张卡片将
-是『[type] in C++ is a type-safe union』：</p>
-<p>{{c1::std:<!-- -->:variant::~type~}} in C++ is a {{c2::type-safe union}}</p>
+是 <code>[type] in C++ is a type-safe union</code>：</p>
+<pre><code>{{c1::std:&lt;!-- --&gt;:variant::~type~}} in C++ is a {{c2::type-safe union}}
+</code></pre>
 <h3 id="不安全命令"><a class="header" href="#不安全命令">不安全命令</a></h3>
 <p>Anki 禁止在卡片或模板上使用 \input 或 \def 等某些命令，因为允许它们可能会允许恶意共享牌组损害你的
 系统。（为了安全起见，这些命令甚至在注释中也是不允许的，所以如果你遇到此错误但认为没有使用，请仔细检

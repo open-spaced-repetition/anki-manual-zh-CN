@@ -297,7 +297,8 @@ onclick="this.style.display='none';document.getElementById('hint4753594160').sty
 为<a href="https://en.wikipedia.org/wiki/Ruby_character">注音字符</a>。在日语中，这些称
 为<a href="https://en.wikipedia.org/wiki/Furigana">假名</a>。</p>
 <p>在 Anki 中，你可以使用以下语法来显示注音字符：</p>
-<p>Text[Ruby]</p>
+<pre><code>Text[Ruby]
+</code></pre>
 <p>假设上面的文本写在 MyField 中。默认情况下，如果你只是使用 <code>{{Myfield}}</code>，字段将以原样显示。要正确地
 将注音字符放置在文本上方，请在模板中使用 <code>furigana</code> 过滤器，如下所示：</p>
 <p>{{furigana:MyField}}</p>
@@ -342,9 +343,12 @@ onclick="this.style.display='none';document.getElementById('hint4753594160').sty
 <h3 id="字段引用"><a class="header" href="#字段引用">字段引用</a></h3>
 <p>对字段的媒体引用不受支持。它们在复习期间可能显示，也可能不显示，并且在检查未使用的媒体、导入/导出等
 操作中将无法正常工作。无法正常工作的示例：</p>
-<img src="{{Expression}}.jpg">
-<p>[sound:{{Word}}]</p>
-<p>[latex]{{Field 1}}[/latex]</p>
+<pre><code>&lt;img src=&quot;{{Expression}}.jpg&quot;&gt;
+
+[sound:{{Word}}]
+
+[latex]{{Field 1}}[/latex]
+</code></pre>
 <p>相反，你应该在字段中包含媒体引用。请查看<a href="../importing/text-files.html#importing-media">导入部分</a> 以获
 取更多信息。</p>
 <h2 id="检查你的答案"><a class="header" href="#检查你的答案">检查你的答案</a></h2>
