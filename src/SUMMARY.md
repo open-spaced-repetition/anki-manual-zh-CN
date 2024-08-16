@@ -42,7 +42,7 @@
 - [搜索](searching.md)
 - [导入](importing/intro.md)
   - [文本文件](importing/text-files.md)
-  - [打包的牌组](importing/packaged-decks.md)
+  - [打包的牌组](importing/打包牌组.md)
 - [导出](exporting.md)
 - [备份](backups.md)
 - [管理文件](files.md)
