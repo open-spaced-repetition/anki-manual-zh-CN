@@ -220,8 +220,8 @@
 字段为空和 Front 非空时添加一张卡片：</p>
 <p>{{^AddIfEmpty}} {{Front}} {{/AddIfEmpty}}</p>
 <p>在更早的 Anki 版本中，否定条件会被忽略，卡片生成将仅依赖于 Front 是否非空。</p>
-<p>在旧版本中混合使用 <strong>AND</strong> 和 <strong>OR</strong> 条件也可能导致问题。例如，以下内容（“如果 A <strong>或</strong> B <strong>或</strong> C
-非空则添加卡片”）是可以的：</p>
+<p>在旧版本中混合使用 <strong>AND</strong> 和 <strong>OR</strong> 条件也可能导致问题。例如，以下内容（“如果 A <strong>或</strong> B <strong>或</strong> C非
+空则添加卡片”）是可以的：</p>
 <p>{{A}} {{B}} {{C}}</p>
 <p>以下内容（“如果 A <strong>和</strong> B <strong>和</strong> C 非空则添加卡片”）也是可以的：</p>
 <p>{{#A}} {{#B}} {{#C}} {{A}} {{/C}} {{/B}} {{/A}}</p>
