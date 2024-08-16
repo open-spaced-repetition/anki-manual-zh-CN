@@ -13,7 +13,7 @@
 字段名称区分大小写。如果你有一个名为 `Front` 的字段，写成 `{{front}}` 是无法正常工作的。
 
 你的模板不是仅限于列出字段。你还可以在模板中包含任意文本。例如，如果你在学习首都城市，并且你创建了一
-个包含「国家」字段的笔记类型，你可能会创建一个前面这样的模板：
+个包含「国家」字段的笔记模板，你可能会创建一个前面这样的模板：
 
 What's the capital city of {{Country}}?
 
@@ -95,7 +95,7 @@ br 代码代表「(line) br(eak)」。
 
 在 Windows 上，有些像 Cortana 的语音无法选择，因为 Microsoft 不允许其他应用程序使用这些语音。
 
-在完形填空笔记类型中，你可以使用 `cloze-only` 筛选器来让 Anki 只朗读隐藏部分，如下所示：
+在完形填空笔记模板中，你可以使用 `cloze-only` 筛选器来让 Anki 只朗读隐藏部分，如下所示：
 
 {{tts en_US:cloze-only:Text}}
 
@@ -127,7 +127,7 @@ This is other text on the template. It is outside of the tags so it should not b
 
 卡片的旗标：{{CardFlag}}
 
-卡片的类型（「正向」等）：{{Card}}
+卡片的模板（「正向」等）：{{Card}}
 
 前模板的内容（仅在背面模板中有效）：{{FrontSide}}
 
@@ -342,7 +342,7 @@ code#typeans {
 {{Extra}}
 ```
 
-注意，由于填空类型不使用 FrontSide，这必须添加到填空笔记类型的两边。
+注意，由于填空类型不使用 FrontSide，这必须添加到填空笔记模板的两边。
 
 如果有多个部分被省略，你可以在文本框中用逗号分隔答案。
 
