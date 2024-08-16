@@ -8,4 +8,4 @@
 
 这份翻译在知识共享署名-相同方式共享 4.0 国际许可证下发布。
 
-访问网站获取最佳阅读体验：https://l-m-sherlock.github.io/anki-manual-zh-CN/
+访问网站获取最佳阅读体验：https://open-spaced-repetition.github.io/anki-manual-zh-CN/
