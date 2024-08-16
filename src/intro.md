@@ -25,5 +25,5 @@
 - [فارسى](http://ankidroid.ir/anki.pdf)
 - [日本語](http://wikiwiki.jp/rage2050/)
 
-如果您希望帮助将手册翻译成其他语言，请参
+如果你希望帮助将手册翻译成其他语言，请参
 阅[翻译文档](https://translating.ankiweb.net/anki/manual.html)。

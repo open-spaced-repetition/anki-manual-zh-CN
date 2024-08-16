@@ -11,7 +11,7 @@
 
 - [输入答案](http://www.youtube.com/watch?v=5tYObQ3ocrw&yt:cc=on)
 
-## 模板屏幕
+## 模板界面
 
 你可以通过点击编辑屏幕中的「Cards...」按钮来修改卡片模板。
 
@@ -34,4 +34,4 @@
   卡片放在另一个牌组中）。你可以再次选择 Deck Override 检查卡片当前将要去的牌组。
 
 - 『浏览器外观』选项允许你为浏览器的问题和答案列设置不同的（可能是简化的）模板；更多信息请参
-  见[browser appearance](styling.md#browser-appearance)。
+  见[browser appearance](styling.md#浏览器外观)。

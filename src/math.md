@@ -93,11 +93,11 @@ sudo tlmgr update --self; sudo tlmgr install dvipng
 
 \[latex\] 标签必须在字段中使用——将它们放在卡片模板中会[导致问题](templates/fields.md)。
 
-例如，在 Anki 闪卡正面输入以下内容：
+例如，在 Anki 抽认卡正面输入以下内容：
 
     [latex]\begin{math}\sum\_{k = 1}^{\infty}\frac{1}{k}\end{math}[/latex] 收敛吗？
 
-当查看闪卡时，将会生成：
+当查看抽认卡时，将会生成：
 
 ![收敛性问题](math/convergence_question.png)
 

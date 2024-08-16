@@ -5,8 +5,8 @@
 ## 要求
 
 封装版本要求近期的 64 位 Intel/AMD Linux，同样需要 glibc 和一些通用库，如 libwayland-client 和
-systemd。如果您使用的是不同的架构（例如 ARM/AArch64），或是一个精简的 Linux 发行版，您将无法使用封装
-版本，但您可以尝试使用 [Python wheels](https://betas.ankiweb.net/#via-pypipip)。
+systemd。如果你使用的是不同的架构（例如 ARM/AArch64），或是一个精简的 Linux 发行版，你将无法使用封装
+版本，但你可以尝试使用 [Python wheels](https://betas.ankiweb.net/#via-pypipip)。
 
 Debian 及其衍生版本，例如 Ubuntu
 和[启用 Linux 的 Chromebook](https://support.google.com/chromebook/answer/9145439?)，请在安装前使用
@@ -16,9 +16,9 @@ Debian 及其衍生版本，例如 Ubuntu
 sudo apt install libxcb-xinerama0 libxcb-cursor0 libnss3
 ```
 
-如果安装后 Anki 无法启动，您可能[缺少其他库](./missing-libraries.md)。
+如果安装后 Anki 无法启动，你可能[缺少其他库](./missing-libraries.md)。
 
-如果您在 Ubuntu 24.04 上无法启动 Anki，请参
+如果你在 Ubuntu 24.04 上无法启动 Anki，请参
 见[本主题](https://forums.ankiweb.net/t/issues-running-on-ubuntu-24-04/40974)。
 
 Anki 的构建系统仅支持 glibc，因此目前不支持基于 musl 的发行版。
@@ -27,9 +27,9 @@ Anki 的构建系统仅支持 glibc，因此目前不支持基于 musl 的发行
 
 安装 Anki 的步骤：
 
-1. 从 <https://apps.ankiweb.net> 下载 Anki 到您的 Downloads 文件夹。有关如何在 -qt5 和 -qt6 之间进行
+1. 从 <https://apps.ankiweb.net> 下载 Anki 到你的 Downloads 文件夹。有关如何在 -qt5 和 -qt6 之间进行
    选择，请参见下一节。
-2. 如果您的系统上尚未安装 zstd，请安装它（例如 `sudo apt install zstd`）。
+2. 如果你的系统上尚未安装 zstd，请安装它（例如 `sudo apt install zstd`）。
 3. 打开终端并运行以下命令，根据需要替换文件名。
 
 ```shell
@@ -38,9 +38,9 @@ cd anki-2XXX-linux-qt6
 sudo ./install.sh
 ```
 
-在某些 Linux 系统上，您可能需要使用 `tar xaf --use-compress-program=unzstd`。
+在某些 Linux 系统上，你可能需要使用 `tar xaf --use-compress-program=unzstd`。
 
-4. 然后，您可以通过输入「anki」并按回车键来启动 Anki。如果遇到任何问题，请参见左侧的链接。
+4. 然后，你可以通过输入「anki」并按回车键来启动 Anki。如果遇到任何问题，请参见左侧的链接。
 
 ## Qt5 与 Qt6
 
@@ -60,16 +60,16 @@ Qt6 版本的缺点包括：
 
 ## 升级
 
-如果您过去是从 .deb/.rpm 等安装 Anki，请确保在安装此处提供的封装包之前删除系统版本。
+如果你过去是从 .deb/.rpm 等安装 Anki，请确保在安装此处提供的封装包之前删除系统版本。
 
-如果您是从之前的封装包升级，只需重复安装步骤，即可升级到最新版本。您的用户数据将会被保留。
+如果你是从之前的封装包升级，只需重复安装步骤，即可升级到最新版本。你的用户数据将会被保留。
 
-如果您希望降级到先前的版本，请确保您先进行 [降级](http://changes.ankiweb.net)。
+如果你希望降级到先前的版本，请确保你先进行 [降级](http://changes.ankiweb.net)。
 
 ## 插件兼容性
 
-某些插件可能不总是与最新的 Anki 版本兼容。如果您升级到最新的 Anki 版本并发现您不能没有的插件停止工
-作，您可以从[发布页面](https://github.com/ankitects/anki/releases) 下载旧版本的Anki。
+某些插件可能不总是与最新的 Anki 版本兼容。如果你升级到最新的 Anki 版本并发现你不能没有的插件停止工
+作，你可以从[发布页面](https://github.com/ankitects/anki/releases) 下载旧版本的Anki。
 
 ## 问题
 
