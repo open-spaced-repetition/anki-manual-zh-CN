@@ -153,18 +153,18 @@
 文：<a href="https://docs.ankiweb.net/platform/linux/display-issues.html">Display Issues - Anki Manual (ankiweb.net)</a></p>
 </blockquote>
 <h3 id="qt5"><a class="header" href="#qt5">Qt5</a></h3>
-<p>硬件加速默认是关闭的。在首选项屏幕中启用它并重启 Anki 可能会让 Anki 的界面响应更加灵敏，但有些用户在
+<p>硬件加速默认是关闭的。在首选项界面中启用它并重启 Anki 可能会让 Anki 的界面响应更加灵敏，但有些用户在
 启用时可能会遇到菜单栏缺失、窗口空白或崩溃的问题。（窗口空白也可能由 <a href="./blank-window.html">这个问题</a>引
 起。）</p>
-<p>你可以在 Anki 的首选项屏幕中调整显示驱动。我们建议你尝试两种设置，看看哪一种对你最合适。</p>
+<p>你可以在 Anki 的首选项界面中调整显示驱动。我们建议你尝试两种设置，看看哪一种对你最合适。</p>
 <p>如果你无法打开 Anki，可以在终端中通过将 <code>auto</code> 或 <code>software</code> 写入 <code>~/.local/share/Anki2/gldriver</code> 来
 调整驱动。请注意，如果你使用的是 nouveau，它已知有一些问题，而且只支持软件模式。</p>
 <h3 id="qt6"><a class="header" href="#qt6">Qt6</a></h3>
-<p>硬件加速默认是开启的。如果你遇到空白屏幕或显示问题，可以尝试使用终端启用软件渲染：</p>
+<p>硬件加速默认是开启的。如果你遇到空白界面或显示问题，可以尝试使用终端启用软件渲染：</p>
 <pre><code>echo software &gt; ~/.local/share/Anki2/gldriver6
 </code></pre>
 <p>如果你希望切换回默认设置，将 <code>software</code> 改为 <code>auto</code>，或删除该文件。</p>
-<p>在 Anki 23.10+ 版本中，你还可以从首选项屏幕中更换图形驱动。</p>
+<p>在 Anki 23.10+ 版本中，你还可以从首选项界面中更换图形驱动。</p>
 
                     </main>
 
