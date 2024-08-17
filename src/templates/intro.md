@@ -3,7 +3,7 @@
 > 原文：[Card Templates - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/templates/intro.html)
 
 卡片模板告诉 Anki 哪些字段应出现在卡片的正面和背面，并控制某些字段中有文本时会生成哪些卡片。通过调整
-卡片模板，你可以同时更改多个卡片的设计和样式。
+卡片模板，你可以同时更改多张卡片的设计和样式。
 
 一些入门视频中介绍了卡片模板：
 
