@@ -8,8 +8,14 @@ Michael Nielsen 撰写了一篇[详尽的文章](http://augmentingcognition.com/
 他如何使用 Anki。他还提供了一
 个[简化版本](https://twitter.com/michael_nielsen/status/957763229454774272)，以推文系列的形式呈现。
 
+> 译注：该文章已被翻译为中
+> 文——[《量子物理学家是如何使用 Anki 的？》](https://zhuanlan.zhihu.com/p/65131722)
+
 一些医学生联合起来制作了一份付费指南，专注于在医学院中使用 Anki：
 <https://www.theanking.com/anki-mastery-course>
 
 Soren Bjornstad 撰写了[一系列详尽的文章](https://controlaltbackspace.org/categories/memory/)，探讨记
 忆、SRS 以及如何有效使用 Anki。
+
+> 译注：目前该系列的[《设计明晰 Anki 卡片的规则》](https://zhuanlan.zhihu.com/p/691567753)已被翻译为
+> 中文。
