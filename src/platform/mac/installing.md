@@ -11,7 +11,7 @@
 
 支持 macOS 10.10 到 10.13.3 的最后一个 Anki 版本 是
 [Anki 2.1.35-alternate](https://github.com/ankitects/anki/releases/tag/2.1.35)。如果你使用较旧的机
-器，可以从[发布页](https://github.com/ankitects/anki/releases) 获取旧版本。
+器，可以从[发布页](https://github.com/ankitects/anki/releases)获取旧版本。
 
 ## 安装
 
@@ -51,7 +51,7 @@ Anki。
 ## 插件兼容性
 
 某些插件可能不总是与最新的 Anki 版本兼容。如果你升级到最新的 Anki 版本后发现有不可或缺的插件无法工
-作，你可以从[发布页](https://github.com/ankitects/anki/releases) 下载旧版本的Anki。
+作，你可以从[发布页](https://github.com/ankitects/anki/releases)下载旧版本的Anki。
 
 ## 问题
 

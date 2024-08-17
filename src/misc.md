@@ -15,7 +15,7 @@
 
 有时你可能会被要求使用调试控制台来更改设置或检查事项。除非被要求在「调试控制台」中输入文本，否则你可
 能不需要用到这个功能。高级用户可以在
-[插件编写指南](https://addon-docs.ankiweb.net/debugging.html#debug-console) 中了解更多关于它的内容。
+[插件编写指南](https://addon-docs.ankiweb.net/debugging.html#debug-console)中了解更多关于它的内容。
 
 当被要求在「调试控制台」中输入文本时，请启动 Anki，在主窗口中按下
 

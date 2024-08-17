@@ -51,8 +51,8 @@ Anki 23.10 引入了更大的灵活性：你可以选择无条件地更新笔记
 - 创建一个新的配置文件，并将 .apkg 文件导入其中。
 - 在浏览屏幕中定位一个未能更新的笔记并选择它。
 - 使用「字段和卡片」按钮检查字段名称和卡片模板名称，并记下它们。
-- 使用 [调试控制台](https://docs.ankiweb.net/misc.html#debug-console) 确定笔记模板 id。它将在最后一
-  行显示。
+- 使用[调试控制台](https://docs.ankiweb.net/misc.html#debug-console)确定笔记模板 id。它将在最后一行
+  显示。
 
 ```
 nt = bcard().note().note_type()

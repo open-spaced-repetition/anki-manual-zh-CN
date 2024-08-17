@@ -67,12 +67,12 @@ Qt6 版本的缺点包括：
 
 如果你是从之前的封装包升级，只需重复安装步骤，即可升级到最新版本。你的用户数据将会被保留。
 
-如果你希望降级到先前的版本，请确保你先进行 [降级](http://changes.ankiweb.net)。
+如果你希望降级到先前的版本，请确保你先进行[降级](http://changes.ankiweb.net)。
 
 ## 插件兼容性
 
 某些插件可能不总是与最新的 Anki 版本兼容。如果你升级到最新的 Anki 版本并发现你不能没有的插件停止工
-作，你可以从[发布页面](https://github.com/ankitects/anki/releases) 下载旧版本的Anki。
+作，你可以从[发布页面](https://github.com/ankitects/anki/releases)下载旧版本的Anki。
 
 ## 问题
 

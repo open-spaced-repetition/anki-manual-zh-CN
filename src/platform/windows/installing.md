@@ -13,7 +13,7 @@
 - 支持 32 位 Windows 的最后一个 Anki 版本是
   [Anki 2.1.35-alternate](https://github.com/ankitects/anki/releases/tag/2.1.35)。
 
-如果你使用的是老旧的电脑，可以从 [发布页面](https://github.com/ankitects/anki/releases) 获取旧版本。
+如果你使用的是老旧的电脑，可以从[发布页面](https://github.com/ankitects/anki/releases)获取旧版本。
 
 ## 安装
 
@@ -21,7 +21,7 @@
 
 1. 从 <https://apps.ankiweb.net> 下载 Anki。有关如何在 -qt5 和 -qt6 之间进行选择，请参见下一节。
 2. 将安装程序保存到桌面或下载文件夹。
-3. 双击安装程序运行。如果你看到错误信息，请参见 [安装问题页面](installation-issues.md)。
+3. 双击安装程序运行。如果你看到错误信息，请参见[安装问题页面](installation-issues.md)。
 4. Anki 安装完成后，双击桌面上的新星形图标以启动 Anki。
 
 ## Qt5 vs. Qt6
@@ -53,7 +53,7 @@ Qt6 版本的缺点：
 ## 插件兼容性
 
 一些插件可能无法总是与最新的 Anki 版本兼容。如果你升级到最新 Anki 版本后发现某个不可或缺的插件停止工
-作，可以从 [发布页面](https://github.com/ankitects/anki/releases) 下载旧版本的Anki。
+作，可以从[发布页面](https://github.com/ankitects/anki/releases)下载旧版本的Anki。
 
 ## 问题
 
