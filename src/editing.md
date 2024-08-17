@@ -28,8 +28,8 @@ vocab check_with_tutor
 
 …那么你添加的笔记将有两个标签。
 
-当你在正面和反面输入文本时，你可以点击「添加」按钮，或按下 <kbd>Ctrl</kbd>+<kbd>Enter</kbd>（在 Mac
-上为 <kbd>Command</kbd>+<kbd>Enter</kbd>），将笔记添加到你的集合中。当你这样做时，也会创建一张卡片，
+当你在正面和反面输入文本时，你可以点击「添加」按钮，或按下 <kbd>Ctrl</kbd>+<kbd>回车</kbd>（在 Mac
+上为 <kbd>Command</kbd>+<kbd>回车</kbd>），将笔记添加到你的集合中。当你这样做时，也会创建一张卡片，
 并将其放入你选择的牌组中。如果你想编辑添加的卡片，可以点击历史按钮，在[浏览器](browsing.md)中搜索最
 近添加的卡片。
 

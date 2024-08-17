@@ -30,8 +30,8 @@ Anki 的 MathJax 支持期望内容为 TeX 格式。如果你不熟悉 TeX 格�
 请注意，第二点在 Anki 中不适用——Anki 使用 `\(` 和 `\)` 表示行内方程，使用 `\[` 和 `\]` 表示显示方
 程。
 
-如果你想在 MathJax 表达式中使用换行符，请用 <kbd>Shift</kbd>+<kbd>Enter</kbd>，而不是仅仅使用
-<kbd>Enter</kbd>，因为普通的换行符会导致 MathJax 无法正常工作。
+如果你想在 MathJax 表达式中使用换行符，请用 <kbd>Shift</kbd>+<kbd>回车</kbd>，而不是仅仅使用 <kbd>回
+车</kbd>，因为普通的换行符会导致 MathJax 无法正常工作。
 
 Anki 内置了对 mhchem 的支持来渲染化学方程。请参见「化学方程」部分和以下章节以获取更多信息：
 <https://mhchem.github.io/MathJax-mhchem/>
