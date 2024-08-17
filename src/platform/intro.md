@@ -8,4 +8,4 @@
 - [macOS](./mac/intro.md)
 - [Linux](./linux/intro.md)
 
-如果你已经安装了 Anki，你可以跳到[入门指南](/src/getting-started.md)部分。
+如果你已经安装了 Anki，你可以跳到[入门指南](../getting-started.md)部分。
