@@ -187,7 +187,7 @@
 <p>任何 CSS 都可以放置在样式部分 - 高级用户可能希望做一些例如添加背景图片或渐变的操作。如果你想知道如何
 实现某种特定的格式，请在网上搜索有关如何在 CSS 中实现它的信息，因为有大量的文档可用。</p>
 <p>样式在所有卡片间共享，这意味着当你进行调整时，它将影响该笔记模板的所有卡片。不过，也可以指定特定卡片
-的样式。以下示例将在所有卡片上使用黄色背景，除了第一个卡片：</p>
+的样式。以下示例将在所有卡片上使用黄色背景，除了第一张卡片：</p>
 <pre><code class="language-css">.card {
   background-color: yellow;
 }
@@ -222,7 +222,7 @@
 <p><a href="https://addon-docs.ankiweb.net/porting2.0.html#webview-changes">https://addon-docs.ankiweb.net/porting2.0.html#webview-changes</a></p>
 <p>Anki 2.1.50+ 原生支持在编辑器中调整图像大小。</p>
 <h2 id="字段样式"><a class="header" href="#字段样式">字段样式</a></h2>
-<p>默认样式适用于整个卡片。你还可以使某些字段或卡片的某部分使用不同的字体、颜色等。这在学习外语时尤其重
+<p>默认样式适用于整张卡片。你还可以使某些字段或卡片的某部分使用不同的字体、颜色等。这在学习外语时尤其重
 要，因为 Anki 有时无法正确显示字符，除非选择了合适的字体。</p>
 <p>假设你有一个「Expression」字段，你想给它设置 OSX 泰语字体「Ayuthaya」。假设你的模板已经显示：</p>
 <pre><code>What is {{Expression}}?
@@ -299,7 +299,7 @@
   direction: rtl;
 }
 </code></pre>
-<p>这会改变整个卡片的方向。你可以通过在一些 HTML 中包装字段参考来仅更改某些字段的方向：</p>
+<p>这会改变整张卡片的方向。你可以通过在一些 HTML 中包装字段参考来仅更改某些字段的方向：</p>
 <pre><code>&lt;div dir=&quot;rtl&quot;&gt;{{Front}}&lt;/div&gt;
 </code></pre>
 <p>要在编辑器中更改字段的方向，请参阅<a href="../editing.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E6%AE%B5">编辑</a>部分。</p>
@@ -390,7 +390,7 @@
 }
 </code></pre>
 <p>仅更改「arial」部分，不要更改「myfont」部分。</p>
-<p>之后，你可以选择更改整个卡片的字体，或仅更改某个字段的字体。要更改整个卡片的字体，只需在 .card 部分
+<p>之后，你可以选择更改整张卡片的字体，或仅更改某个字段的字体。要更改整张卡片的字体，只需在 .card 部分
 找到 font-family: 行并将字体更改为「myfont」。要仅更改特定字段的字体，请参阅上面
 的<a href="#%E5%AD%97%E6%AE%B5%E6%A0%B7%E5%BC%8F">字段样式</a>说明。</p>
 <p>请确保文件名完全匹配。如果文件叫做 arial.TTF 而你在卡片模板中写的是 arial.ttf，它将无法工作。</p>
