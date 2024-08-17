@@ -33,7 +33,7 @@ set SYNC_USER1=user:pass
 "\Program Files\anki\anki.exe" --syncserver
 ```
 
-在 MacOS 的 Terminal.app 中：
+在 MacOS 的终端.app 中：
 
 ```bash
 SYNC_USER1=user:pass /Applications/Anki.app/Contents/MacOS/anki --syncserver

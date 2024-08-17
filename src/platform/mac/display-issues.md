@@ -9,8 +9,8 @@
 
 如果你在 Anki 23.10+ 上遇到显示问题或崩溃，可以尝试在首选项屏幕中更改视频驱动，然后重启 Anki。
 
-旧版本的 Anki 没有在首选项中提供这个选项，但允许你通过打开 Terminal.app，然后粘贴以下内容并点击回车
-来调整驱动：
+旧版本的 Anki 没有在首选项中提供这个选项，但允许你通过打开终端.app，然后粘贴以下内容并点击回车来调整
+驱动：
 
 ```
 echo software > ~/Library/Application\ Support/Anki2/gldriver6
