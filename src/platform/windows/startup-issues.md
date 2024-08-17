@@ -10,7 +10,7 @@
 最近有一些报告称 Anki 无法出现，但没有显示任何错误消息。如果你遇到这种情况，你可以：
 
 - 一些用户报告在断开多个/外部显示器后问题停止。
-- 安装 [最新的 Anki 版本](https://apps.ankiweb.net/)（尝试 qt6 和 qt5）
+- 安装[最新的 Anki 版本](https://apps.ankiweb.net/)（尝试 qt6 和 qt5）
 - 或者你可以尝试
   [调整小数点分隔符](https://forums.ankiweb.net/t/windows-update-broke-anki/1822/75)，如果它不是一个
   点。
@@ -41,7 +41,7 @@
 
 ## 视频驱动问题
 
-请参阅 [显示问题](./display-issues.md)。
+请参阅[显示问题](./display-issues.md)。
 
 ## 多显示器
 

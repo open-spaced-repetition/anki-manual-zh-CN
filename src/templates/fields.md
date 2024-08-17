@@ -66,7 +66,7 @@ br 代码代表「(line) br(eak)」。
     {{tts en_US:Front}}
 
 在 Windows、macOS 和 iOS 上，Anki 会使用操作系统自带的语音。在 Linux 上，默认没有语音，但可以通过安
-装插件提供，例如 [此插件](https://ankiweb.net/shared/info/391644525)。
+装插件提供，例如[此插件](https://ankiweb.net/shared/info/391644525)。
 
 若要查看所有可用语言/语音的列表，可以在卡片模板中放置以下内容：
 
