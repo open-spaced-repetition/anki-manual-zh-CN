@@ -59,7 +59,7 @@ Anki，你的 Anki 文件会在 `Documents/Anki` 文件夹中。
     anki -b /path/to/anki/folder
 
 - 如果你有多个配置文件，你可以传递 -p &lt;name&gt; 来加载一个特定的配置文件。
-- 如果你传递 -p some-fake-name，Anki 将在启动时显示配置文件屏幕。如果没有提供配置文件，将加载最后使
+- 如果你传递 -p some-fake-name，Anki 将在启动时显示配置文件窗口。如果没有提供配置文件，将加载最后使
   用的配置文件。
 
 - 要更改界面语言，请使用 -l &lt;iso 639-1 language code&gt;，例如 "-l ja" 表示日语。

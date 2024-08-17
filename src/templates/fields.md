@@ -86,7 +86,7 @@ br 代码代表「(line) br(eak)」。
 
 在 Mac 上，你可以自定义可用的语音：
 
-- 打开「系统设置」屏幕。
+- 打开「系统设置」界面。
 
 - 点击「辅助功能」。
 
@@ -286,7 +286,7 @@ Anki 不会扫描模板中的媒体引用，因为这样做很慢。这对在模
 
 你可以在 [YouTube](http://www.youtube.com/watch?v=5tYObQ3ocrw&yt:cc=on) 上观看关于此功能的视频。
 
-检查答案的最简单方法是在卡片添加屏幕的左上角单击「Basic」，然后选择「Basic (type in the answer)」。
+检查答案的最简单方法是在卡片添加界面的左上角单击「Basic」，然后选择「Basic (type in the answer)」。
 如果你已经下载了一个共享牌组，并希望在其中输入答案，你可以修改它的卡片模板。如果它有一个模板像这样：
 
     {{Native Word}}
