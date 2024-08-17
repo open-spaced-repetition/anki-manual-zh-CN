@@ -99,7 +99,7 @@ br 代码代表「(line) br(eak)」。
 
 在 Windows 上，有些像 Cortana 的语音无法选择，因为 Microsoft 不允许其他应用程序使用这些语音。
 
-在完形填空笔记模板中，你可以使用 `cloze-only` 筛选器来让 Anki 只朗读隐藏部分，如下所示：
+在填空题笔记模板中，你可以使用 `cloze-only` 筛选器来让 Anki 只朗读隐藏部分，如下所示：
 
     {{tts en_US:cloze-only:Text}}
 
@@ -133,7 +133,7 @@ This is other text on the template. It is outside of the tags so it should not b
 
     卡片的模板（「正向」等）：{{Card}}
 
-    前模板的内容（仅在背面模板中有效）：{{FrontSide}}
+    正面模板的内容（仅在背面模板中有效）：{{FrontSide}}
 
 FrontSide 不会自动播放卡片正面的任何音频。如果你希望在卡片的正反两面自动播放相同音频，你需要手动在背
 面也包含音频字段。
@@ -233,7 +233,7 @@ Show Back</a><div id="hint4753594160" class=hint style="display: none">{{Back}}<
 | `Text[Ruby]` | <ruby><rb>Text</rb><rt>Ruby</rt></ruby> |
 | `日本語[にほんご]` | <ruby><rb>日本語</rb><rt>にほんご</rt></ruby> |
 | `世[よ]の 中[なか]` | <ruby><rb>世</rb><rt>よ</rt></ruby>の<ruby><rb>中</rb><rt>なか</rt></ruby> |
-| `世[よ]の中[なか]` | <ruby><rb>世</rb><rt>よ</rt></ruby><ruby><rb>の中</rb><rt>なか</rt></ruby> _(不正确!)_ |
+| `世[よ]の中[なか]` | <ruby><rb>世</rb><rt>よ</rt></ruby><ruby><rb>の中</rb><rt>なか</rt></ruby> **（不正确！）** |
 
 注意第三个示例在「中」字符前有一个空格。这是为了指定注音文本只适用于该字符。如果没有空格，注音文本将
 被错误地放置在「の」字符上，如第四个示例所示。
@@ -286,8 +286,8 @@ Anki 不会扫描模板中的媒体引用，因为这样做很慢。这对在模
 
 你可以在 [YouTube](http://www.youtube.com/watch?v=5tYObQ3ocrw&yt:cc=on) 上观看关于此功能的视频。
 
-检查答案的最简单方法是在卡片添加界面的左上角单击「Basic」，然后选择「Basic (type in the answer)」。
-如果你已经下载了一个共享牌组，并希望在其中输入答案，你可以修改它的卡片模板。如果它有一个模板像这样：
+检查答案的最简单方法是在卡片添加界面的左上角单击「问答题」，然后选择「问答题（输入答案）」。如果你已
+经下载了一个共享牌组，并希望在其中输入答案，你可以修改它的卡片模板。如果它有一个模板像这样：
 
     {{Native Word}}
 
@@ -316,17 +316,11 @@ Anki 不会扫描模板中的媒体引用，因为这样做很慢。这对在模
 Anki 使用等宽字体进行答案比较，以便「已提供」和「正确」部分对齐。如果你希望为答案比较覆盖字体，你可
 以在样式部分的底部放置以下内容：
 
-```css
-code#typeans {
-  font-family: "myfontname";
-}
-```
+    code#typeans { font-family: "myfontname"; }
 
 这将影响以下用于答案比较的 HTML：
 
-```html
-<code id="typeans">...</code>
-```
+    <code id=typeans>...</code>
 
 高级用户可以使用 css 类 `typeGood`、`typeBad` 和 `typeMissed` 覆盖默认的输入答案颜色。AnkiMobile支持
 `typeGood` 和 `typeBad`，但不支持 `typeMissed`。
@@ -334,13 +328,9 @@ code#typeans {
 如果希望覆盖输入框的大小而不想在「Fields」对话框中更改字体，可以使用 `!important` 来覆盖默认的内联样
 式，如下所示：
 
-```css
-#typeans {
-  font-size: 50px !important;
-}
-```
+    #typeans { font-size: 50px !important; }
 
-还可以为填空删除卡片输入答案。为此，请在前后模板中添加 `{{type:cloze:Text}}`，这样背面看起来像这样：
+还可以为填空题卡片输入答案。为此，请在前后模板中添加 `{{type:cloze:Text}}`，这样背面看起来像这样：
 
     {{cloze:Text}}
     {{type:cloze:Text}}
@@ -350,7 +340,7 @@ code#typeans {
 
 如果有多个部分被省略，你可以在文本框中用逗号分隔答案。
 
-在浏览器中的「[预览」对话框](intro.md)中不会显示输入答案框。当你复习或在卡片类型窗口中查看预览时，它
+在浏览器中的[「预览」对话框](intro.md)中不会显示输入答案框。当你复习或在卡片类型窗口中查看预览时，它
 们将显示。
 
 在 [ankiweb.net](../syncing.md) 上复习卡片时，不会显示输入答案框。
