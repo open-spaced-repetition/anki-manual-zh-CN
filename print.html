@@ -886,7 +886,7 @@ echo &quot;export GTK2_RC_FILES=$HOME/.gtkrc-2.0&quot; &gt;&gt; ~/.profile
 <p><strong>学习中</strong>：最近第一次看到的卡片，尚在学习中。</p>
 </li>
 <li>
-<p><strong>复习中</strong>：之前学过，现在需要复习的卡片，防止遗忘。复习卡片有两种状态：</p>
+<p><strong>复习中</strong>：之前学过，现在需要复习的卡片，防止遗忘。复习卡片还可以分为两类：</p>
 <ul>
 <li>
 <p><strong>欠熟练</strong>：欠熟练卡片的间隔小于 21 天，但不在学习中。</p>
@@ -1564,7 +1564,7 @@ AnkiWeb。</p>
 段中。有关媒体的更多信息，请参见<a href="media.html">媒体</a>部分。</p>
 <p>麦克风图标允许你从电脑的麦克风录音，并将录音附加到笔记中。</p>
 <p>Fx 按钮显示添加 MathJax 或 <a href="math.html">LaTeX</a> 到笔记中的快捷方式。</p>
-<p>当选择填空笔记模板时，[…] 按钮是可见的。</p>
+<p>当选择填空题笔记模板时，[…] 按钮是可见的。</p>
 <p><img src="media/cloze_icons.png" alt="挖空图标" /></p>
 <p><code>&lt;/&gt;</code> 按钮允许编辑字段的底层 HTML。</p>
 <p><img src="media/html_icon.png" alt="HTML 图标" /></p>
@@ -1585,7 +1585,7 @@ AnkiWeb。</p>
 <p>有时以这种方式挖空的部分被称为「遮罩」。</p>
 <p>为什么你可能想要使用填空题的更多信息，请参见 <a href="https://super-memory.com/articles/20rules.htm">这里</a>的
 规则 5。</p>
-<p>Anki 提供了一种特殊的填空题的笔记模板，以便于挖空。要创建一个填空题笔记，选择填空笔记模板，并在「文
+<p>Anki 提供了一种特殊的填空题笔记模板，以便于挖空。要创建一个填空题笔记，选择填空题笔记模板，并在「文
 本」字段中输入一些文本。然后拖动鼠标选择要挖空的文本，并点击 […] 按钮。Anki 将用以下内容替换文本：</p>
 <pre><code>堪培拉成立于 {{c1::1913 年}}
 </code></pre>
@@ -1617,21 +1617,21 @@ AnkiWeb。</p>
 <p>从版本 2.1.56 开始，支持嵌套挖空。例如，以下是有效的：</p>
 <pre><code>{{c1::堪培拉{{c2::成立}}}}于 1913 年
 </code></pre>
-<p>内部填空完全嵌套在外部填空中。不支持部分重叠，例如：</p>
+<p>内部挖空完全嵌套在外部挖空中。不支持部分重叠，例如：</p>
 <pre><code>[...]立于 1913 年-&gt; 堪培拉成
 堪培拉[...]于 1913 年-&gt; 成立
 </code></pre>
-<p>其中「成」出现在两个填空中。</p>
-<p>在 2.1.56 版本之前，如果你需要从重叠文本创建填空题，添加另一个文本字段到填空中，添加
-到<a href="templates/intro.html">模板</a>，然后在创建笔记时，将文本粘贴到两个独立的字段中，如下所示：</p>
+<p>其中「成」出现在两个挖空中。</p>
+<p>在 2.1.56 版本之前，如果你需要从重叠文本中挖空，先添加另一个文本字段到填空
+题<a href="templates/intro.html">模板</a>中，然后在创建笔记时，将文本粘贴到两个独立的字段中，如下所示：</p>
 <pre><code>文本 1 字段：{{c1::堪培拉成立}}于 1913 年
 
 文本 2 字段：{{c2::堪培拉}}成立于 1913 年
 </code></pre>
-<p>默认的填空笔记模板有一个名为「额外」的第二个字段，显示在每张卡片的答案侧。它可用于添加一些使用说明或
-额外信息。</p>
-<p>填空笔记模板被 Anki 特殊处理，并不能基于普通笔记模板创建。如果你希望自定义它，请确保复制现有的填空模
-板，而不是其他笔记模板。事物如格式可以自定义，但不能向填空笔记模板添加额外的卡片模板。</p>
+<p>默认的填空题笔记模板有一个名为「额外」的第二个字段，显示在每张卡片的答案侧。它可用于添加一些使用说明
+或额外信息。</p>
+<p>填空题笔记模板被 Anki 特殊处理，并不能基于普通笔记模板创建。如果你希望自定义它，请确保复制现有的填空
+模板，而不是其他笔记模板。格式之类的东西可以自定义，但不能向填空题笔记模板添加额外的卡片模板。</p>
 <h2 id="图片遮盖"><a class="header" href="#图片遮盖">图片遮盖</a></h2>
 <p>Anki 23.10+ 原生支持图片遮盖（Image Occlusion）卡片。图片遮盖笔记是基于图像的填空题的特殊情况，允许
 你创建卡片，隐藏图像的某些部分，测试你对隐藏信息的知识。</p>
@@ -2024,7 +2024,7 @@ Show Back&lt;/a&gt;&lt;div id=&quot;hint4753594160&quot; class=hint style=&quot;
 {{type:cloze:Text}}
 {{Extra}}
 </code></pre>
-<p>注意，由于填空类型不使用 FrontSide，这必须添加到填空笔记模板的两边。</p>
+<p>注意，由于填空题模板不使用 FrontSide，这必须添加到填空题笔记模板的两边。</p>
 <p>如果有多个部分被省略，你可以在文本框中用逗号分隔答案。</p>
 <p>在浏览器中的<a href="templates/intro.html">「预览」对话框</a>中不会显示输入答案框。当你复习或在卡片类型窗口中查看预览时，它
 们将显示。</p>
@@ -2192,10 +2192,10 @@ Show Back&lt;/a&gt;&lt;div id=&quot;hint4753594160&quot; class=hint style=&quot;
 <p>对于每个不同的编号，将生成一张卡片。</p>
 </li>
 </ul>
-<p>由于填空题卡片的生成方式不同，{{cloze:...}} 标签不能用于常规笔记模板——只有当用在填空笔记模板中时，它
-们才能正常工作。</p>
-<p>条件生成提供了一个特殊字段，以便你检测所呈现的卡片。例如，如果你想在第一个填空上显示「hint1」字段，
-并在第二个填空上显示「hint2」字段，你可以使用以下模板：</p>
+<p>由于填空题卡片的生成方式不同，{{cloze:...}} 标签不能用于常规笔记模板——只有当用在填空题笔记模板中时，
+它们才能正常工作。</p>
+<p>条件生成提供了一个特殊字段，以便你检测所呈现的卡片。例如，如果你想在第一个挖空上显示「hint1」字段，
+并在第二个挖空上显示「hint2」字段，你可以使用以下模板：</p>
 <pre><code>{{cloze:Text}}
 
 {{#c1}}
@@ -2501,8 +2501,8 @@ JavaScript 的相关问题，你可以使用 Chrome
 <li><a href="templates/errors.html#%E6%A8%A1%E6%9D%BF%E8%AF%AD%E6%B3%95%E9%94%99%E8%AF%AF">模板语法错误</a></li>
 <li><a href="templates/errors.html#%E7%9B%B8%E5%90%8C%E7%9A%84%E6%AD%A3%E9%9D%A2">相同的正面</a></li>
 <li><a href="templates/errors.html#%E6%AD%A3%E9%9D%A2%E6%97%A0%E5%AD%97%E6%AE%B5%E6%9B%BF%E6%8D%A2">正面无字段替换</a></li>
-<li><a href="templates/errors.html#%E5%A1%AB%E7%A9%BA%E7%AD%9B%E9%80%89%E5%99%A8%E5%9C%A8%E9%9D%9E%E5%A1%AB%E7%A9%BA%E7%AC%94%E8%AE%B0%E6%A8%A1%E6%9D%BF%E4%B8%AD">填空筛选器在非填空笔记模板中</a></li>
-<li><a href="templates/errors.html#%E5%A1%AB%E7%A9%BA%E7%AC%94%E8%AE%B0%E6%A8%A1%E6%9D%BF%E4%B8%AD%E6%97%A0%E5%A1%AB%E7%A9%BA%E7%AD%9B%E9%80%89%E5%99%A8">填空笔记模板中无填空筛选器</a></li>
+<li><a href="templates/errors.html#%E5%A1%AB%E7%A9%BA%E7%AD%9B%E9%80%89%E5%99%A8%E5%9C%A8%E9%9D%9E%E5%A1%AB%E7%A9%BA%E9%A2%98%E7%AC%94%E8%AE%B0%E6%A8%A1%E6%9D%BF%E4%B8%AD">填空筛选器在非填空题笔记模板中</a></li>
+<li><a href="templates/errors.html#%E5%A1%AB%E7%A9%BA%E9%A2%98%E7%AC%94%E8%AE%B0%E6%A8%A1%E6%9D%BF%E4%B8%AD%E6%97%A0%E5%A1%AB%E7%A9%BA%E7%AD%9B%E9%80%89%E5%99%A8">填空题笔记模板中无填空筛选器</a></li>
 </ul>
 </li>
 </ul>
@@ -2531,17 +2531,17 @@ JavaScript 的相关问题，你可以使用 Chrome
 <p>如果你没有在卡片类型的前模板中使用<a href="templates/./fields.html">字段替换</a>，则从中创建的每张卡片在问题面都会看起来相
 同，无论其笔记为何。这样将无法回答卡片，因为你不知道期望的答案是什么。</p>
 <p>要解决此问题，请打开<a href="templates/./intro.html#%E6%A8%A1%E6%9D%BF%E7%95%8C%E9%9D%A2">模板界面</a>，并点击添加字段按钮，在前面添加一个或多个字段。</p>
-<h3 id="填空筛选器在非填空笔记模板中"><a class="header" href="#填空筛选器在非填空笔记模板中">填空筛选器在非填空笔记模板中</a></h3>
-<p><a href="templates/../editing.html#%E5%A1%AB%E7%A9%BA%E9%A2%98">填空</a>筛选器（如 <code>{{cloze:Some Field}}</code>）只能用于填空笔记模板，及其复制的类
-型。</p>
+<h3 id="填空筛选器在非填空题笔记模板中"><a class="header" href="#填空筛选器在非填空题笔记模板中">填空筛选器在非填空题笔记模板中</a></h3>
+<p><a href="templates/../editing.html#%E5%A1%AB%E7%A9%BA%E9%A2%98">填空</a>筛选器（如 <code>{{cloze:Some Field}}</code>）只能用于填空题笔记模板，及其复制的模
+板。</p>
 <p>如果你遇到此错误，可以从模板中移除填空筛选器。</p>
 <p>如果有使用该笔记模板但包含填空的笔记，你可以在浏览界面中选择它们，并使用更改笔记模板操作分配它们到一
-个标准填空笔记模板。</p>
+个标准填空题笔记模板。</p>
 <p>旧版本的 Anki 在你尝试在普通笔记模板上使用填空时不会发出警告，但这从来不是一个意图支持的用例。如果你
 想将填空与常规卡片结合使用，你可以寻找像 Closet 插件这样的插件提供一些替代方案。</p>
-<h3 id="填空笔记模板中无填空筛选器"><a class="header" href="#填空笔记模板中无填空筛选器">填空笔记模板中无填空筛选器</a></h3>
-<p>一个填空笔记模板的正反模板应该有一个<a href="templates/../editing.html#%E5%A1%AB%E7%A9%BA%E9%A2%98">填空</a>筛选器。如果缺少，你需要添加回来，以
-便 Anki 可以正确创建填空卡片。</p>
+<h3 id="填空题笔记模板中无填空筛选器"><a class="header" href="#填空题笔记模板中无填空筛选器">填空题笔记模板中无填空筛选器</a></h3>
+<p>一个填空题笔记模板的正反模板应该有一个<a href="templates/../editing.html#%E5%A1%AB%E7%A9%BA%E9%A2%98">填空</a>筛选器。如果缺少，你需要添加回来，
+以便 Anki 可以正确创建填空题卡片。</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="首选项"><a class="header" href="#首选项">首选项</a></h1>
 <blockquote>
 <p>原文：<a href="https://docs.ankiweb.net/preferences.html">Preferences - Anki Manual (ankiweb.net)</a></p>
@@ -4857,15 +4857,15 @@ chemtex 示例文件：</p>
 </code></pre>
 <h3 id="挖空冲突"><a class="header" href="#挖空冲突">挖空冲突</a></h3>
 <p>挖空以 <code>}}</code> 终止，这可能与你的 LaTeX 中出现的 <code>}}</code> 冲突。为了防止 LaTeX 被解释为一个关闭的挖空标记，
-可以在不表示填空结束的任意双闭合大括号之间加一个空格，这样</p>
+可以在不表示挖空结束的任意双闭合大括号之间加一个空格，这样</p>
 <pre><code>{{c1::[$]\frac{foo}{\frac{bar}{baz}}[/$] blah blah blah.}}
 </code></pre>
 <p>将不起作用，但</p>
 <pre><code>{{c1::[$]\frac{foo}{\frac{bar}{baz} }[/$] blah blah blah.}}
 </code></pre>
 <p>将正常工作（并且 LaTeX 在数学模式中忽略空格，所以你的方程渲染相同）。如果你想避免在渲染文本中增加额
-外的空间（例如，当你制作编程语言学习用的填空卡片时），另一种选择是在 HTML 模式下编辑卡片时使用 HTML
-注释：</p>
+外的空间（例如，当你制作编程语言学习用的填空题卡片时），另一种选择是在 HTML 模式下编辑卡片时使用
+HTML 注释：</p>
 <pre><code>{{c1::[$]\frac{foo}{\frac{bar}{baz}&lt;!-- --&gt;}[/$] blah blah blah.}}
 </code></pre>
 <p>如果你需要在被挖空的文本中使用 <code>::</code> 字符序列，可以使用任一制作法。以下笔记文本生成的第一张卡片将是

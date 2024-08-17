@@ -323,15 +323,15 @@ chemtex 示例文件：</p>
 </code></pre>
 <h3 id="挖空冲突"><a class="header" href="#挖空冲突">挖空冲突</a></h3>
 <p>挖空以 <code>}}</code> 终止，这可能与你的 LaTeX 中出现的 <code>}}</code> 冲突。为了防止 LaTeX 被解释为一个关闭的挖空标记，
-可以在不表示填空结束的任意双闭合大括号之间加一个空格，这样</p>
+可以在不表示挖空结束的任意双闭合大括号之间加一个空格，这样</p>
 <pre><code>{{c1::[$]\frac{foo}{\frac{bar}{baz}}[/$] blah blah blah.}}
 </code></pre>
 <p>将不起作用，但</p>
 <pre><code>{{c1::[$]\frac{foo}{\frac{bar}{baz} }[/$] blah blah blah.}}
 </code></pre>
 <p>将正常工作（并且 LaTeX 在数学模式中忽略空格，所以你的方程渲染相同）。如果你想避免在渲染文本中增加额
-外的空间（例如，当你制作编程语言学习用的填空卡片时），另一种选择是在 HTML 模式下编辑卡片时使用 HTML
-注释：</p>
+外的空间（例如，当你制作编程语言学习用的填空题卡片时），另一种选择是在 HTML 模式下编辑卡片时使用
+HTML 注释：</p>
 <pre><code>{{c1::[$]\frac{foo}{\frac{bar}{baz}&lt;!-- --&gt;}[/$] blah blah blah.}}
 </code></pre>
 <p>如果你需要在被挖空的文本中使用 <code>::</code> 字符序列，可以使用任一制作法。以下笔记文本生成的第一张卡片将是
