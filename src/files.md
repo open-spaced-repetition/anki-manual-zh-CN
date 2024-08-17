@@ -91,9 +91,8 @@ Anki，你的 Anki 文件会在 `Documents/Anki` 文件夹中。
 
 我们不建议你直接使用第三方同步服务同步你的 Anki 文件夹，因为在文件使用中进行同步会导致数据库损坏。
 
-如果你只是想同步媒体，可以将外部文件夹链接到像 DropBox 这样的服务中。请参阅 [DropboxWiki：同步
-Dropbox 以外的文件夹
-(archive.org)][http://web.archive.org/web/20180919153730/http://www.dropboxwiki.com/tips-and-tricks/sync-other-folders]
+如果你只是想同步媒体，可以将外部文件夹链接到像 DropBox 这样的服务中。请参阅
+[DropboxWiki：同步 Dropbox 以外的文件夹 (archive.org)](http://web.archive.org/web/20180919153730/http://www.dropboxwiki.com/tips-and-tricks/sync-other-folders)
 了解更多信息。
 
 如果你还希望保持集合同步，强烈建议你创建一个脚本，将文件从同步文件夹复制到本地文件夹，启动 Anki，然
