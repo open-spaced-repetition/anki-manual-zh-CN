@@ -29,7 +29,7 @@ Anki，你的 Anki 文件会在 `Documents/Anki` 文件夹中。
 据路径，则储存在 `$XDG_DATA_HOME/Anki2` 中。旧版本的 Anki 会将文件储存在 `~/Documents/Anki` 或
 `~/Anki` 中。
 
-在 Anki 文件夹中，会有程序级别和配置文件级别的偏好设置储存在一个名为 prefs.db 的文件中。
+在 Anki 文件夹中，会有程序级别和配置文件级别的首选项储存在一个名为 prefs.db 的文件中。
 
 每个配置文件都有一个单独的文件夹。该文件夹包含：
 

@@ -1,10 +1,10 @@
-# 偏好设置
+# 首选项
 
 > 原文：[Preferences - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/preferences.html)
 
 <!-- toc -->
 
-在 Windows/Linux 上，偏好设置可以从工具菜单中访问；在 Mac 上，则可以从 Anki 菜单中找到。
+在 Windows/Linux 上，首选项可以从工具菜单中访问；在 Mac 上，则可以从 Anki 菜单中找到。
 
 ## 外观
 

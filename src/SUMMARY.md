@@ -33,7 +33,7 @@
   - [卡片生成](templates/generation.md)
   - [样式与 HTML](templates/styling.md)
   - [检查和错误](templates/errors.md)
-- [偏好设置](preferences.md)
+- [首选项](preferences.md)
 - [牌组选项](deck-options.md)
 - [与 AnkiWeb 同步](syncing.md)
 - [用户档案](profiles.md)
