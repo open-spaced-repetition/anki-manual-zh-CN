@@ -391,7 +391,7 @@ Windows、macOS、Linux/FreeBSD 以及一些移动设备上运行。并且比 Su
 <p>最近有一些报告称 Anki 无法出现，但没有显示任何错误消息。如果你遇到这种情况，你可以：</p>
 <ul>
 <li>一些用户报告在断开多个/外部显示器后问题停止。</li>
-<li>安装 <a href="https://apps.ankiweb.net/">最新的 Anki 版本</a>（尝试 qt6 和 qt5）</li>
+<li>安装<a href="https://apps.ankiweb.net/">最新的 Anki 版本</a>（尝试 qt6 和 qt5）</li>
 <li>或者你可以尝试
 <a href="https://forums.ankiweb.net/t/windows-update-broke-anki/1822/75">调整小数点分隔符</a>，如果它不是一个
 点。</li>
@@ -417,7 +417,7 @@ Windows、macOS、Linux/FreeBSD 以及一些移动设备上运行。并且比 Su
 <li><a href="http://www.catalog.update.microsoft.com/Search.aspx?q=kb4490628">http://www.catalog.update.microsoft.com/Search.aspx?q=kb4490628</a></li>
 </ul>
 <h2 id="视频驱动问题"><a class="header" href="#视频驱动问题">视频驱动问题</a></h2>
-<p>请参阅 <a href="platform/windows/./display-issues.html">显示问题</a>。</p>
+<p>请参阅<a href="platform/windows/./display-issues.html">显示问题</a>。</p>
 <h2 id="多显示器"><a class="header" href="#多显示器">多显示器</a></h2>
 <p>如果你收到 <em>LoadLibrary failed with error 126</em>，这可能是因为 Anki 构建所使用的工具包
 在<a href="https://forums.ankiweb.net/t/error-126-on-open-anki-desktop/13967">多显示器</a>上遇到了问题。</p>
@@ -976,8 +976,8 @@ echo &quot;export GTK2_RC_FILES=$HOME/.gtkrc-2.0&quot; &gt;&gt; ~/.profile
 </code></pre>
 <p>通过将字段名称用双大括号括起来，我们告诉 Anki 用字段中的实际信息替换该部分。未用大括号括起来的内容在
 每张卡片上保持不变。（例如，在添加材料时，我们不必在页码字段中键入「页码 #」——它会自动添加到每张卡
-片。）&lt;br&gt; 是一个特殊的代码，告诉 Anki 换行；有关更多细节，请参阅 <a href="templates/intro.html">模板</a>
-部分。</p>
+片。）&lt;br&gt; 是一个特殊的代码，告诉 Anki 换行；有关更多细节，请参阅<a href="templates/intro.html">模板</a> 部
+分。</p>
 <p>生成卡片模板的工作方式类似：</p>
 <pre><code>问：{{英语}}
 答：{{法语}}&lt;br&gt;
@@ -1554,7 +1554,7 @@ Anki 的间隔重复<a href="https://faqs.ankiweb.net/due-times-after-a-break.ht
 <h2 id="编辑功能"><a class="header" href="#编辑功能">编辑功能</a></h2>
 <p>添加笔记时、在复习时<a href="studying.html#%E7%BC%96%E8%BE%91%E5%8F%8A%E6%9B%B4%E5%A4%9A">编辑笔记</a>，或在<a href="browsing.html">浏览</a>时会显示编辑器。</p>
 <p><img src="media/editor_icons.png" alt="编辑器图标" /></p>
-<p>左上角有两个按钮，可以打开<a href="editing.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E6%AE%B5">字段</a>和 <a href="templates/intro.html">卡片</a>窗口。</p>
+<p>左上角有两个按钮，可以打开<a href="editing.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E6%AE%B5">字段</a>和<a href="templates/intro.html">卡片</a>窗口。</p>
 <p>右侧是控制格式的按钮。粗体、斜体和下划线的工作方式与文字处理程序相同。接下来的两个按钮允许你下标或上
 标文本，对化学式如 H<sub>2</sub>O 或简单的数学公式如 x<sup>2</sup>很有用。再接下来，有两个按钮允许你
 更改文本颜色。</p>
@@ -1615,7 +1615,7 @@ Anki 的间隔重复<a href="https://faqs.ankiweb.net/due-times-after-a-break.ht
 <p>当卡片出现复习时，它将显示为：</p>
 <pre><code>[城市]成立于 1913 年
 </code></pre>
-<p>有关测试你正确输入完形填空答案的方法，请参见 <a href="templates/fields.html#%E6%A3%80%E6%9F%A5%E4%BD%A0%E7%9A%84%E7%AD%94%E6%A1%88">输入答案</a>部分。</p>
+<p>有关测试你正确输入完形填空答案的方法，请参见<a href="templates/fields.html#%E6%A3%80%E6%9F%A5%E4%BD%A0%E7%9A%84%E7%AD%94%E6%A1%88">输入答案</a>部分。</p>
 <p>从版本 2.1.56 开始，支持嵌套完形填空。例如，以下是有效的：</p>
 <pre><code>{{c1::堪培拉{{c2::成立}}}}于 1913 年
 </code></pre>
@@ -1817,7 +1817,7 @@ two
 <pre><code>{{tts en_US:Front}}
 </code></pre>
 <p>在 Windows、macOS 和 iOS 上，Anki 会使用操作系统自带的语音。在 Linux 上，默认没有语音，但可以通过安
-装插件提供，例如 <a href="https://ankiweb.net/shared/info/391644525">此插件</a>。</p>
+装插件提供，例如<a href="https://ankiweb.net/shared/info/391644525">此插件</a>。</p>
 <p>若要查看所有可用语言/语音的列表，可以在卡片模板中放置以下内容：</p>
 <pre><code>{{tts-voices:}}
 </code></pre>
@@ -2366,7 +2366,7 @@ Show Back&lt;/a&gt;&lt;div id=&quot;hint4753594160&quot; class=hint style=&quot;
 <p>这会改变整个卡片的方向。你可以通过在一些 HTML 中包装字段参考来仅更改某些字段的方向：</p>
 <pre><code>&lt;div dir=&quot;rtl&quot;&gt;{{Front}}&lt;/div&gt;
 </code></pre>
-<p>要在编辑器中更改字段的方向，请参阅 <a href="templates/../editing.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E6%AE%B5">编辑</a>部分。</p>
+<p>要在编辑器中更改字段的方向，请参阅<a href="templates/../editing.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%AD%97%E6%AE%B5">编辑</a>部分。</p>
 <h2 id="其他-html"><a class="header" href="#其他-html">其他 HTML</a></h2>
 <p>你的模板可以包含任意 HTML，这意味着所有用于互联网网页的布局可能性也可以用于你的卡片。例如，通过使用
 表格，你可以更改布局，使卡片的正面和背面显示在左侧和右侧，而不是顶部和底部。</p>
@@ -2993,8 +2993,8 @@ AnkiWeb 上的旧版本覆盖它们时很有用。</p>
 多卡片的可能性。</p>
 </li>
 </ul>
-<p>使用 SM-2 调度器时，通过比较卡片过期天数与间隔时间来确定过期程度。例如，一个当前间隔为 5 天、过期 2
-天的卡片将在一个当前间隔为 10 天、过期 3 天的卡片之前显示。</p>
+<p>使用 SM-2 排程算法时，通过比较卡片过期天数与间隔时间来确定过期程度。例如，一个当前间隔为 5 天、过期
+2 天的卡片将在一个当前间隔为 10 天、过期 3 天的卡片之前显示。</p>
 <p>使用 FSRS 时，过期程度基于每张卡片的可检索性和牌组预设中的预期保留率来计算。</p>
 <h2 id="计时"><a class="header" href="#计时">计时</a></h2>
 <p>Anki 会监测你回答每张卡片所花的时间，以显示每天用于学习的时间。所用时间不会影响调度。</p>
@@ -3044,9 +3044,9 @@ AnkiWeb 上的旧版本覆盖它们时很有用。</p>
 制显示答案时会发生什么；有关详细信息，请查看<a href="templates/fields.html#%E7%89%B9%E6%AE%8A%E5%AD%97%E6%AE%B5">本节</a>。</p>
 <h2 id="高级"><a class="header" href="#高级">高级</a></h2>
 <h3 id="fsrs"><a class="header" href="#fsrs">FSRS</a></h3>
-<p><a href="https://github.com/open-spaced-repetition/fsrs4anki">自由间隔重复调度器（FSRS）</a> 是一个 Anki 旧版
-SuperMemo 2（SM2）调度器的替代品。通过更准确地确定你可能忘记的时候，它可以帮助你在相同的时间内记住更
-多内容。此设置由所有牌组预设共享。</p>
+<p><a href="https://github.com/open-spaced-repetition/fsrs4anki">自由间隔重复排程算法（FSRS）</a> 是一个 Anki 旧版
+SuperMemo 2（SM2）排程算法的替代品。通过更准确地确定你可能忘记的时候，它可以帮助你在相同的时间内记住
+更多内容。此设置由所有牌组预设共享。</p>
 <p>启用此设置后，一些新选项将可以使用，SM-2 特定设置，例如「『毕业』卡片再现间隔</p>
 <p>」、「『简单』复习间隔乘数」等将被隐藏。</p>
 <p><strong>启用之前</strong></p>
@@ -3119,8 +3119,8 @@ SuperMemo 2（SM2）调度器的替代品。通过更准确地确定你可能忘
 大地依赖于你的输入，并且如果与 0.9 有显著差异，说明你每天分配的时间要么太低，要么太高，无法学习到这
 些卡片。这个数字可以作为参考，但不建议将其复制到期望的保留率字段。</p>
 <h4 id="初学和重学间隔"><a class="header" href="#初学和重学间隔">初学和重学间隔</a></h4>
-<p>当使用 FSRS 时，不推荐使用 1 天以上的初学/重学间隔。它们在旧的 SM-2 调度器中受欢迎的主要原因是，在学
-习阶段毕业后反复失败一张卡片可能会大幅降低其简易度，导致所谓的「简易度地狱」。这是 FSRS 不存在的问
+<p>当使用 FSRS 时，不推荐使用 1 天以上的初学/重学间隔。它们在旧的 SM-2 排程算法中受欢迎的主要原因是，在
+学习阶段毕业后反复失败一张卡片可能会大幅降低其简易度，导致所谓的「简易度地狱」。这是 FSRS 不存在的问
 题。通过将你的初学间隔保持在一天内，你将允许 FSRS 在它计算的最适合你的材料和记忆的时候安排卡片。另一
 个不使用较长初学间隔的原因是，FSRS 可能会在首次复习时安排比你最后的初学间隔更短的时间，导致<code>困难</code> 按
 钮显示的时间比<code>良好</code>长。</p>
@@ -4681,7 +4681,7 @@ Anki 无法知道删除的卡片属于哪个牌组），但查看整个集合的
 <h2 id="手动添加媒体"><a class="header" href="#手动添加媒体">手动添加媒体</a></h2>
 <p>当你通过 Anki 的界面添加媒体时，Anki 会确保文件名经过编码，可以在不同的设备上正常工作，删除不适用于
 某些操作系统的字符，并截断非常长的文件名。</p>
-<p>如果你手动将文件添加到 <a href="files.html#%E6%96%87%E4%BB%B6%E4%BD%8D%E7%BD%AE">媒体文件夹</a>，你应该在之后使用工具菜单中的「检查媒体」，以
+<p>如果你手动将文件添加到<a href="files.html#%E6%96%87%E4%BB%B6%E4%BD%8D%E7%BD%AE">媒体文件夹</a>，你应该在之后使用工具菜单中的「检查媒体」，以
 确保文件名编码正确。如果跳过此步骤，任何不兼容的文件名在同步时将被跳过。</p>
 <h2 id="支持的格式"><a class="header" href="#支持的格式">支持的格式</a></h2>
 <p>Anki 使用一个名为 mpv 的程序（在必要时使用 mplayer 作为备选），以支持声音和视频。支持多种文件格式，
