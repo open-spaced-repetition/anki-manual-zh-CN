@@ -994,33 +994,33 @@ echo &quot;export GTK2_RC_FILES=$HOME/.gtkrc-2.0&quot; &gt;&gt; ~/.profile
 看，建议你为所学习的内容定义自己的笔记模板。标准笔记模板如下：</p>
 <ul>
 <li>
-<p><strong>基础</strong><br />
-具有前方和背面字段，并会创建一张卡片。你输入在前方的文本会出现在卡片前面，输入在背面的文本会出现在
+<p><strong>问答题</strong><br />
+具有正面和背面字段，并会创建一张卡片。你输入在前方的文本会出现在卡片前面，输入在背面的文本会出现在
 卡片背面。</p>
 </li>
 <li>
-<p><strong>基础（及反向卡片）</strong><br />
-如基础，但为你输入的文本创建两张卡片：一张从前→后，一张从后→前。</p>
+<p><strong>问答题（同时生成翻转的卡片）</strong><br />
+如问答题，但为你输入的文本创建两张卡片：一张从前→后，一张从后→前。</p>
 </li>
 <li>
-<p><strong>基础（可选反向卡片）</strong><br />
-这是一张从前→后的卡片，并可选从后→前卡片。为此，它有一个名为「添加反向」的第三个字段。如果你在该字
-段中输入任意文本，就会创建反向卡片。有关这方面的更多信息，请参阅<a href="templates/intro.html">卡片和模板</a>部
-分。</p>
+<p><strong>问答题（同时生成翻转的卡片&lt;可选&gt;）</strong><br />
+这是一张从前→后的卡片，并可选从后→前卡片。为此，它有一个名为「增加翻转的卡片」的第三个字段。如果你
+在该字段中输入任意文本，就会创建反向卡片。有关这方面的更多信息，请参
+阅<a href="templates/intro.html">卡片和模板</a>部分。</p>
 </li>
 <li>
-<p><strong>基础（输入答案）</strong><br />
-本质上是基础，前面有一个额外的文本框，你可以在其中输入答案，翻转到背面后会检查并与答案进行比较。更
-多信息请参阅<a href="templates/fields.html#%E6%A3%80%E6%9F%A5%E4%BD%A0%E7%9A%84%E7%AD%94%E6%A1%88">检查答案</a>部分。</p>
+<p><strong>问答题（输入答案）</strong><br />
+本质上是问答题，前面有一个额外的文本框，你可以在其中输入答案，翻转到背面后会检查并与答案进行比较。
+更多信息请参阅<a href="templates/fields.html#%E6%A3%80%E6%9F%A5%E4%BD%A0%E7%9A%84%E7%AD%94%E6%A1%88">检查答案</a>部分。</p>
 </li>
 <li>
-<p><strong>完形填空</strong><br />
-一种笔记模板，使得轻松选择文字并将其变成完形填空（如，「人类在[...]年登陆月球」→「人类在1969年登
-陆月球」）。更多信息请参阅<a href="editing.html#%E5%AE%8C%E5%BD%A2%E5%A1%AB%E7%A9%BA">完形填空</a>部分。</p>
+<p><strong>填空题</strong><br />
+一种笔记模板，使得轻松选择文字并将其变成填空题（如，「人类在 [...] 年登陆月球」→「人类在 1969 年
+登陆月球」）。更多信息请参阅<a href="editing.html#%E5%A1%AB%E7%A9%BA%E9%A2%98">填空题</a>部分。</p>
 </li>
 <li>
 <p><strong>图片遮盖</strong><br />
-类似于完形填空笔记模板，但适用于图像而非文字，这在研究重度依赖图像的材料时尤其有用，如解剖学、地理
+类似于填空题笔记模板，但适用于图像而非文字，这在研究重度依赖图像的材料时尤其有用，如解剖学、地理
 等。详细信息请参阅手册的<a href="editing.html#%E5%9B%BE%E7%89%87%E9%81%AE%E7%9B%96">图片遮盖</a>部分。</p>
 </li>
 </ul>
@@ -1342,7 +1342,7 @@ AnkiWeb。</p>
 对于新卡片的更细粒度排序，你可以在<a href="browsing.html">浏览</a>中更改顺序。</p>
 <h2 id="关联卡片与搁置"><a class="header" href="#关联卡片与搁置">关联卡片与搁置</a></h2>
 <p>回顾<a href="getting-started.html">基础知识</a>，Anki 可以为你输入的每个项创建多张卡片，例如正面→背面卡片和背面→
-正面卡片，或者从同一文本中两张不同的完形填空。这些相关的卡片称为「关联卡片」。</p>
+正面卡片，或者从同一文本中两张不同的填空题。这些相关的卡片称为「关联卡片」。</p>
 <p>当你回答一张有关联卡片的卡片时，Anki 可以通过自动「搁置」它们防止这些卡片在同一个会话中显示。搁置的
 卡片在时钟转到新的一天之前或你手动通过「取消搁置」按钮（可见于<a href="studying.html#%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%A7%88">牌组概览</a>界面底
 部）取消搁置之前将不会显示。即使关联卡片不在同一牌组中，Anki 也会搁置它们（例如，如果你使用
@@ -1396,7 +1396,7 @@ AnkiWeb。</p>
 </ul>
 </li>
 <li><a href="editing.html#%E7%BC%96%E8%BE%91%E5%8A%9F%E8%83%BD">编辑功能</a></li>
-<li><a href="editing.html#%E5%AE%8C%E5%BD%A2%E5%A1%AB%E7%A9%BA">完形填空</a></li>
+<li><a href="editing.html#%E5%A1%AB%E7%A9%BA%E9%A2%98">填空题</a></li>
 <li><a href="editing.html#%E5%9B%BE%E7%89%87%E9%81%AE%E7%9B%96">图片遮盖</a>
 <ul>
 <li><a href="editing.html#%E6%B7%BB%E5%8A%A0%E5%9B%BE%E5%83%8F">添加图像</a></li>
@@ -1411,8 +1411,8 @@ AnkiWeb。</p>
 <p>回顾一下<a href="getting-started.html">基础知识</a>，在 Anki 中，我们添加的是笔记而不是卡片，Anki 会为我们创建卡
 片。点击<a href="studying.html#%E7%89%8C%E7%BB%84">主窗口</a>中的「添加」，将会出现添加笔记窗口。</p>
 <p><img src="media/add_screen.png" alt="添加界面" /></p>
-<p>窗口的左上角显示了当前的<a href="getting-started.html#%E7%AC%94%E8%AE%B0%E6%A8%A1%E6%9D%BF">笔记模板</a>。如果不是「基础」，那么你可能在下载
-共享牌组时添加了一些笔记模板。下面的文本假定你已经选择了「基础」。</p>
+<p>窗口的左上角显示了当前的<a href="getting-started.html#%E7%AC%94%E8%AE%B0%E6%A8%A1%E6%9D%BF">笔记模板</a>。如果不是「问答题」，那么你可能在下
+载共享牌组时添加了一些笔记模板。下面的文本假定你已经选择了「问答题」。</p>
 <p>窗口的右上角显示了将要添加卡片的<a href="getting-started.html#%E7%89%8C%E7%BB%84">牌组</a>。如果你想要将卡片添加到一个新的牌
 组，可以点击牌组名称按钮，再点击「添加」。</p>
 <p>在笔记模板下方，你会看到一些按钮，以及标有「正面」和「反面」的区域。正面和反面被称
@@ -1575,19 +1575,18 @@ AnkiWeb。</p>
 <p>大多数按钮都有快捷键。你可以将鼠标指针悬停在按钮上以查看其快捷键。</p>
 <p>粘贴文本时，Anki 默认会保留大部分格式。如果在粘贴时按住 <kbd>Shift</kbd> 键，Anki 会去掉大多数格式。
 你可以在首选项中打开或关闭「若粘贴时未按住 Shift 键，则清除文本格式」以修改默认行为。</p>
-<h2 id="完形填空"><a class="header" href="#完形填空">完形填空</a></h2>
-<p>「完形填空」指的是隐藏句子中的一个或多个词语的过程。例如，如果你这么一条句子：</p>
+<h2 id="填空题"><a class="header" href="#填空题">填空题</a></h2>
+<p>「填空题」指的是隐藏句子中的一个或多个词语的过程。例如，如果你这么一条句子：</p>
 <pre><code>堪培拉成立于 1913 年
 </code></pre>
-<p>……然后你在「1913 年」上创建一个完形填空，则句子将变为：</p>
+<p>……然后你在「1913 年」上创建一个填空题，则句子将变为：</p>
 <pre><code>堪培拉成立于 [...]
 </code></pre>
 <p>有时以这种方式挖空的部分被称为「遮罩」。</p>
-<p>为什么你可能想要使用完形填空的更多信息，请参见
-<a href="https://super-memory.com/articles/20rules.htm">这里</a>的规则 5。</p>
-<p>Anki 提供了一种特殊的完形填空的笔记模板，以便于挖空。要创建一个完形填空笔记，选择填空笔记模板，并在
-「文本」字段中输入一些文本。然后拖动鼠标选择要挖空的文本，并点击 […] 按钮。Anki 将用以下内容替换文
-本：</p>
+<p>为什么你可能想要使用填空题的更多信息，请参见 <a href="https://super-memory.com/articles/20rules.htm">这里</a>的
+规则 5。</p>
+<p>Anki 提供了一种特殊的填空题的笔记模板，以便于挖空。要创建一个填空题笔记，选择填空笔记模板，并在「文
+本」字段中输入一些文本。然后拖动鼠标选择要挖空的文本，并点击 […] 按钮。Anki 将用以下内容替换文本：</p>
 <pre><code>堪培拉成立于 {{c1::1913 年}}
 </code></pre>
 <p>「c1」部分表示你在这个句子上创建了一个挖空。你可以创建多个挖空，如果你愿意。例如，如果你选择堪培拉并
@@ -1614,7 +1613,7 @@ AnkiWeb。</p>
 <p>当卡片出现复习时，它将显示为：</p>
 <pre><code>[城市]成立于 1913 年
 </code></pre>
-<p>有关测试你正确输入完形填空答案的方法，请参见<a href="templates/fields.html#%E6%A3%80%E6%9F%A5%E4%BD%A0%E7%9A%84%E7%AD%94%E6%A1%88">输入答案</a>部分。</p>
+<p>有关测试你正确输入填空题答案的方法，请参见<a href="templates/fields.html#%E6%A3%80%E6%9F%A5%E4%BD%A0%E7%9A%84%E7%AD%94%E6%A1%88">输入答案</a>部分。</p>
 <p>从版本 2.1.56 开始，支持嵌套挖空。例如，以下是有效的：</p>
 <pre><code>{{c1::堪培拉{{c2::成立}}}}于 1913 年
 </code></pre>
@@ -1623,7 +1622,7 @@ AnkiWeb。</p>
 堪培拉[...]于 1913 年-&gt; 成立
 </code></pre>
 <p>其中「成」出现在两个填空中。</p>
-<p>在 2.1.56 版本之前，如果你需要从重叠文本创建完形填空，添加另一个文本字段到填空中，添加
+<p>在 2.1.56 版本之前，如果你需要从重叠文本创建填空题，添加另一个文本字段到填空中，添加
 到<a href="templates/intro.html">模板</a>，然后在创建笔记时，将文本粘贴到两个独立的字段中，如下所示：</p>
 <pre><code>文本 1 字段：{{c1::堪培拉成立}}于 1913 年
 
@@ -1634,8 +1633,8 @@ AnkiWeb。</p>
 <p>填空笔记模板被 Anki 特殊处理，并不能基于普通笔记模板创建。如果你希望自定义它，请确保复制现有的填空模
 板，而不是其他笔记模板。事物如格式可以自定义，但不能向填空笔记模板添加额外的卡片模板。</p>
 <h2 id="图片遮盖"><a class="header" href="#图片遮盖">图片遮盖</a></h2>
-<p>Anki 23.10+ 原生支持图片遮盖（Image Occlusion）卡片。图片遮盖笔记是基于图像的完形填空的特殊情况，允
-许你创建卡片，隐藏图像的某些部分，测试你对隐藏信息的知识。</p>
+<p>Anki 23.10+ 原生支持图片遮盖（Image Occlusion）卡片。图片遮盖笔记是基于图像的填空题的特殊情况，允许
+你创建卡片，隐藏图像的某些部分，测试你对隐藏信息的知识。</p>
 <p><img src="media/io.jpg" alt="图片遮盖" /></p>
 <h3 id="添加图像"><a class="header" href="#添加图像">添加图像</a></h3>
 <p>要将图片遮盖卡片添加到你的集合中，打开添加界面，点击「模板」，从内置笔记模板列表中选择「图片遮盖」。
@@ -1668,7 +1667,7 @@ AnkiWeb。</p>
 <li>放大 / 缩小 - 重置缩放。</li>
 <li>切换透明度：使用此工具临时查看隐藏区域。</li>
 <li>删除：使用此工具删除所选形状和文本区域。请注意，删除形状不会自动删除其关联的卡片；你需要之后使用工
-具 &gt; 清空卡片，正如常规完形填空一样。</li>
+具 &gt; 清空卡片，正如常规填空题一样。</li>
 <li>复制。</li>
 <li>分组选定：使用此工具创建一个形状簇，允许你同时移动、调整大小或删除它们。请注意，一旦分组，两个或两
 个以上的单一形状将只创建一张卡片。</li>
@@ -1846,7 +1845,7 @@ two
 <p>某些语音听起来会比其他更好，请试验以选择你喜欢的。需注意 Siri 语音仅能用于 Apple 应用程序。安装新语
 音后，你需要重启 Anki 以便新语音可用。</p>
 <p>在 Windows 上，有些像 Cortana 的语音无法选择，因为 Microsoft 不允许其他应用程序使用这些语音。</p>
-<p>在完形填空笔记模板中，你可以使用 <code>cloze-only</code> 筛选器来让 Anki 只朗读隐藏部分，如下所示：</p>
+<p>在填空题笔记模板中，你可以使用 <code>cloze-only</code> 筛选器来让 Anki 只朗读隐藏部分，如下所示：</p>
 <pre><code>{{tts en_US:cloze-only:Text}}
 </code></pre>
 <p>cloze-only 筛选器在 Anki 2.1.29+、AnkiMobile 2.0.65+ 及 AnkiDroid 2.17+ 上受支持。</p>
@@ -1871,7 +1870,7 @@ This is other text on the template. It is outside of the tags so it should not b
 
 卡片的模板（「正向」等）：{{Card}}
 
-前模板的内容（仅在背面模板中有效）：{{FrontSide}}
+正面模板的内容（仅在背面模板中有效）：{{FrontSide}}
 </code></pre>
 <p>FrontSide 不会自动播放卡片正面的任何音频。如果你希望在卡片的正反两面自动播放相同音频，你需要手动在背
 面也包含音频字段。</p>
@@ -1942,7 +1941,7 @@ Show Back&lt;/a&gt;&lt;div id=&quot;hint4753594160&quot; class=hint style=&quot;
 <tr><td><code>Text[Ruby]</code></td><td><ruby><rb>Text</rb><rt>Ruby</rt></ruby></td></tr>
 <tr><td><code>日本語[にほんご]</code></td><td><ruby><rb>日本語</rb><rt>にほんご</rt></ruby></td></tr>
 <tr><td><code>世[よ]の 中[なか]</code></td><td><ruby><rb>世</rb><rt>よ</rt></ruby>の<ruby><rb>中</rb><rt>なか</rt></ruby></td></tr>
-<tr><td><code>世[よ]の中[なか]</code></td><td><ruby><rb>世</rb><rt>よ</rt></ruby><ruby><rb>の中</rb><rt>なか</rt></ruby> <em>(不正确!)</em></td></tr>
+<tr><td><code>世[よ]の中[なか]</code></td><td><ruby><rb>世</rb><rt>よ</rt></ruby><ruby><rb>の中</rb><rt>なか</rt></ruby> <strong>（不正确！）</strong></td></tr>
 </tbody></table>
 </div>
 <p>注意第三个示例在「中」字符前有一个空格。这是为了指定注音文本只适用于该字符。如果没有空格，注音文本将
@@ -1986,8 +1985,8 @@ Show Back&lt;/a&gt;&lt;div id=&quot;hint4753594160&quot; class=hint style=&quot;
 息。</p>
 <h2 id="检查你的答案"><a class="header" href="#检查你的答案">检查你的答案</a></h2>
 <p>你可以在 <a href="http://www.youtube.com/watch?v=5tYObQ3ocrw&amp;yt:cc=on">YouTube</a> 上观看关于此功能的视频。</p>
-<p>检查答案的最简单方法是在卡片添加界面的左上角单击「Basic」，然后选择「Basic (type in the answer)」。
-如果你已经下载了一个共享牌组，并希望在其中输入答案，你可以修改它的卡片模板。如果它有一个模板像这样：</p>
+<p>检查答案的最简单方法是在卡片添加界面的左上角单击「问答题」，然后选择「问答题（输入答案）」。如果你已
+经下载了一个共享牌组，并希望在其中输入答案，你可以修改它的卡片模板。如果它有一个模板像这样：</p>
 <pre><code>{{Native Word}}
 
 {{FrontSide}}
@@ -2009,29 +2008,25 @@ Show Back&lt;/a&gt;&lt;div id=&quot;hint4753594160&quot; class=hint style=&quot;
 的字段。</p>
 <p>Anki 使用等宽字体进行答案比较，以便「已提供」和「正确」部分对齐。如果你希望为答案比较覆盖字体，你可
 以在样式部分的底部放置以下内容：</p>
-<pre><code class="language-css">code#typeans {
-  font-family: &quot;myfontname&quot;;
-}
+<pre><code>code#typeans { font-family: &quot;myfontname&quot;; }
 </code></pre>
 <p>这将影响以下用于答案比较的 HTML：</p>
-<pre><code class="language-html">&lt;code id=&quot;typeans&quot;&gt;...&lt;/code&gt;
+<pre><code>&lt;code id=typeans&gt;...&lt;/code&gt;
 </code></pre>
 <p>高级用户可以使用 css 类 <code>typeGood</code>、<code>typeBad</code> 和 <code>typeMissed</code> 覆盖默认的输入答案颜色。AnkiMobile支持
 <code>typeGood</code> 和 <code>typeBad</code>，但不支持 <code>typeMissed</code>。</p>
 <p>如果希望覆盖输入框的大小而不想在「Fields」对话框中更改字体，可以使用 <code>!important</code> 来覆盖默认的内联样
 式，如下所示：</p>
-<pre><code class="language-css">#typeans {
-  font-size: 50px !important;
-}
+<pre><code>#typeans { font-size: 50px !important; }
 </code></pre>
-<p>还可以为填空删除卡片输入答案。为此，请在前后模板中添加 <code>{{type:cloze:Text}}</code>，这样背面看起来像这样：</p>
+<p>还可以为填空题卡片输入答案。为此，请在前后模板中添加 <code>{{type:cloze:Text}}</code>，这样背面看起来像这样：</p>
 <pre><code>{{cloze:Text}}
 {{type:cloze:Text}}
 {{Extra}}
 </code></pre>
 <p>注意，由于填空类型不使用 FrontSide，这必须添加到填空笔记模板的两边。</p>
 <p>如果有多个部分被省略，你可以在文本框中用逗号分隔答案。</p>
-<p>在浏览器中的「<a href="templates/intro.html">预览」对话框</a>中不会显示输入答案框。当你复习或在卡片类型窗口中查看预览时，它
+<p>在浏览器中的<a href="templates/intro.html">「预览」对话框</a>中不会显示输入答案框。当你复习或在卡片类型窗口中查看预览时，它
 们将显示。</p>
 <p>在 <a href="templates/../syncing.html">ankiweb.net</a> 上复习卡片时，不会显示输入答案框。</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="卡片生成"><a class="header" href="#卡片生成">卡片生成</a></h1>
@@ -2047,15 +2042,16 @@ Show Back&lt;/a&gt;&lt;div id=&quot;hint4753594160&quot; class=hint style=&quot;
 <li><a href="templates/generation.html#%E7%A9%BA%E7%99%BD%E8%83%8C%E9%9D%A2">空白背面</a></li>
 <li><a href="templates/generation.html#%E6%97%A7%E7%89%88%E6%9C%AC-anki-%E7%9A%84%E9%99%90%E5%88%B6">旧版本 Anki 的限制</a></li>
 <li><a href="templates/generation.html#%E6%B7%BB%E5%8A%A0%E7%A9%BA%E7%AC%94%E8%AE%B0">添加空笔记</a></li>
-<li><a href="templates/generation.html#%E5%A1%AB%E7%A9%BA%E6%A8%A1%E6%9D%BF">填空模板</a></li>
+<li><a href="templates/generation.html#%E5%A1%AB%E7%A9%BA%E9%A2%98%E6%A8%A1%E6%9D%BF">填空题模板</a></li>
 </ul>
 <h2 id="反向卡片"><a class="header" href="#反向卡片">反向卡片</a></h2>
 <p>你可以在 YouTube 上观看<a href="http://www.youtube.com/watch?v=DnbKwHEQ1mA&amp;yt:cc=on">有关反向卡片的视频</a>。</p>
 <p>如果你想创建双向的卡片（例如，「ookii」→「big」和「big」→「ookii」），你有几种选择。最简单的方法是选
-择内置的「基础（及反向卡片）」笔记模板。这将生成两张卡片，每个方向一张。</p>
+择内置的「问答题（同时生成翻转的卡片）」笔记模板。这将生成两张卡片，每个方向一张。</p>
 <p>如果你只想为部分材料生成反向卡片（可能你只想花时间学习最重要材料的反向，或者有些卡片反向后不合理），
-你可以选择「基础（可选反向卡片）」笔记模板。当你只填写前两个字段时，这种笔记模板只生成正向卡片；如果
-你在「添加反向」字段中输入内容（如 'y'），Anki 也会生成一张反向卡片。此字段的内容不会在卡片上显示。</p>
+你可以选择「问答题（同时生成翻转的卡片&lt;可选&gt;）」笔记模板。当你只填写前两个字段时，这种笔记模板只生成
+正向卡片；如果你在「增加翻转的卡片」字段中输入内容（如 'y'），Anki 也会生成一张反向卡片。此字段的内
+容不会在卡片上显示。</p>
 <h2 id="卡片的生成与删除"><a class="header" href="#卡片的生成与删除">卡片的生成与删除</a></h2>
 <p>Anki 不会创建正面空白的卡片。因此，如果「我的字段」为空，并且某张卡的正面模板仅包含该字段，则不会创
 建该卡片。</p>
@@ -2180,10 +2176,10 @@ Show Back&lt;/a&gt;&lt;div id=&quot;hint4753594160&quot; class=hint style=&quot;
 片，将使用第一个模板创建一个空卡片。这允许你即使内容不完整也可以添加材料，并稍后通过修改材料或模板使
 其变为有效。如果你不想保留空笔记，可以使用空卡片功能将其删除。</p>
 <p>在旧版本的 Anki 中，如果没有卡片会被生成，Anki 会拒绝添加或导入笔记。</p>
-<h2 id="填空模板"><a class="header" href="#填空模板">填空模板</a></h2>
-<p>请参阅<a href="templates/../editing.html#%E5%AE%8C%E5%BD%A2%E5%A1%AB%E7%A9%BA">填空删除</a>部分以获取相关信息。</p>
-<p>填空笔记模板的功能与常规笔记模板不同。它没有可自定义的卡片类型数量，而是所有填空删除共享一个类型。</p>
-<p>如上面卡片生成部分所述，常规卡片的生成取决于一个或多个问题字段是否非空。填空删除笔记模板的生成方式不
+<h2 id="填空题模板"><a class="header" href="#填空题模板">填空题模板</a></h2>
+<p>请参阅<a href="templates/../editing.html#%E5%A1%AB%E7%A9%BA%E9%A2%98">填空题</a>部分以获取相关信息。</p>
+<p>填空题笔记模板的功能与常规笔记模板不同。它没有可自定义的卡片类型数量，而是所有填空题共享一个类型。</p>
+<p>如上面卡片生成部分所述，常规卡片的生成取决于一个或多个问题字段是否非空。填空题笔记模板的生成方式不
 同：</p>
 <ul>
 <li>
@@ -2196,8 +2192,8 @@ Show Back&lt;/a&gt;&lt;div id=&quot;hint4753594160&quot; class=hint style=&quot;
 <p>对于每个不同的编号，将生成一张卡片。</p>
 </li>
 </ul>
-<p>由于填空删除卡片的生成方式不同，{{cloze:...}} 标签不能用于常规笔记模板——只有当用在填空笔记模板中时，
-它们才能正常工作。</p>
+<p>由于填空题卡片的生成方式不同，{{cloze:...}} 标签不能用于常规笔记模板——只有当用在填空笔记模板中时，它
+们才能正常工作。</p>
 <p>条件生成提供了一个特殊字段，以便你检测所呈现的卡片。例如，如果你想在第一个填空上显示「hint1」字段，
 并在第二个填空上显示「hint2」字段，你可以使用以下模板：</p>
 <pre><code>{{cloze:Text}}
@@ -2536,7 +2532,7 @@ JavaScript 的相关问题，你可以使用 Chrome
 同，无论其笔记为何。这样将无法回答卡片，因为你不知道期望的答案是什么。</p>
 <p>要解决此问题，请打开<a href="templates/./intro.html#%E6%A8%A1%E6%9D%BF%E7%95%8C%E9%9D%A2">模板界面</a>，并点击添加字段按钮，在前面添加一个或多个字段。</p>
 <h3 id="填空筛选器在非填空笔记模板中"><a class="header" href="#填空筛选器在非填空笔记模板中">填空筛选器在非填空笔记模板中</a></h3>
-<p><a href="templates/../editing.html#%E5%AE%8C%E5%BD%A2%E5%A1%AB%E7%A9%BA">填空</a>筛选器（如 <code>{{cloze:Some Field}}</code>）只能用于填空笔记模板，及其复制的类
+<p><a href="templates/../editing.html#%E5%A1%AB%E7%A9%BA%E9%A2%98">填空</a>筛选器（如 <code>{{cloze:Some Field}}</code>）只能用于填空笔记模板，及其复制的类
 型。</p>
 <p>如果你遇到此错误，可以从模板中移除填空筛选器。</p>
 <p>如果有使用该笔记模板但包含填空的笔记，你可以在浏览界面中选择它们，并使用更改笔记模板操作分配它们到一
@@ -2544,8 +2540,8 @@ JavaScript 的相关问题，你可以使用 Chrome
 <p>旧版本的 Anki 在你尝试在普通笔记模板上使用填空时不会发出警告，但这从来不是一个意图支持的用例。如果你
 想将填空与常规卡片结合使用，你可以寻找像 Closet 插件这样的插件提供一些替代方案。</p>
 <h3 id="填空笔记模板中无填空筛选器"><a class="header" href="#填空笔记模板中无填空筛选器">填空笔记模板中无填空筛选器</a></h3>
-<p>一个填空笔记模板的正反模板应该有一个<a href="templates/../editing.html#%E5%AE%8C%E5%BD%A2%E5%A1%AB%E7%A9%BA">填空</a>筛选器。如果缺少，你需要添加回来，
-以便 Anki 可以正确创建填空卡片。</p>
+<p>一个填空笔记模板的正反模板应该有一个<a href="templates/../editing.html#%E5%A1%AB%E7%A9%BA%E9%A2%98">填空</a>筛选器。如果缺少，你需要添加回来，以
+便 Anki 可以正确创建填空卡片。</p>
 <div style="break-before: page; page-break-before: always;"></div><h1 id="首选项"><a class="header" href="#首选项">首选项</a></h1>
 <blockquote>
 <p>原文：<a href="https://docs.ankiweb.net/preferences.html">Preferences - Anki Manual (ankiweb.net)</a></p>
@@ -3026,7 +3022,7 @@ AnkiWeb 上的旧版本覆盖它们时很有用。</p>
 <p>选项包括：</p>
 <ul>
 <li>
-<p>搁置新的关联卡片：是否延迟直到第二天显示同一笔记的其他新卡片（例如，反向卡片，相邻的完形填空）。</p>
+<p>搁置新的关联卡片：是否延迟直到第二天显示同一笔记的其他新卡片（例如，反向卡片，相邻的填空题）。</p>
 </li>
 <li>
 <p>搁置待复习的关联卡片：是否延迟直到第二天显示同一笔记的其他复习卡片。</p>
@@ -3820,7 +3816,7 @@ AND 搜索时变得很重要 — 在示例中有括号时，它匹配「dog 
 <p><code>card:forward</code><br />
 找到由名为「Forward」的卡片类型创建的卡片。</p>
 <p><code>card:1</code><br />
-按卡片类型编号搜索卡片，例如要查找笔记的第二个填空删除，你可以使用 <code>card:2</code></p>
+按卡片类型编号搜索卡片，例如要查找笔记的第二个填空题，你可以使用 <code>card:2</code></p>
 <p><code>note:basic</code><br />
 搜索由名为「Basic」的笔记模板创建的卡片。</p>
 <h2 id="忽略重音组合字符"><a class="header" href="#忽略重音组合字符">忽略重音/组合字符</a></h2>
