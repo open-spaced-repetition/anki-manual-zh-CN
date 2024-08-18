@@ -240,7 +240,7 @@ Show Back</a><div id="hint4753594160" class=hint style="display: none">{{Back}}<
 
 ### 附加注音字符筛选器
 
-除了 `furigana` 筛选器，你还可以只显示注音文本的某些部分，使用 `kana` 和 `kanji` 筛选器。`kana` 过滤
+除了 `furigana` 筛选器，你还可以只显示注音文本的某些部分，使用 `kana` 和 `kanji` 筛选器。`kana` 筛选
 器只会显示注音文本，而 `kanji` 筛选器则完全去除注音文本。
 
 <!-- prettier-ignore -->
