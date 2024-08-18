@@ -3694,7 +3694,7 @@ Anki 应在哪里查找要替换的文本：笔记的标签中（需要 Anki 2.1
 <li><a href="searching.html#%E5%BF%BD%E7%95%A5%E9%87%8D%E9%9F%B3%E7%BB%84%E5%90%88%E5%AD%97%E7%AC%A6">忽略重音/组合字符</a></li>
 <li><a href="searching.html#%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F">正则表达式</a></li>
 <li><a href="searching.html#%E5%8D%A1%E7%89%87%E7%8A%B6%E6%80%81">卡片状态</a></li>
-<li><a href="searching.html#%E6%A0%87%E8%AE%B0">标记</a></li>
+<li><a href="searching.html#%E6%97%97%E6%A0%87">旗标</a></li>
 <li><a href="searching.html#%E5%8D%A1%E7%89%87%E5%B1%9E%E6%80%A7">卡片属性</a></li>
 <li><a href="searching.html#%E6%9C%80%E8%BF%91%E4%BA%8B%E4%BB%B6">最近事件</a>
 <ul>
@@ -3735,9 +3735,9 @@ Anki 应在哪里查找要替换的文本：笔记的标签中（需要 Anki 2.1
 <p><code>-&quot;a dog&quot;</code><br />
 找到不包含确切字符序列「a dog」的笔记。</p>
 <p><code>d_g</code><br />
-找到包含 d，&lt;一个字符&gt;，g 的笔记，如 dog、dig、dug 等。</p>
+找到包含 d&lt;一个字符&gt;g 的笔记，如 dog、dig、dug 等。</p>
 <p><code>d*g</code><br />
-找到包含 d，&lt;零个或多个字符&gt;，g 的笔记，如 dg、dog、dung 等。</p>
+找到包含 d&lt;零个或多个字符&gt;g 的笔记，如 dg、dog、dung 等。</p>
 <p><code>w:dog</code><br />
 搜索单词「dog」而不是字符序列 - 会匹配「dog」但不包括「doggy」或「underdog」。需要 Anki
 2.1.24+、AnkiMobile 2.1.61+ 或 AnkiDroid 2.17+。请注意，格式变化可能会被解释为单词边界。例如，搜索
@@ -3749,21 +3749,21 @@ Anki 应在哪里查找要替换的文本：笔记的标签中（需要 Anki 2.1
 <p>从以上可以注意到以下几点：</p>
 <ul>
 <li>
-<p>搜索术语以空格分隔。</p>
+<p>搜索关键词以空格分隔。</p>
 </li>
 <li>
-<p>当提供多个搜索术语时，Anki 会查找同时匹配所有术语的笔记 - 在每个术语之间插入一个隐式的「and」。在
-Anki 2.1.24+、AnkiMobile 2.0.60+ 和 AnkiDroid 2.17+ 上，你可以显式设置（「dog and cat」与「dog
-cat」相同），但较旧的 Anki 版本会将「and」视为要搜索的另一个单词。</p>
+<p>当提供多个搜索关键词时，Anki 会查找同时匹配所有关键词的笔记 - 在每个关键词之间插入一个隐式的
+「and」。在 Anki 2.1.24+、AnkiMobile 2.0.60+ 和 AnkiDroid 2.17+ 上，你可以显式设置（「dog and
+cat」与「dog cat」相同），但较旧的 Anki 版本会将「and」视为要搜索的另一个单词。</p>
 </li>
 <li>
-<p>如果你只需要匹配其中一个术语，可以使用「or」。</p>
+<p>如果你只需要匹配其中一个关键词，可以使用「or」。</p>
 </li>
 <li>
-<p>你可以在术语前加上减号来查找不匹配该术语的笔记。</p>
+<p>你可以在关键词前加上减号来查找不匹配该关键词的笔记。</p>
 </li>
 <li>
-<p>你可以通过将搜索术语放在括号中来对其进行分组，如「dog (cat or mouse)」示例中那样。这在组合 OR 和
+<p>你可以通过将搜索关键词放在括号中来对其进行分组，如「dog (cat or mouse)」示例中那样。这在组合 OR 和
 AND 搜索时变得很重要 — 在示例中有括号时，它匹配「dog cat」或「dog mouse」，而没有括号时，它会匹配
 「dog and cat」或「mouse」。</p>
 </li>
@@ -3773,7 +3773,7 @@ AND 搜索时变得很重要 — 在示例中有括号时，它匹配「dog 
 配。如果单词没有格式化，或者格式化没有在单词中间变化，那么 Anki 将能够在任何字段中找到它。</p>
 </li>
 <li>
-<p>标准搜索对拉丁字符进行不区分大小写 - a-z 将匹配 A-Z，反之亦然。其他字符如西里尔字母在标准搜索中是
+<p>标准搜索对拉丁字符进行不区分大小写—— a-z 将匹配 A-Z，反之亦然。其他字符如西里尔字母在标准搜索中是
 区分大小写的，但可以通过在单词边界或正则表达式上进行搜索来取消区分大小写（<code>w:</code>，<code>re:</code>）。</p>
 </li>
 </ul>
@@ -3810,16 +3810,16 @@ AND 搜索时变得很重要 — 在示例中有括号时，它匹配「dog 
 <p><code>&quot;deck:french vocab&quot;</code><br />
 与前面相同。</p>
 <p><code>deck:filtered</code><br />
-仅过滤的牌组。</p>
+仅筛选牌组。</p>
 <p><code>-deck:filtered</code><br />
 仅普通牌组。</p>
 <p><code>preset:&quot;Default&quot;</code><br />
 在所有使用「Default」牌组选项预设的牌组中的卡片。需要 Anki 23.10+、AnkiMobile 23.10+ 或 AnkiDroid
 2.17+。</p>
 <p><code>card:forward</code><br />
-找到由名为「Forward」的卡片类型创建的卡片。</p>
+找到由名为「Forward」的卡片模板创建的卡片。</p>
 <p><code>card:1</code><br />
-按卡片类型编号搜索卡片，例如要查找笔记的第二个填空题，你可以使用 <code>card:2</code></p>
+按卡片模板编号搜索卡片，例如要查找笔记的第二个填空题，你可以使用 <code>card:2</code></p>
 <p><code>note:basic</code><br />
 搜索由名为「Basic」的笔记模板创建的卡片。</p>
 <h2 id="忽略重音组合字符"><a class="header" href="#忽略重音组合字符">忽略重音/组合字符</a></h2>
@@ -3855,47 +3855,47 @@ AND 搜索时变得很重要 — 在示例中有括号时，它匹配「dog 
 <p>需要注意的一些事项：</p>
 <ul>
 <li>搜索默认不区分大小写；在搜索的开头使用 <code>(?-i)</code> 来开启区分大小写。</li>
-<li>某些文本如空格和换行在 HTML 中可能会有不同的表示 - 你可以在编辑窗口中使用 HTML 编辑器查看底层 HTML
+<li>某些文本如空格和换行在 HTML 中可能会有不同的表示——你可以在编辑窗口中使用 HTML 编辑器查看底层 HTML
 内容。</li>
 <li>有关 Anki 正则表达式支持的具体细节，请参
 见<a href="https://docs.rs/regex/1.3.9/regex/#syntax">regex crate 文档</a>。</li>
 </ul>
 <h2 id="卡片状态-1"><a class="header" href="#卡片状态-1">卡片状态</a></h2>
 <p><code>is:due</code><br />
-等待学习的复习卡片和学习卡片。</p>
+等待学习的复习中卡片和学习中卡片。</p>
 <p><code>is:new</code><br />
 新卡片。</p>
 <p><code>is:learn</code><br />
 在学习中的卡片。</p>
 <p><code>is:review</code><br />
-复习（包括到期的和未到期的）和失效的卡片。</p>
+复习（包括到期的和未到期的）和遗忘的卡片。</p>
 <p><code>is:suspended</code><br />
 被<a href="leeches.html">自动</a>或手动暂停的卡片。</p>
 <p><code>is:buried</code><br />
 被<a href="studying.html#%E5%85%B3%E8%81%94%E5%8D%A1%E7%89%87%E4%B8%8E%E6%90%81%E7%BD%AE">自动</a>或手动搁置的卡片。</p>
-<p><a href="deck-options.html#%E9%81%97%E5%BF%98">遗忘的</a>卡片属于前面几个类别中的一些，因此可能有必要结合不同的搜索术语以获得更
-准确的结果：</p>
+<p><a href="deck-options.html#%E9%81%97%E5%BF%98">遗忘的</a>卡片属于前面几个类别中的一些，因此可能有必要结合不同的搜索关键词以获得
+更准确的结果：</p>
 <p><code>is:learn is:review</code><br />
-失效并等待重新学习的卡片。</p>
+遗忘并等待重新学习的卡片。</p>
 <p><code>-is:learn is:review</code><br />
-不包括失效卡片的复习卡片。</p>
+不包括遗忘卡片的复习卡片。</p>
 <p><code>is:learn -is:review</code><br />
 第一次在学习中的卡片。</p>
-<h2 id="标记"><a class="header" href="#标记">标记</a></h2>
+<h2 id="旗标"><a class="header" href="#旗标">旗标</a></h2>
 <p><code>flag:1</code><br />
-带有红色标记的卡片。</p>
+带有红色旗标的卡片。</p>
 <p><code>flag:2</code><br />
-带有橙色标记的卡片。</p>
+带有橙色旗标的卡片。</p>
 <p><code>flag:3</code><br />
-带有绿色标记的卡片。</p>
+带有绿色旗标的卡片。</p>
 <p><code>flag:4</code><br />
-带有蓝色标记的卡片。</p>
+带有蓝色旗标的卡片。</p>
 <p><code>flag:5</code><br />
-带有粉色标记的卡片。</p>
+带有粉色旗标的卡片。</p>
 <p><code>flag:6</code><br />
-带有绿松石色标记的卡片。</p>
+带有绿松石色旗标的卡片。</p>
 <p><code>flag:7</code><br />
-带有紫色标记的卡片。</p>
+带有紫色旗标的卡片。</p>
 <h2 id="卡片属性"><a class="header" href="#卡片属性">卡片属性</a></h2>
 <p><code>prop:ivl&gt;=10</code><br />
 间隔为 10 天或更长的卡片。</p>
@@ -3912,7 +3912,7 @@ AND 搜索时变得很重要 — 在示例中有括号时，它匹配「dog 
 <p><code>prop:reps&lt;10</code><br />
 回答次数少于 10 次的卡片。</p>
 <p><code>prop:lapses&gt;3</code><br />
-失效次数超过 3 次的卡片。</p>
+遗忘次数超过 3 次的卡片。</p>
 <p><code>prop:ease!=2.5</code><br />
 比默认简易度更容易或更难的卡片。</p>
 <p><code>prop:cdn:d&gt;5</code><br />
@@ -3961,13 +3961,13 @@ AND 搜索时变得很重要 — 在示例中有括号时，它匹配「dog 
 <ul>
 <li>
 <p>空格<br />
-要匹配包含空格的内容，请将「整个术语」用双引号括起来。如果是冒号搜索，你也可以选择只引用
+要匹配包含空格的内容，请将「整个关键词」用双引号括起来。如果是冒号搜索，你也可以选择只引用
 <code>部分：&quot;在冒号之后&quot;</code>。</p>
 </li>
 <li>
 <p><code>And</code>/<code>Or</code><br />
 要搜索 <code>or</code> 和 <code>and</code> 的单词，用双引号包围它们。例如，<code>dog &quot;and&quot; cat</code> 搜索「dog」、「cat」和「and」
-这个词。如果你像前面的例子那样用引号包围整个搜索术语，则不需要转义 <code>and</code> 或 <code>or</code>。</p>
+这个词。如果你像前面的例子那样用引号包围整个搜索关键词，则不需要转义 <code>and</code> 或 <code>or</code>。</p>
 </li>
 <li>
 <p><code>&quot;</code>, <code>*</code> 和 <code>_</code><br />
@@ -3981,8 +3981,8 @@ AND 搜索时变得很重要 — 在示例中有括号时，它匹配「dog 
 </li>
 <li>
 <p><code>(</code> 和 <code>)</code><br />
-你可以通过用引号括起整个术语、使用反斜杠或同时使用这两者来搜索括号。例如，<code>&quot;(text)&quot;</code>、<code>\ (text\ )</code>
-和 <code>&quot;\(text\)&quot;</code> 是等价搜索，都搜索「(text)」。</p>
+你可以通过用引号括起整个关键词、使用反斜杠或同时使用这两者来搜索括号。例
+如，<code>&quot;(text)&quot;</code>、<code>\ (text\ )</code> 和 <code>&quot;\(text\)&quot;</code> 是等价搜索，都搜索「(text)」。</p>
 </li>
 <li>
 <p><code>-</code><br />
