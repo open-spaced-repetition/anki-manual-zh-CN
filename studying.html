@@ -155,7 +155,7 @@
 <li><a href="#%E7%89%8C%E7%BB%84">牌组</a></li>
 <li><a href="#%E5%AD%A6%E4%B9%A0%E6%A6%82%E8%A7%88">学习概览</a></li>
 <li><a href="#%E9%97%AE%E9%A2%98">问题</a></li>
-<li><a href="#%E5%AD%A6%E4%B9%A0%E9%87%8D%E5%AD%A6%E5%8D%A1%E7%89%87">学习/重学卡片</a></li>
+<li><a href="#%E5%88%9D%E5%AD%A6%E9%87%8D%E5%AD%A6%E5%8D%A1%E7%89%87">初学/重学卡片</a></li>
 <li><a href="#%E5%A4%8D%E4%B9%A0%E5%8D%A1%E7%89%87">复习卡片</a></li>
 <li><a href="#%E5%88%B0%E6%9C%9F%E8%AE%A1%E6%95%B0">到期计数</a></li>
 <li><a href="#%E6%A8%A1%E7%B3%8A%E7%B3%BB%E6%95%B0">模糊系数</a></li>
@@ -192,7 +192,7 @@
 <p>当显示答案时，你应该将你想到的答案与显示的答案进行比较，并告诉 Anki 你记忆得有多好。如果你不相信自己
 能准确地比较你的答案，可以让 Anki <a href="templates/fields.html#%E6%A3%80%E6%9F%A5%E4%BD%A0%E7%9A%84%E7%AD%94%E6%A1%88">提示你输入答案</a>而不是仅仅显示答
 案给你。</p>
-<h2 id="学习重学卡片"><a class="header" href="#学习重学卡片">学习/重学卡片</a></h2>
+<h2 id="初学重学卡片"><a class="header" href="#初学重学卡片">初学/重学卡片</a></h2>
 <p>在学习新卡，或重学你已忘记的卡片时，Anki 会一遍或多遍地展示这些卡片以帮助你记忆。每次展示之间的时间
 称为「初学间隔」。默认情况下，有两个间隔：1 分钟和 10 分钟。你可以
 在<a href="deck-options.html#%E6%96%B0%E5%8D%A1%E7%89%87">牌组选项</a>中更改间隔数量和长度。</p>
@@ -264,7 +264,7 @@
 <p>在 v1 调度器中，这些数字表示完成该队列中所有卡片所需的<strong>复习</strong>数，而非<strong>卡片</strong>数。如果你为遗忘卡片配
 置了多个重学间隔，数字将在你遗忘一张卡片时增长超过 1，因为那张卡片需要被多次展示。</p>
 <p>从 <a href="https://faqs.ankiweb.net/the-anki-2.1-scheduler.html">v2 调度器</a>开始，这些数字表示<strong>卡片</strong>，所以
-无论剩下多少步骤，数字总是只会增加 1。</p>
+无论剩下多少初学/重学间隔，数字总是只会增加 1。</p>
 <p>当答案显示时，Anki 在每个按钮上方显示卡片下次展示时间的预测值。如果你更喜欢不看预测值，可以在 Anki
 的<a href="preferences.html">首选项</a>中禁用它们。</p>
 <h2 id="模糊系数"><a class="header" href="#模糊系数">模糊系数</a></h2>
@@ -292,7 +292,7 @@
 </ul>
 <p>旧调度器中，如果卡片处于学习中被搁置，它们会在被搁置前移动回到新卡或复习卡队列。</p>
 <p>然而，使用 <a href="https://faqs.ankiweb.net/the-anki-2.1-scheduler.html">2.1 调度器</a>，搁置卡片并不会重置卡
-片的学习步骤。</p>
+片的初学/重学间隔。</p>
 <ul>
 <li><strong>重置卡片</strong>：将当前卡片移至<a href="browsing.html#%E5%8D%A1%E7%89%87">新卡队列的末尾</a>。</li>
 </ul>
@@ -311,7 +311,7 @@
 </li>
 </ul>
 <p>然而，使用 <a href="https://faqs.ankiweb.net/the-anki-2.1-scheduler.html">2.1 调度器</a>，暂停卡片并不会重置卡
-片的学习步骤。</p>
+片的初学/重学间隔。</p>
 <ul>
 <li>
 <p><strong>选项</strong>：编辑当前牌组的<a href="deck-options.html">选项</a>。</p>
