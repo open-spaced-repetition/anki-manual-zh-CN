@@ -58,11 +58,11 @@ Anki，你的 Anki 文件会在 `Documents/Anki` 文件夹中。
 
     anki -b /path/to/anki/folder
 
-- 如果你有多个配置文件，你可以传递 -p &lt;name&gt; 来加载一个特定的配置文件。
+- 如果你有多个配置文件，你可以传递 `-p <name>`; 来加载一个特定的配置文件。
 - 如果你传递 -p some-fake-name，Anki 将在启动时显示配置文件窗口。如果没有提供配置文件，将加载最后使
   用的配置文件。
 
-- 要更改界面语言，请使用 -l &lt;iso 639-1 language code&gt;，例如 "-l ja" 表示日语。
+- 要更改界面语言，请使用 `-l <iso 639-1 language code>`，例如 "-l ja" 表示日语。
 
 如果你总是想使用自定义文件夹位置，你可以修改 Anki 的快捷方式。在 Windows 上，右键点击快捷方式，选择
 属性，选择快捷方式选项卡，然后在程序路径后添加 "-b \\path\\to\\data\\folder"，这样应该会给你类似于

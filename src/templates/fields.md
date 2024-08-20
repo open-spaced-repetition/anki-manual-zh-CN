@@ -45,7 +45,7 @@ HTML 元素，如段落或 div。
 
     one two
 
-要添加换行，你需要在行末添加 &lt;br&gt; 代码，如下所示：
+要添加换行，你需要在行末添加 `<br>` 代码，如下所示：
 
     one<br>
     two
@@ -191,7 +191,7 @@ Show Back</a><div id="hint4753594160" class=hint style="display: none">{{Back}}<
 
 像模板一样，字段以 HTML 格式存储。在上面的字典链接示例中，如果表达中包含没有格式的单词「myword」，那
 么 HTML 将是相同的：「myword」。但当你在字段中包含格式时，会包括额外的 HTML。如果「myword」被加粗，
-实际的 HTML 将是「&lt;b&gt;myword&lt;/b&gt;」。
+实际的 HTML 将是「`<b>myword</b>`」。
 
 这可能会对字典链接等事情造成问题。在上面的示例中，字典链接最终会是：
 
