@@ -361,7 +361,7 @@ Anki 23.10+ 原生支持图片遮盖（Image Occlusion）卡片。图片遮盖�
 的布局，不过通常可以在一般的「国际键盘」布局上输入。这种输入方法是先键入重音符号，然后输入你想要标重
 音的字符，例如，先输入省略号 (') 再输入字母 a (a)，这样就得到 á。
 
-要在 Windows 机器上添加国际键盘，请参见
+要在 Windows 系统上添加国际键盘，请参见
 <https://thegeekpage.com/how-to-add-us-international-keyboard-in-windows-10/>
 
 要在 Mac 上添加，请参见 <http://www.macworld.com/article/1147039/os-x/accentinput.html>
