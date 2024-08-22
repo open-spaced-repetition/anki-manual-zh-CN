@@ -177,20 +177,20 @@
 </ul>
 <h2 id="基础替换"><a class="header" href="#基础替换">基础替换</a></h2>
 <p>最基本的模板看起来是这样的：</p>
-<pre><code>{{Front}}
+<pre><code>{{正面}}
 </code></pre>
 <p>当你把文本放在大括号内时，Anki 会寻找该名称对应的字段，并用字段的实际内容替换文本。</p>
 <p>字段名称区分大小写。如果你有一个名为 <code>Front</code> 的字段，写成 <code>{{front}}</code> 是无法正常工作的。</p>
 <p>你的模板不是仅限于列出字段。你还可以在模板中包含任意文本。例如，如果你在学习首都城市，并且你创建了一
 个包含「国家」字段的笔记模板，你可能会创建一个前面这样的模板：</p>
-<pre><code>What's the capital city of {{Country}}?
+<pre><code>{{国家}}的首都是？
 </code></pre>
 <p>默认的背面模板会看起来是这样的：</p>
 <pre><code>{{FrontSide}}
 
 &lt;hr id=answer&gt;
 
-{{Back}}
+{{背面}}
 </code></pre>
 <p>这意味着「先显示正面的文本，然后是一条分隔线，再然后是背面字段」。</p>
 <p>'id=answer' 部分告诉 Anki 问题和答案之间的分隔线在哪里。这使得 Anki 在你按下「显示答案」时会自动滚动

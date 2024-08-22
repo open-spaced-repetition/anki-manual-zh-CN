@@ -244,20 +244,20 @@ AND 搜索时变得很重要 — 在示例中有括号时，它匹配「dog 
 <h2 id="限定到某个字段"><a class="header" href="#限定到某个字段">限定到某个字段</a></h2>
 <p>你也可以要求 Anki 只有在特定字段包含某些文本时才匹配。与前面的搜索示例不同，字段搜索默认需要精确匹
 配。</p>
-<p><code>front:dog</code><br />
-找到 Front 字段内容精确为「dog」的笔记。内容为「a dog」的字段将不匹配。</p>
+<p><code>正面:dog</code><br />
+找到「正面」字段内容精确为「dog」的笔记。内容为「a dog」的字段将不匹配。</p>
 <p><code>&quot;animal front:a dog&quot;</code><br />
 找到「Animal Front」字段内容精确为「a dog」的笔记。双引号是必需的：请参阅<a href="#%E5%8C%B9%E9%85%8D%E7%89%B9%E6%AE%8A%E5%AD%97%E7%AC%A6">本节后面</a>。</p>
-<p><code>front:*dog*</code><br />
-找到 Front 字段包含 dog 的笔记。</p>
-<p><code>front:</code><br />
-找到 Front 字段为空的笔记。</p>
-<p><code>front:_*</code><br />
-找到 Front 字段不为空的笔记。</p>
-<p><code>front:*</code><br />
-找到有 Front 字段的笔记，无论是否为空。</p>
-<p><code>fr*:text</code><br />
-在字段前缀为「fr」的字段中找到笔记。需要 Anki 2.1.24+、AnkiMobile 2.1.60+ 或 AnkiDroid 2.17+。</p>
+<p><code>正面:*dog*</code><br />
+找到「正面」字段包含 dog 的笔记。</p>
+<p><code>正面:</code><br />
+找到「正面」字段为空的笔记。</p>
+<p><code>正面:_*</code><br />
+找到「正面」字段不为空的笔记。</p>
+<p><code>正面:*</code><br />
+找到有「正面」字段的笔记，无论是否为空。</p>
+<p><code>正*:text</code><br />
+在字段前缀为「正」的字段中找到笔记。需要 Anki 2.1.24+、AnkiMobile 2.1.60+ 或 AnkiDroid 2.17+。</p>
 <h2 id="标签牌组卡片和笔记"><a class="header" href="#标签牌组卡片和笔记">标签、牌组、卡片和笔记</a></h2>
 <p><code>tag:animal</code><br />
 找到带有「animal」标签的笔记，或类似「animal::mammal」的子标签。</p>
@@ -306,9 +306,9 @@ AND 搜索时变得很重要 — 在示例中有括号时，它匹配「dog 
 找到笔记中连续三个数字的笔记。</p>
 <p>正则表达式也可以限定在特定字段中。请注意，与特定字段中的普通搜索不同，字段中的正则表达式不要求精确匹
 配：</p>
-<p><code>front:re:[a-c]1</code><br />
-匹配出现在「Front」字段中的大小写 a1、B1 或 c1。</p>
-<p><code>front:re:^[a-c]1$</code><br />
+<p><code>正面:re:[a-c]1</code><br />
+匹配出现在「正面」字段中的 a1、B1 或 c1（不区分大小写）。</p>
+<p><code>正面:re:^[a-c]1$</code><br />
 与前一个示例相同，但如果在 a1/b1/c1 之前或之后有任何其他文本，则不匹配。</p>
 <p>Anki 2.1.50+ 支持对标签使用正则表达式：</p>
 <p><code>tag:re:^parent$</code><br />
