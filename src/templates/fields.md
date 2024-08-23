@@ -123,7 +123,7 @@ This is other text on the template. It is outside of the tags so it should not b
 
     笔记的标签：{{Tags}}
 
-    笔记的类型：{{Type}}
+    笔记的模板：{{Type}}
 
     卡片的牌组：{{Deck}}
 
@@ -342,7 +342,7 @@ Anki 使用等宽字体进行答案比较，以便「已提供」和「正确」
 
 如果有多个部分被省略，你可以在文本框中用逗号分隔答案。
 
-在浏览器中的[「预览」对话框](intro.md)中不会显示输入答案框。当你复习或在卡片类型窗口中查看预览时，它
+在浏览器中的[「预览」对话框](intro.md)中不会显示输入答案框。当你复习或在卡片模板窗口中查看预览时，它
 们将显示。
 
 在 [ankiweb.net](../syncing.md) 上复习卡片时，不会显示输入答案框。
