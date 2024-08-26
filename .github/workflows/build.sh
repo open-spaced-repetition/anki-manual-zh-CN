@@ -7,4 +7,5 @@ export PATH="$HOME:$PATH"
 if [ "$CHECK" = "" ]; then
     rm $HOME/mdbook-linkcheck
 fi
+cargo install mdbook --git https://github.com/Sunshine40/mdBook --branch search-non-english --force
 mdbook build
