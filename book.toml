@@ -1,7 +1,7 @@
 [book]
 authors = ["Ankitects Pty Ltd and contributors"]
 description = "Anki 的用户手册。Anki 是一款让学习更容易的抽认卡程序。"
-language = "zh-Hans"
+language = "zh-CN"
 multilingual = false
 src = "src"
 title = "Anki 手册"
