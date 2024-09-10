@@ -39,3 +39,5 @@ Anki 可以帮助你识别记忆难点。每次复习卡片「遗忘」（即在
 
 要详细讨论，可以参考 Soren Bjornstad 撰写的文章
 「[处理记忆难点](https://controlaltbackspace.org/leech/)」。
+
+> 译注：该文章已被翻译为中文——[《如何应对记忆难点》](https://zhuanlan.zhihu.com/p/719174183)
