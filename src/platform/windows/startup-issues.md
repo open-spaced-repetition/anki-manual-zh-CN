@@ -63,23 +63,27 @@
 如果更新过程导致你有多个 Anki 安装（例如在 `C:\Program Files\Anki` 和
 `C:\Program Files (x86)\Anki`），它们可能处于不可用状态，而 Anki 可能拒绝启动且不显示任何错误消息。
 
-你可以尝试卸载所有版本 - 你可以通过 Windows 的「应用和功能」设置菜单，或在每个 Anki 程序文件夹中运行
-`uninstall.exe` 来做到这一点。然后，再次安装 Anki。
+尝试从你的计算机上卸载所有 Anki 副本。要做到这一点，在 Windows 设置 > 应用和功能（或应用 > 已安装的
+应用）中找到它们并卸载，或在每个 Anki 程序文件夹中运行 `uninstall.exe`。之后，重新安装 Anki。
 
 ## 调试
 
 从终端启动 Anki 可能会揭示更多关于某些错误的信息。在安装最新的 Anki 版本并确保所有 Windows 更新安装
-后，不要直接运行 Anki，使用「开始>运行」，并键入 cmd.exe。当控制台窗口出现时，输入
+后，不要直接运行 Anki，按下 <kbd>Windows</kbd> 键（或打开开始菜单），输入 `cmd`，然后启动命令提示
+符。当终端窗口打开时，粘贴以下命令，并按 <kbd>Enter</kbd> 键。（如果 Anki 安装在非默认位置，路径会有
+所不同。）
 
 ```bat
-cd \program files\anki & anki-console
+%LocalAppData%\Programs\Anki\anki-console.bat
 ```
 
-推测 Anki 将像之前一样无法打开，但可能会揭示导致问题的原因。
+推测 Anki 将像之前一样无法打开，但终端窗口中的输出可能会揭示导致问题的原因。
 
 ## 如果一切都失败
 
 如果在尝试上述解决方法后仍无法启动 Anki，你还有两个选择：
 
 - 你可以尝试[从 Python 运行](https://faqs.ankiweb.net/running-from-python.html)。
-- 你可以尝试使用旧工具包构建的旧版 Anki，如 2.1.35-alternate 和 2.1.15。
+- 你可以尝试使用旧工具包构建的旧版 Anki，如
+  [2.1.35-alternate](https://github.com/ankitects/anki/releases/tag/2.1.35) 或
+  [2.1.15](https://github.com/ankitects/anki/releases/tag/2.1.15)。
