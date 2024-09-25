@@ -19,3 +19,9 @@ Soren Bjornstad 撰写了[一系列详尽的文章](https://controlaltbackspace.
 
 > 译注：目前该系列的[《设计明晰 Anki 卡片的规则》](https://zhuanlan.zhihu.com/p/691567753)已被翻译为
 > 中文。
+
+FSRS 的创造者 Jarrett Ye 写了一
+篇[关于间隔重复算法的精彩文章](https://github.com/open-spaced-repetition/fsrs4anki/wiki/Spaced-Repetition-Algorithm:-A-Three%E2%80%90Day-Journey-from-Novice-to-Expert)。
+
+Expertium 的博客主要关注 FSRS 和间隔重
+复：[https://expertium.github.io/](https://expertium.github.io/)
