@@ -62,7 +62,8 @@
 
 在旧调度器中，如果你在卡片仍处于学习状态时创建、重建、清空或删除筛选牌组，它们会被重置为新卡片。在重
 学中遗忘的情况下，任何剩余的重学间隔将被跳过。这
-在[v2 调度器](https://faqs.ankiweb.net/the-anki-2.1-scheduler.html)中得到修复，因此卡片不再被重置。
+在[v2 调度器](https://open-spaced-repetition.github.io/anki-faqs-zh-CN/the-anki-2.1-scheduler.html)中
+得到修复，因此卡片不再被重置。
 
 ## 手动创建
 
@@ -139,14 +140,15 @@
 
 在 v1 调度器中，**自定义初学/重学间隔**选项允许你覆盖所属牌组的初学/重学间隔并提供自己的初学/重学间
 隔。提供的初学/重学间隔适用于学习中的卡片、复习忘记的卡片以及提前复习的卡片。然而，请注意，从
-[v2 调度器](https://faqs.ankiweb.net/the-anki-2.1-scheduler.html)开始，筛选牌
+[v2 调度器](https://open-spaced-repetition.github.io/anki-faqs-zh-CN/the-anki-2.1-scheduler.html)开
+始，筛选牌
 组[不再支持自定义初学/重学间隔](https://forums.ankiweb.net/t/filtered-deck-interval-problem/11834/8)。
 
 **v3 调度器**
 
-在 [v3 调度器](https://faqs.ankiweb.net/the-2021-scheduler.html)中，禁用重新排程的筛选牌组显示 4 个
-按钮——提供的间隔适用于「重来」按钮，而「困难/良好」将使用 1.5 倍和 2 倍的提供间隔。「简单」将移除卡
-片。
+在 [v3 调度器](https://open-spaced-repetition.github.io/anki-faqs-zh-CN/the-2021-scheduler.html)中，
+禁用重新排程的筛选牌组显示 4 个按钮——提供的间隔适用于「重来」按钮，而「困难/良好」将使用 1.5 倍和 2
+倍的提供间隔。「简单」将移除卡片。
 
 ## 到期复习
 
@@ -177,8 +179,9 @@ Anki 对这些复习使用一种特别的算法，考虑到你复习的提前程
 
 默认情况下，Anki 将通过在筛选牌组中的表现来调整计划后返回卡片到它们的所属牌组。有一个**基于此牌组的
 回答情况，对卡片重新排程**选项可用，它会改变此行为。从
-[v2 调度器](https://faqs.ankiweb.net/the-anki-2.1-scheduler.html)开始，当重新安排被禁用时，卡片会以
-简单的「预览模式」显示，当它们返回到原始牌组时，位置会准确回到开始时的状态。
+[v2 调度器](https://open-spaced-repetition.github.io/anki-faqs-zh-CN/the-anki-2.1-scheduler.html)开
+始，当重新安排被禁用时，卡片会以简单的「预览模式」显示，当它们返回到原始牌组时，位置会准确回到开始时
+的状态。
 
 在 v1 调度器中，卡片的展示方式更接近于正常情况，但学习卡片会产生一些副作用，并且在学习时，新卡片的原
 始位置会丢失。

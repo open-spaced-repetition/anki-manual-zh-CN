@@ -20,4 +20,4 @@
 [仍然运行](https://www.tekrevue.com/tip/windows-protected-your-pc-disable-smartscreen/)。
 
 杀毒程序有时也可能报
-告[误报](https://faqs.ankiweb.net/my-antivirus-program-says-anki-is-infected.html)。
+告[误报](https://open-spaced-repetition.github.io/anki-faqs-zh-CN/my-antivirus-program-says-anki-is-infected.html)。

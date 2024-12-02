@@ -83,7 +83,8 @@
 
 如果在尝试上述解决方法后仍无法启动 Anki，你还有两个选择：
 
-- 你可以尝试[从 Python 运行](https://faqs.ankiweb.net/running-from-python.html)。
+- 你可以尝
+  试[从 Python 运行](https://open-spaced-repetition.github.io/anki-faqs-zh-CN/running-from-python.html)。
 - 你可以尝试使用旧工具包构建的旧版 Anki，如
   [2.1.35-alternate](https://github.com/ankitects/anki/releases/tag/2.1.35) 或
   [2.1.15](https://github.com/ankitects/anki/releases/tag/2.1.15)。

@@ -25,7 +25,7 @@
 
 这表示你错误地使用了[字段替换](./fields.md)语法。访问报告中的笔记和卡片模板的
 [模板界面](./intro.md#模板界面)，查看预览区域以获取更多信息。关于模板问题，还可以参
-考[更多信息](https://faqs.ankiweb.net/card-template-has-a-problem.html)。
+考[更多信息](https://open-spaced-repetition.github.io/anki-faqs-zh-CN/card-template-has-a-problem.html)。
 
 ### 相同的正面
 

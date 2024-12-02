@@ -92,5 +92,5 @@ Anki 很好地解决了 SuperMemo 的这些痛点。它在多个平台上均提�
 远胜 SuperMemo。
 
 在间隔重复算法上，Anki 最初基于 SuperMemo 的早期算法
-[SM-2](https://faqs.ankiweb.net/what-spaced-repetition-algorithm)，不过最近又集成了一种名为
-[FSRS](./deck-options.md#fsrs) 的新算法，作为 SM-2 算法的替代选择。
+[SM-2](https://open-spaced-repetition.github.io/anki-faqs-zh-CN/what-spaced-repetition-algorithm)，
+不过最近又集成了一种名为 [FSRS](./deck-options.md#fsrs) 的新算法，作为 SM-2 算法的替代选择。

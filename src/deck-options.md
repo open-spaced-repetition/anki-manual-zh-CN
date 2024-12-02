@@ -81,7 +81,8 @@ Anki 允许你在不同牌组之间共享选项，从而可以更轻松地在多
 
 当学习包含子牌组的牌组时，每个子牌组设置的限制控制了从该特定牌组中抽取的最大卡片数量。
 
-对于早期版本，请参见[此常见问题页面](https://faqs.ankiweb.net/the-anki-2.1-scheduler.html)。
+对于早期版本，请参
+见[此常见问题页面](https://open-spaced-repetition.github.io/anki-faqs-zh-CN/the-anki-2.1-scheduler.html)。
 
 学习新卡片将暂时增加你每天需要复习的卡片数量，因为新学习的材料需要重复几次，才能显著增加重复间隔。如
 果你持续每天学习 20 张新卡片，预计每天的复习量大约为 200 张卡片。你可以通过每天引入更少的新卡片来减
@@ -438,7 +439,8 @@ FSRS，之后如果需要，你可以撤销或从备份中恢复。
 #### 更多信息
 
 关于 FSRS 的一些常见问题已
-在[这个 FAQ](https://faqs.ankiweb.net/frequently-asked-questions-about-fsrs.html) 中得到回答。
+在[这个 FAQ](https://open-spaced-repetition.github.io/anki-faqs-zh-CN/frequently-asked-questions-about-fsrs.html)
+中得到回答。
 
 有关 FSRS 的更多信息，请查看：
 
@@ -531,4 +533,5 @@ log(90%) / log(85%) = 0.65
 
 ### 自定义排程
 
-请参见[此页面](https://faqs.ankiweb.net/the-2021-scheduler.html#add-ons-and-custom-scheduling)。
+请参
+见[此页面](https://open-spaced-repetition.github.io/anki-faqs-zh-CN/the-2021-scheduler.html#插件和自定义调度)。

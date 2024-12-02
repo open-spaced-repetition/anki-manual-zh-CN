@@ -72,8 +72,8 @@
 - **简单**立即将卡片转换为复习卡片，即使还有剩余阶段。[默认](deck-options.md#简单间隔)情况下，卡片将
   在 4 天后再次展示，然后在越来越长的间隔后再次展示。在 v1 调度器中，如果在重学模式下，则不会显示
   「简单」按钮，因为它会给出和「良好」一样的间隔。在
-  [v2 调度器+](https://faqs.ankiweb.net/the-anki-2.1-scheduler.html) 中，当卡片处于重学时，「简单」
-  按钮会使间隔增加 1 天。
+  [v2 调度器+](https://open-spaced-repetition.github.io/anki-faqs-zh-CN/the-anki-2.1-scheduler.html)
+  中，当卡片处于重学时，「简单」按钮会使间隔增加 1 天。
 
 当卡片第一次出现时，它们从第一阶段开始。这意味着第一次在卡片上回答**良好**时，将在 10 分钟后再显示一
 次，并且会跳过第一阶段的 1 分钟间隔。但如果你按下**重来**，卡片将在 1 分钟后出现。
@@ -106,8 +106,8 @@
 答案。按下 <kbd>空格键</kbd> 或 <kbd>回车</kbd> 将选择**良好**。
 
 参见[牌组选项](deck-options.md)和这个
-[FAQ](https://faqs.ankiweb.net/what-spaced-repetition-algorithm.html) 以了解更多关于算法如何工作的知
-识。
+[FAQ](https://open-spaced-repetition.github.io/anki-faqs-zh-CN/what-spaced-repetition-algorithm.html)
+以了解更多关于算法如何工作的知识。
 
 ## 如何选择答案按钮
 
@@ -135,8 +135,9 @@
 在 v1 调度器中，这些数字表示完成该队列中所有卡片所需的**复习**数，而非**卡片**数。如果你为遗忘卡片配
 置了多个重学间隔，数字将在你遗忘一张卡片时增长超过 1，因为那张卡片需要被多次展示。
 
-从 [v2 调度器](https://faqs.ankiweb.net/the-anki-2.1-scheduler.html)开始，这些数字表示**卡片**，所以
-无论剩下多少初学/重学间隔，数字总是只会增加 1。
+从
+[v2 调度器](https://open-spaced-repetition.github.io/anki-faqs-zh-CN/the-anki-2.1-scheduler.html)开
+始，这些数字表示**卡片**，所以无论剩下多少初学/重学间隔，数字总是只会增加 1。
 
 当答案显示时，Anki 在每个按钮上方显示卡片下次展示时间的预测值。如果你更喜欢不看预测值，可以在 Anki
 的[首选项](preferences.md)中禁用它们。
@@ -145,8 +146,9 @@
 
 当你在复习卡片上选择一个难度按钮时，Anki 也会应用少量的随机「模糊」以防止同时引入并被赋予相同评分的
 卡片黏在一起，总是在同一天进行复习。这种模糊将在
-[v3 调度器](https://faqs.ankiweb.net/the-2021-scheduler.html)启用时显示在答案按钮上，所以如果你使用
-较早的版本并注意到你选择的内容与卡片实际间隔之间有些许差异，这可能是原因。
+[v3 调度器](https://open-spaced-repetition.github.io/anki-faqs-zh-CN/the-2021-scheduler.html)启用时
+显示在答案按钮上，所以如果你使用较早的版本并注意到你选择的内容与卡片实际间隔之间有些许差异，这可能是
+原因。
 
 学习卡片也会有最多 5 分钟的额外间隔，以使它们不总是同样顺序出现，但答案按钮不会反映这一点。无法关闭
 此功能。
@@ -168,8 +170,9 @@
 
 旧调度器中，如果卡片处于学习中被搁置，它们会在被搁置前移动回到新卡或复习卡队列。
 
-然而，使用 [2.1 调度器](https://faqs.ankiweb.net/the-anki-2.1-scheduler.html)，搁置卡片并不会重置卡
-片的初学/重学间隔。
+然而，使用
+[2.1 调度器](https://open-spaced-repetition.github.io/anki-faqs-zh-CN/the-anki-2.1-scheduler.html)，
+搁置卡片并不会重置卡片的初学/重学间隔。
 
 - **重置卡片**：将当前卡片移至[新卡队列的末尾](browsing.md#卡片)。
 
@@ -185,8 +188,9 @@
   钮）。如果你想在一段时间内避免复习该笔记而不是删除它，这很有用。旧调度器中，如果卡片处于学习中被暂
   停，它们会在被暂停前移动回到新卡或复习队列。
 
-然而，使用 [2.1 调度器](https://faqs.ankiweb.net/the-anki-2.1-scheduler.html)，暂停卡片并不会重置卡
-片的初学/重学间隔。
+然而，使用
+[2.1 调度器](https://open-spaced-repetition.github.io/anki-faqs-zh-CN/the-anki-2.1-scheduler.html)，
+暂停卡片并不会重置卡片的初学/重学间隔。
 
 - **选项**：编辑当前牌组的[选项](deck-options.md)。
 
@@ -223,11 +227,14 @@ Anki 从牌组中抽取卡片的方式取决于使用的算法：
 
 - 使用 v1 调度器时，当一个牌组有子牌组时，卡片会[轮流](studying.md#显示顺序)出现在每个牌组中。
 
-- 使用 [v2 调度器](https://faqs.ankiweb.net/the-anki-2.1-scheduler.html)时，当一个牌组有子牌组时，复
-  习内容同时从所有子牌组中抽取。子牌组的复习限制被忽略——仅适用于你点击的牌组的限制。
+- 使用
+  [v2 调度器](https://open-spaced-repetition.github.io/anki-faqs-zh-CN/the-anki-2.1-scheduler.html)时，
+  当一个牌组有子牌组时，复习内容同时从所有子牌组中抽取。子牌组的复习限制被忽略——仅适用于你点击的牌组
+  的限制。
 
-- 使用 [v3 调度器](https://faqs.ankiweb.net/the-2021-scheduler.html)时，每个子牌组的限制也被执行，你
-  不需要按牌组顺序查看卡片。有关详细信息，请参见手册中
+- 使用
+  [v3 调度器](https://open-spaced-repetition.github.io/anki-faqs-zh-CN/the-2021-scheduler.html)时，
+  每个子牌组的限制也被执行，你不需要按牌组顺序查看卡片。有关详细信息，请参见手册中
   的[牌组选项](deck-options.md#复习卡片排列顺序)部分。
 
 默认情况下，对于新卡片，Anki 按字母顺序从牌组中获取卡片。因此，在上述示例中，你将首先从「法语」中获
@@ -260,8 +267,9 @@ Anki 从牌组中抽取卡片的方式取决于使用的算法：
 Anki 只会搁置新卡片或复习卡片的关联卡片，不会搁置正在学习中的卡片，因为对这些卡片来说，时间至关重
 要。另一方面，当你学习一张正在学习中的卡片时，任何未学习的关联卡片和复习中的关联卡片都会被搁置。
 
-请注意，从 [v2 调度器](https://faqs.ankiweb.net/the-anki-2.1-scheduler.html)开始，Anki 现在区分手动
-搁置和自动搁置的卡片，以便你可以取消搁置一组而不影响另一组。
+请注意，从
+[v2 调度器](https://open-spaced-repetition.github.io/anki-faqs-zh-CN/the-anki-2.1-scheduler.html)开
+始，Anki 现在区分手动搁置和自动搁置的卡片，以便你可以取消搁置一组而不影响另一组。
 
 还要注意，一张卡片不能同时被搁置和暂停。暂停被搁置的卡片会取消搁置它。搁置已暂停的卡片在 Anki
 2.1.49+ 上不起作用，而在早期版本中，它会取消暂停卡片。
@@ -289,4 +297,6 @@ Anki 中的大多数常见操作都有快捷键。它们中的大多数可以在
 如果希望更改过期复习的顺序，可以通过创建一个[筛选牌组](filtered-decks.md)实现。
 
 当你回答已经过期很久的卡片时，Anki 会在确定下一次应该显示该卡片的时间点时考虑到这种过期。更多信息请
-参见 Anki 的间隔重复[算法](https://faqs.ankiweb.net/due-times-after-a-break.html)部分。
+参见 Anki 的间隔重
+复[算法](https://open-spaced-repetition.github.io/anki-faqs-zh-CN/due-times-after-a-break.html)部
+分。

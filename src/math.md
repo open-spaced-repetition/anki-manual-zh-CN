@@ -36,7 +36,8 @@ Anki 的 MathJax 支持期望内容为 TeX 格式。如果你不熟悉 TeX 格�
 Anki 内置了对 mhchem 的支持来渲染化学方程。请参见「化学方程」部分和以下章节以获取更多信息：
 <https://mhchem.github.io/MathJax-mhchem/>
 
-可以[自定义一些设置](https://faqs.ankiweb.net/customizing-mathjax.html)。
+可
+以[自定义一些设置](https://open-spaced-repetition.github.io/anki-faqs-zh-CN/customizing-mathjax.html)。
 
 ## LaTeX
 
