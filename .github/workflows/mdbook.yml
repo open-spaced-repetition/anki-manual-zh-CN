@@ -35,6 +35,7 @@ jobs:
           curl --proto '=https' --tlsv1.2 https://sh.rustup.rs -sSf -y | sh
           rustup update
           cargo install mdbook --git https://github.com/Sunshine40/mdBook --branch search-non-english --force
+          cargo install mdbook-toc
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
