@@ -15,8 +15,9 @@
 - [Control-Alt-Backspace](https://controlaltbackspace.org/categories/memory/)：Soren Bjornstad 的博
   客，包含关于记忆、间隔重复系统（SRS）以及如何高效使用Anki的实用文章。
 
-  > 译注：目前该系列的[《设计明晰 Anki 卡片的规则》](https://l-m-sherlock.github.io/ZhiHuArchive/691567753.html)已被翻译
-  > 为中文。
+  > 译注：目前该系列
+  > 的[《设计明晰 Anki 卡片的规则》](https://l-m-sherlock.github.io/ZhiHuArchive/691567753.html)已被
+  > 翻译为中文。
 
 - [间隔重复算法：三天从新手到专家](https://github.com/open-spaced-repetition/fsrs4anki/wiki/Spaced-Repetition-Algorithm:-A-Three%E2%80%90Day-Journey-from-Novice-to-Expert)：FSRS
   算法创始人 Jarrett Ye 撰写的深入文章，详细介绍了间隔重复算法。FSRS 是 Anki 当前采用的核心算法。
