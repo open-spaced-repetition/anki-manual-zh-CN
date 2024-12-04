@@ -26,7 +26,8 @@
 Anki，你的 Anki 文件会在 `Documents/Anki` 文件夹中。
 
 在 **Linux** 上，最近的 Anki 版本会将数据储存在 `~/.local/share/Anki2` 中，或者如果你设置了自定义数
-据路径，则储存在 `$XDG_DATA_HOME/Anki2` 中。旧版本的 Anki 会将文件储存在 `~/Documents/Anki` 或
+据路径，则储存在 `$XDG_DATA_HOME/Anki2` 中。如果你使用的是第三方 **Flatpak** 构建版本，你的文件将位
+于 `~/.var/app/net.ankiweb.Anki/data/Anki2/`。旧版本的 Anki 会将文件储存在 `~/Documents/Anki` 或
 `~/Anki` 中。
 
 在 Anki 文件夹中，会有程序级别和配置文件级别的首选项储存在一个名为 prefs.db 的文件中。
