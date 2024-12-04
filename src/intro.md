@@ -29,3 +29,12 @@
 
 如果你希望帮助将手册翻译成其他语言，请参
 阅[翻译文档](https://translating.ankiweb.net/anki/manual.html)。
+
+## 历史版本文档
+
+你正在使用 Anki 的较早版本？你可以
+在[互联网档案馆](https://web.archive.org/web/20240829022941/https://docs.ankiweb.net/)找到本使用手册
+的历史存档版本。
+
+如果你需要了解关于旧版调度器的信息，请参
+阅[这篇常见问题解答](https://open-spaced-repetition.github.io/anki-faqs-zh-CN/the-anki-2.1-scheduler.html)。
