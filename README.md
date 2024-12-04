@@ -8,4 +8,6 @@
 
 这份翻译在知识共享署名-相同方式共享 4.0 国际许可证下发布。
 
+欢迎拉取请求。除非你另有说明，否则你提交的任何拉取请求都将根据上述许可进行授权。请参阅[贡献指南](CONTRIBUTING.md)以了解更多详细信息。
+
 访问网站获取最佳阅读体验：https://open-spaced-repetition.github.io/anki-manual-zh-CN/
