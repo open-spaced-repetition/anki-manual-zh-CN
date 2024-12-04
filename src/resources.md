@@ -2,26 +2,29 @@
 
 > 原文：[Resources - Anki Manual (ankiweb.net)](https://docs.ankiweb.net/resources.html)
 
-SuperMemo 网站上有很多关于间隔重复和记忆的优质信息： <https://supermemo.guru/wiki/SuperMemo_Guru>
+## 相关文章
 
-Michael Nielsen 撰写了一篇[详尽的文章](http://augmentingcognition.com/ltm.html)，讲述了长期记忆以及
-他如何使用 Anki。他还提供了一
-个[简化版本](https://twitter.com/michael_nielsen/status/957763229454774272)，以推文系列的形式呈现。
+- [SuperMemo Guru](https://supermemo.guru/wiki/SuperMemo_Guru)：间隔重复学习先驱 Piotr Wozniak 关于
+  间隔重复和记忆机制的深度探讨。
 
-> 译注：该文章已被翻译为中
-> 文——[《量子物理学家是如何使用 Anki 的？》](https://zhuanlan.zhihu.com/p/65131722)
+- [增强长期认知能力](http://augmentingcognition.com/ltm.html)：Michael Nielsen详细阐述了长期记忆的重
+  要性及其使用Anki的个人经验。他还在Twitter上提供了一
+  个[精简版](https://twitter.com/michael_nielsen/status/957763229454774272)。
+  > 译注：该文章已被翻译为中
+  > 文——[《量子物理学家是如何使用 Anki 的？》](https://zhuanlan.fxzhihu.com/p/65131722)
+- [Control-Alt-Backspace](https://controlaltbackspace.org/categories/memory/)：Soren Bjornstad 的博
+  客，包含关于记忆、间隔重复系统（SRS）以及如何高效使用Anki的实用文章。
 
-一些医学生联合起来制作了一份付费指南，专注于在医学院中使用 Anki：
-<https://www.theanking.com/anki-mastery-course>
+  > 译注：目前该系列的[《设计明晰 Anki 卡片的规则》](https://l-m-sherlock.github.io/ZhiHuArchive/691567753.html)已被翻译
+  > 为中文。
 
-Soren Bjornstad 撰写了[一系列详尽的文章](https://controlaltbackspace.org/categories/memory/)，探讨记
-忆、SRS 以及如何有效使用 Anki。
+- [间隔重复算法：三天从新手到专家](https://github.com/open-spaced-repetition/fsrs4anki/wiki/Spaced-Repetition-Algorithm:-A-Three%E2%80%90Day-Journey-from-Novice-to-Expert)：FSRS
+  算法创始人 Jarrett Ye 撰写的深入文章，详细介绍了间隔重复算法。FSRS 是 Anki 当前采用的核心算法。
 
-> 译注：目前该系列的[《设计明晰 Anki 卡片的规则》](https://zhuanlan.zhihu.com/p/691567753)已被翻译为
-> 中文。
+- [Expertium 的博客](https://expertium.github.io/)：FSRS 算法的主要贡献者之一撰写的技术博客，深入探
+  讨间隔重复和 FSRS 的原理与应用。
 
-FSRS 的创造者 Jarrett Ye 写了一
-篇[关于间隔重复算法的精彩文章](https://github.com/open-spaced-repetition/fsrs4anki/wiki/Spaced-Repetition-Algorithm:-A-Three%E2%80%90Day-Journey-from-Novice-to-Expert)。
+## 使用指南
 
-Expertium 的博客主要关注 FSRS 和间隔重
-复：[https://expertium.github.io/](https://expertium.github.io/)
+- [Anki 精通课程](https://www.theanking.com/anki-mastery-course)：一个专为医学院学生设计的付费课程，
+  详细指导如何有效利用Anki进行医学学习。
