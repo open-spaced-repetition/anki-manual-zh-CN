@@ -119,15 +119,19 @@ Anki 的浏览界面和筛选牌组功能使用了一种通用的方法来搜索
 找到标签前缀为「ani」的笔记。
 
 `deck:french`\
-在名为「French」的牌组中或其子牌组如「French::Vocab」中寻找卡片。
+在名为「French」的顶层牌组中或其子牌组如「French::Words」中寻找卡片。它不会匹配具有该名称的子牌组，
+例如「Languages::French」。
+
+`deck:french::words`\
+在「French::Words」子牌组中寻找卡片。
 
 `deck:french -deck:french::*`\
 找到「French」中的卡片，但不包括其子牌组。
 
-`deck:"french vocab"`\
+`deck:"french words"`\
 搜索带有空格的牌组名称。
 
-`"deck:french vocab"`\
+`"deck:french words"`\
 与前面相同。
 
 `deck:filtered`\
