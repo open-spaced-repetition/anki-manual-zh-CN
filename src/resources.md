@@ -7,8 +7,8 @@
 - [SuperMemo Guru](https://supermemo.guru/wiki/SuperMemo_Guru)：间隔重复学习先驱 Piotr Wozniak 关于
   间隔重复和记忆机制的深度探讨。
 
-- [增强长期认知能力](http://augmentingcognition.com/ltm.html)：Michael Nielsen详细阐述了长期记忆的重
-  要性及其使用Anki的个人经验。他还在Twitter上提供了一
+- [增强长期认知能力](http://augmentingcognition.com/ltm.html)：Michael Nielsen 详细阐述了长期记忆的
+  重要性及其使用 Anki 的个人经验。他还在 Twitter 上提供了一
   个[精简版](https://twitter.com/michael_nielsen/status/957763229454774272)。
   > 译注：该文章已被翻译为中
   > 文——[《量子物理学家是如何使用 Anki 的？》](https://zhuanlan.fxzhihu.com/p/65131722)
