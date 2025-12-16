@@ -54,5 +54,6 @@
 - [故障排除](troubleshooting.md)
 - [同步服务器](sync-server.md)
 - [其他](misc.md)
-
-[贡献](contrib.md) [常见问题](faqs.md) [资源](resources.md)
+- [贡献](contrib.md)
+- [常见问题](faqs.md)
+- [资源](resources.md)

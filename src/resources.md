@@ -11,7 +11,7 @@
   重要性及其使用 Anki 的个人经验。他还在 Twitter 上提供了一
   个[精简版](https://twitter.com/michael_nielsen/status/957763229454774272)。
   > 译注：该文章已被翻译为中
-  > 文——[《量子物理学家是如何使用 Anki 的？》](https://zhuanlan.fxzhihu.com/p/65131722)
+  > 文——[《量子物理学家是如何使用 Anki 的？》](https://zhuanlan.zhihu.com/p/65131722)
 - [Control-Alt-Backspace](https://controlaltbackspace.org/categories/memory/)：Soren Bjornstad 的博
   客，包含关于记忆、间隔重复系统（SRS）以及如何高效使用Anki的实用文章。
 

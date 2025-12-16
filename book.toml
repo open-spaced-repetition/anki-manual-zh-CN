@@ -16,9 +16,8 @@ renderer = ["html"]
 git-repository-url = "https://github.com/L-M-Sherlock/anki-manual-zh-CN"
 additional-css = ["css/misc.css", "css/kbd.css"]
 
-[output.linkcheck]
+[output.linkcheck2]
 optional = true
-warning-policy = "warn"
 follow-web-links = true
 exclude = [
   'microsoft.com',
@@ -29,6 +28,11 @@ exclude = [
   'support.google.com',
   'wikiwiki.jp',
   'web.archive.org',
+  'apps.ankiweb.net/docs/manual.id.html',
+  'apps.ankiweb.net/docs/manual.es.html',
+  'apps.ankiweb.net/docs/manual.fr.html',
+  'apps.ankiweb.net/downloads/archive/screencasts/2.0/',
+  'zhuanlan.zhihu.com',
 ]
 
 [output.html.fold]
