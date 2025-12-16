@@ -33,6 +33,7 @@ exclude = [
   'apps.ankiweb.net/docs/manual.fr.html',
   'apps.ankiweb.net/downloads/archive/screencasts/2.0/',
   'zhuanlan.zhihu.com',
+  'thegeekpage.com',
 ]
 
 [output.html.fold]
