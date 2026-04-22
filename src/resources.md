@@ -19,7 +19,7 @@
   > 的[《设计明晰 Anki 卡片的规则》](https://l-m-sherlock.github.io/ZhiHuArchive/691567753.html)已被
   > 翻译为中文。
 
-- [间隔重复算法：三天从新手到专家](https://github.com/open-spaced-repetition/fsrs4anki/wiki/Spaced-Repetition-Algorithm:-A-Three%E2%80%90Day-Journey-from-Novice-to-Expert)：FSRS
+- [间隔重复算法：三天从新手到专家](https://github.com/open-spaced-repetition/awesome-fsrs/wiki/Spaced-Repetition-Algorithm:-A-Three%E2%80%90Day-Journey-from-Novice-to-Expert)：FSRS
   算法创始人 Jarrett Ye 撰写的深入文章，详细介绍了间隔重复算法。FSRS 是 Anki 当前采用的核心算法。
 
 - [Expertium 的博客](https://expertium.github.io/)：FSRS 算法的主要贡献者之一撰写的技术博客，深入探
